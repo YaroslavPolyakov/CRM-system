@@ -11,12 +11,14 @@
     <Grid x:Name="Wnd">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition/>
+            <RowDefinition Height="637"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300"/>
             <ColumnDefinition Width="1058"/>
         </Grid.ColumnDefinitions>
+        <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="272,135,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+        <local:Menu Grid.Row="1"/>
 
     </Grid>
 </Window>

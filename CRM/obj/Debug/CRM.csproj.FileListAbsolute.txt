@@ -14,3 +14,6 @@ E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.exe
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.pdb
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\LogIn.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\LogIn.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Menu.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Menu.baml
