@@ -5,6 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CRM"
         mc:Ignorable="d"
-        Title="CRM" Height="600" Width="800">
-    <Grid x:Name="Wnd"/>
+        Title="CRM" Height="768" Width="1366" Background="#FF333F67" MinHeight="600" MinWidth="800" MaxHeight="768" MaxWidth="1466">
+    <!--Background="#FF1CB189"
+    -->
+    <Grid x:Name="Wnd">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="1058"/>
+        </Grid.ColumnDefinitions>
+
+    </Grid>
 </Window>
