@@ -5,13 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CRM"
              mc:Ignorable="d" 
-             d:DesignHeight="86.765" d:DesignWidth="994" >
+             d:DesignHeight="86.765" d:DesignWidth="1087" >
     <Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="994">
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Height="61" Margin="100,15,0,0" VerticalAlignment="Top" Width="180" FontSize="22"/>
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Height="61" Margin="30,15,0,0" VerticalAlignment="Top" Width="180" FontSize="22"/>
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Height="61" Margin="30,15,0,0" VerticalAlignment="Top" Width="180" FontSize="22"/>
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Button" Height="61" Margin="30,15,0,0" VerticalAlignment="Top" Width="180" FontSize="22"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="87" VerticalAlignment="Top" Width="1087">
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Height="50" Margin="155,15,0,0" VerticalAlignment="Top" Width="180" FontSize="22"/>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Height="50" Margin="30,15,0,0" VerticalAlignment="Top" Width="180" FontSize="22"/>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Height="50" Margin="30,15,0,0" VerticalAlignment="Top" Width="180" FontSize="22"/>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Button" Height="50" Margin="30,15,0,0" VerticalAlignment="Top" Width="180" FontSize="22"/>
         </StackPanel>
 
     </Grid>

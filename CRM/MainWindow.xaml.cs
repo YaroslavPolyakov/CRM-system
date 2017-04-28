@@ -25,9 +25,6 @@ namespace CRM
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Wnd.Visibility = Visibility.Collapsed;
-        }
+       
     }
 }

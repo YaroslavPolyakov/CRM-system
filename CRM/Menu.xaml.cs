@@ -24,5 +24,25 @@ namespace CRM
         {
             InitializeComponent();
         }
+
+        private void Button_Zadachi(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Command(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Clients(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Param(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
