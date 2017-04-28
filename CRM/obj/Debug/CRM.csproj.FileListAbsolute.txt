@@ -22,3 +22,28 @@ E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Clients.baml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Zadachi.baml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Team.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Team.baml
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\bin\Debug\CRM.exe.config
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.exe
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.pdb
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\bin\Debug\CRM.exe
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\bin\Debug\CRM.pdb
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Clients.g.cs
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\LogIn.g.cs
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\MainWindow.g.cs
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Menu.g.cs
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Team.g.cs
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Zadachi.g.cs
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\App.g.cs
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\GeneratedInternalTypeHelper.g.cs
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM_MarkupCompile.cache
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM_MarkupCompile.lref
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Clients.baml
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\LogIn.baml
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\MainWindow.baml
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Menu.baml
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Team.baml
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Zadachi.baml
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.g.resources
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.Properties.Resources.resources
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.csproj.GenerateResource.Cache
