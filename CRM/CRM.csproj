@@ -57,26 +57,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-<<<<<<< HEAD
-    <Compile Include="mainpage\Team.xaml.cs">
-      <DependentUpon>Team.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="mainpage\Zadachi.xaml.cs">
-      <DependentUpon>Zadachi.xaml</DependentUpon>
-    </Compile>
-    <Page Include="mainpage\Clients.xaml">
-=======
     <Compile Include="Add_client.xaml.cs">
       <DependentUpon>Add_client.xaml</DependentUpon>
     </Compile>
     <Compile Include="Change.xaml.cs">
       <DependentUpon>Change.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Team.xaml.cs">
-      <DependentUpon>Team.xaml</DependentUpon>
+    <Compile Include="Clients.xaml.cs">
+      <DependentUpon>Clients.xaml</DependentUpon>
     </Compile>
     <Compile Include="Delete.xaml.cs">
       <DependentUpon>Delete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Team.xaml.cs">
+      <DependentUpon>Team.xaml</DependentUpon>
     </Compile>
     <Compile Include="Zadachi.xaml.cs">
       <DependentUpon>Zadachi.xaml</DependentUpon>
@@ -90,7 +87,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Clients.xaml">
->>>>>>> origin/master
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -106,9 +102,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="mainpage\Clients.xaml.cs">
-      <DependentUpon>Clients.xaml</DependentUpon>
-    </Compile>
     <Compile Include="LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
     </Compile>
@@ -116,31 +109,24 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="mainpage\Menu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="mainpage\Team.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-<<<<<<< HEAD
-    <Page Include="mainpage\Zadachi.xaml">
-=======
     <Page Include="Delete.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Team.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Zadachi.xaml">
->>>>>>> origin/master
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="mainpage\Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -4,26 +4,17 @@
 winexe
 C#
 .cs
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\
+E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\
 CRM
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\App.xaml
-6-68694706
+E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\App.xaml
+91099040026
 
-10-1746605122
+13-1449341657
 15-1075227541
-mainpage\Clients.xaml;LogIn.xaml;MainWindow.xaml;mainpage\Menu.xaml;mainpage\Team.xaml;mainpage\Zadachi.xaml;
-=======
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\App.xaml
-7-1418973627
-
-111717195139
-15767094614
-Add_client.xaml;Clients.xaml;LogIn.xaml;MainWindow.xaml;Menu.xaml;Team.xaml;Zadachi.xaml;
->>>>>>> origin/master
+Add_client.xaml;Change.xaml;Clients.xaml;LogIn.xaml;MainWindow.xaml;Delete.xaml;Menu.xaml;Team.xaml;Zadachi.xaml;
 
 False
 

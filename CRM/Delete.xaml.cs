@@ -17,9 +17,9 @@ namespace CRM
     /// <summary>
     /// Логика взаимодействия для Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Delete : Window
     {
-        public Window1()
+        public Delete()
         {
             InitializeComponent();
         }
