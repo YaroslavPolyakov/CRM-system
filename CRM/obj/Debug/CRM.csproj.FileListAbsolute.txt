@@ -47,3 +47,5 @@ h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Zadachi.baml
 h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.g.resources
 h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.Properties.Resources.resources
 h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.csproj.GenerateResource.Cache
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Add_client.g.cs
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Add_client.baml

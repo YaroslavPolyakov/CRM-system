@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
         <local:Menu Margin="0,0,0,100" Grid.RowSpan="2"/>
         <Border Name="MainBorder" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1217" Background="#FF505883" Grid.RowSpan="2" Margin="0,0,-129,0">
-            <local:Zadachi></local:Zadachi>
+            <local:Zadachi Margin="-59.8,9.2,60.2,-8.8"></local:Zadachi>
         </Border>
     </Grid>
 </Window>
