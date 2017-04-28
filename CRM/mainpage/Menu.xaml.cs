@@ -27,7 +27,7 @@ namespace CRM
 
         private void Button_Zadachi(object sender, RoutedEventArgs e)
         {
-            
+            //mainWnd.MainBorder.Visibility = Visibility.Collapsed;
         }
 
         private void Button_Command(object sender, RoutedEventArgs e)

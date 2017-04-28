@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\
 CRM
 none
 false
 DEBUG;TRACE
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\App.xaml
-6-474714235
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\App.xaml
+6-68694706
 
-14603143502
-15767094614
-Clients.xaml;LogIn.xaml;MainWindow.xaml;Menu.xaml;Team.xaml;Zadachi.xaml;
+141852834208
+15-1075227541
+mainpage\Clients.xaml;LogIn.xaml;MainWindow.xaml;mainpage\Menu.xaml;mainpage\Team.xaml;mainpage\Zadachi.xaml;
 
-False
+True
 

@@ -57,13 +57,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Team.xaml.cs">
+    <Compile Include="mainpage\Team.xaml.cs">
       <DependentUpon>Team.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Zadachi.xaml.cs">
+    <Compile Include="mainpage\Zadachi.xaml.cs">
       <DependentUpon>Zadachi.xaml</DependentUpon>
     </Compile>
-    <Page Include="Clients.xaml">
+    <Page Include="mainpage\Clients.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -79,7 +79,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Clients.xaml.cs">
+    <Compile Include="mainpage\Clients.xaml.cs">
       <DependentUpon>Clients.xaml</DependentUpon>
     </Compile>
     <Compile Include="LogIn.xaml.cs">
@@ -89,21 +89,21 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Menu.xaml">
+    <Page Include="mainpage\Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Team.xaml">
+    <Page Include="mainpage\Team.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Zadachi.xaml">
+    <Page Include="mainpage\Zadachi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu.xaml.cs">
+    <Compile Include="mainpage\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -139,6 +139,7 @@
     <Resource Include="Resources\private.png" />
     <Resource Include="Resources\user.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
