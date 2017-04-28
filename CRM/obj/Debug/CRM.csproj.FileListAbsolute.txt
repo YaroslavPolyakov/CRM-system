@@ -20,3 +20,5 @@ E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Clients.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Zadachi.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Clients.baml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Zadachi.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Team.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Team.baml

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace CRM
 {
     /// <summary>
-    /// Логика взаимодействия для ClientButtonPanel.xaml
+    /// Логика взаимодействия для Clients.xaml
     /// </summary>
-    public partial class ClientButtonPanel : UserControl
+    public partial class Clients : UserControl
     {
-        public ClientButtonPanel()
+        public Clients()
         {
             InitializeComponent();
         }
