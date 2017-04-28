@@ -18,8 +18,8 @@
             <ColumnDefinition Width="1087"/>
         </Grid.ColumnDefinitions>
         <local:Menu Margin="0,0,0,100" Grid.RowSpan="2"/>
-        <Border Name="MainBorder" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1217" Background="#FF384067" Grid.RowSpan="2" Margin="0,0,-129,0">
-            <local:ClientButtonPanel HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="1217" Margin="-1,9,-1,0"/>
+        <Border Name="MainBorder" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1217" Background="#FF505883" Grid.RowSpan="2" Margin="0,0,-129,0">
+            <local:Zadachi></local:Zadachi>
         </Border>
     </Grid>
 </Window>

@@ -3,7 +3,6 @@ E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.exe
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.pdb
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\CRM.exe
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\CRM.pdb
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\LogIn.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\MainWindow.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Menu.g.cs
@@ -17,5 +16,7 @@ E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Menu.baml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.g.resources
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.Properties.Resources.resources
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.csproj.GenerateResource.Cache
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\ClientButtonPanel.g.cs
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\ClientButtonPanel.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Clients.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Zadachi.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Clients.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Zadachi.baml
