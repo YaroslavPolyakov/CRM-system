@@ -1,1 +1,1 @@
-иди нахуй
+Vsem privet
