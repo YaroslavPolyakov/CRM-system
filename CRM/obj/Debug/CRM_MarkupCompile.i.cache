@@ -9,12 +9,21 @@ CRM
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\App.xaml
 6-68694706
 
 141852834208
 15-1075227541
 mainpage\Clients.xaml;LogIn.xaml;MainWindow.xaml;mainpage\Menu.xaml;mainpage\Team.xaml;mainpage\Zadachi.xaml;
+=======
+h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\App.xaml
+91099040026
+
+17319474913
+15767094614
+Add_client.xaml;Change.xaml;Clients.xaml;LogIn.xaml;MainWindow.xaml;Menu.xaml;Team.xaml;Delete.xaml;Zadachi.xaml;
+>>>>>>> origin/master
 
 True
 
