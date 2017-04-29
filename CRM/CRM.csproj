@@ -57,8 +57,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Add_client.xaml.cs">
-      <DependentUpon>Add_client.xaml</DependentUpon>
+    <Compile Include="Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
     </Compile>
     <Compile Include="Change.xaml.cs">
       <DependentUpon>Change.xaml</DependentUpon>
@@ -78,9 +78,9 @@
     <Compile Include="Zadachi.xaml.cs">
       <DependentUpon>Zadachi.xaml</DependentUpon>
     </Compile>
-    <Page Include="Add_client.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Add.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Change.xaml">
       <SubType>Designer</SubType>

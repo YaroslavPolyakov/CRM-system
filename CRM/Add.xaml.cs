@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace CRM
 {
     /// <summary>
-    /// Логика взаимодействия для Add_client.xaml
+    /// Логика взаимодействия для Change.xaml
     /// </summary>
-    public partial class Add_client : Window
+    public partial class Add : Window
     {
-        public Add_client()
+        public Add()
         {
             InitializeComponent();
-        }
-
-        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

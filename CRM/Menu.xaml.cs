@@ -24,10 +24,22 @@ namespace CRM
         {
             InitializeComponent();
         }
+       /* public Menu(FrameworkElement main)
+        {
+            InitializeComponent();
+            if (main is Grid)
+            {
+                var m = (Grid)main;
+                _main = m;
+            }
+            
+        }
+        private Grid _main;*/
 
         private void Button_Zadachi(object sender, RoutedEventArgs e)
         {
-            //mainWnd.MainBorder.Visibility = Visibility.Collapsed;
+            
+            //_main.Children.Clear();
         }
 
         private void Button_Command(object sender, RoutedEventArgs e)

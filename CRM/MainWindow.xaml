@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CRM"
         mc:Ignorable="d"
-        Title="CRM" Height="768" Width="1466" Background="#FF1F233E" MinHeight="600" MinWidth="800" MaxHeight="768" MaxWidth="1466">
+        Title="CRM" Height="742.5" Width="1380.5" Background="#FF1F233E" MinHeight="600" MinWidth="800" MaxHeight="768" MaxWidth="1466"
+        WindowStartupLocation="CenterScreen">
     <!--Background="#FF1CB189"
     -->
     <Grid x:Name="Wnd">
@@ -15,12 +16,11 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="240"/>
-            <ColumnDefinition Width="982"/>
-            <ColumnDefinition Width="106"/>
+            <ColumnDefinition Width="989"/>
         </Grid.ColumnDefinitions>
         <local:Menu Margin="0,0,0,100" Grid.RowSpan="2"/>
-        <Border Name="MainBorder" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1217" Background="#FF505883" Grid.RowSpan="2" Margin="0,0,-129,0" Grid.ColumnSpan="2">
-            <local:Zadachi></local:Zadachi>
-        </Border>
+        <Grid Name="MainBorder"  Grid.Column="1" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1131" Background="#FF505883" Grid.RowSpan="2" Margin="0,0,-141,0">
+            <local:Zadachi HorizontalAlignment="Left" Width="1130" Margin="0,0,-1,0"/>
+        </Grid>
     </Grid>
 </Window>

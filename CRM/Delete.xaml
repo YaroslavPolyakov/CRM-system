@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Удаление" Height="147.439" Width="261.952">
     <Grid>
-        <Label x:Name="label" Content="Удалить документ?" HorizontalAlignment="Left" Margin="73,37,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Удалить запись?" HorizontalAlignment="Left" Margin="79,37,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button" Content="Да" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="38,88,0,0"/>
-        <Button x:Name="button1" Content="Нет" HorizontalAlignment="Left" Margin="150,88,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button1" Content="Нет" HorizontalAlignment="Left" Margin="146,88,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

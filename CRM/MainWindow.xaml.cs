@@ -23,6 +23,7 @@ namespace CRM
         public MainWindow()
         {
             InitializeComponent();
+            //Menu m = new Menu(MainBorder);
         }
 
        

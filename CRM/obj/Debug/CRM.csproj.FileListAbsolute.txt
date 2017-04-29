@@ -1,86 +1,30 @@
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\CRM.exe.config
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.exe
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.pdb
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\CRM.exe
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\CRM.pdb
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Clients.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\LogIn.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\MainWindow.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Delete.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Menu.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Team.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Zadachi.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\App.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\GeneratedInternalTypeHelper.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM_MarkupCompile.cache
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM_MarkupCompile.lref
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Clients.baml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\LogIn.baml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\MainWindow.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Delete.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Menu.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Team.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Zadachi.baml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.g.resources
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.Properties.Resources.resources
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.csproj.GenerateResource.Cache
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\bin\Debug\CRM.exe.config
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.exe
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.pdb
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\bin\Debug\CRM.exe
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\bin\Debug\CRM.pdb
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Clients.g.cs
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\LogIn.g.cs
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\MainWindow.g.cs
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Menu.g.cs
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Team.g.cs
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Zadachi.g.cs
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\App.g.cs
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\GeneratedInternalTypeHelper.g.cs
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM_MarkupCompile.cache
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM_MarkupCompile.lref
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Clients.baml
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\LogIn.baml
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\MainWindow.baml
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Menu.baml
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Team.baml
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Zadachi.baml
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.g.resources
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.Properties.Resources.resources
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\CRM.csproj.GenerateResource.Cache
-<<<<<<< HEAD
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\mainpage\Clients.g.cs
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\mainpage\Menu.g.cs
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\mainpage\Team.g.cs
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\mainpage\Zadachi.g.cs
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\mainpage\Clients.baml
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\mainpage\Menu.baml
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\mainpage\Team.baml
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\mainpage\Zadachi.baml
-=======
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Add_client.g.cs
-h:\Univer\Учеба\Курсач\crm\miniCRM\CRM\obj\Debug\Add_client.baml
->>>>>>> origin/master
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\bin\Debug\CRM.exe.config
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\CRM.exe
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\CRM.pdb
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Add_client.g.cs
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Change.g.cs
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Clients.g.cs
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\LogIn.g.cs
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\MainWindow.g.cs
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Delete.g.cs
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Zadachi.g.cs
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\App.g.cs
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\GeneratedInternalTypeHelper.g.cs
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\CRM_MarkupCompile.cache
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\CRM_MarkupCompile.lref
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Team.g.cs
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Add_client.baml
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Change.baml
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Clients.baml
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\LogIn.baml
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Delete.baml
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Zadachi.baml
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Team.baml
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\bin\Debug\CRM.exe
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\bin\Debug\CRM.pdb
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Menu.g.cs
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\MainWindow.baml
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\Menu.baml
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\CRM.g.resources
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\CRM.Properties.Resources.resources
-E:\Универ\2 курс\SEM4\Курсач\miniCRM\CRM\obj\Debug\CRM.csproj.GenerateResource.Cache
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.exe
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.pdb
