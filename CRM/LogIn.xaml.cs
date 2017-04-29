@@ -30,5 +30,7 @@ namespace CRM
             mainWnd.Show();
             this.Close();
         }
+
+       
     }
 }
