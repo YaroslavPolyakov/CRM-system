@@ -75,6 +75,7 @@
     <Compile Include="Team.xaml.cs">
       <DependentUpon>Team.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="Zadachi.xaml.cs">
       <DependentUpon>Zadachi.xaml</DependentUpon>
     </Compile>

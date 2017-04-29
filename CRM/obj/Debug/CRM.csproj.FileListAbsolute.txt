@@ -28,3 +28,4 @@ E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.Properties.Re
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.csproj.GenerateResource.Cache
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.exe
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.pdb
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache

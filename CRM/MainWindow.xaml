@@ -3,12 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:CRM.ViewModel"
         xmlns:local="clr-namespace:CRM"
         mc:Ignorable="d"
         Title="CRM" Height="742.5" Width="1380.5" Background="#FF1F233E" MinHeight="600" MinWidth="800" MaxHeight="768" MaxWidth="1466"
         WindowStartupLocation="CenterScreen">
-    <!--Background="#FF1CB189"
-    -->
+    <Window.Resources>
+        <viewModel:MainWindowViewModel x:Key="viewModelSources"/>
+    </Window.Resources>
+    <Window.DataContext>
+        <Binding Source="{StaticResource viewModelSources}"></Binding>
+    </Window.DataContext>
+
     <Grid x:Name="Wnd">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
