@@ -20,30 +20,42 @@ namespace CRM
     /// </summary>
     public partial class Menu : UserControl
     {
-        public Menu()
+        UserControl u = null;
+        Grid g = null;
+       
+        public Menu(Grid rG,UserControl rU)
         {
             InitializeComponent();
+            u = rU;
+            g = rG;
         }
-    
+
 
         private void Button_Zadachi(object sender, RoutedEventArgs e)
         {
-            
+            u.Visibility = Visibility.Collapsed;
+            Zadachi Z = new Zadachi(ref g);
+            g.Children.Add(Z);
         }
 
         private void Button_Command(object sender, RoutedEventArgs e)
         {
-
+            u.Visibility = Visibility.Collapsed;
+            Team T = new Team(ref g);
+            g.Children.Add(T);
         }
 
         private void Button_Clients(object sender, RoutedEventArgs e)
         {
-
+            u.Visibility = Visibility.Collapsed;
+            Clients C = new Clients(ref g);
+            g.Children.Add(C);
         }
 
         private void Button_Param(object sender, RoutedEventArgs e)
         {
-
+            /*Param P = new Param();
+            P.show();*/
         }
     }
 }

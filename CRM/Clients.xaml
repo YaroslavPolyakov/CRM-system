@@ -5,14 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CRM"
              mc:Ignorable="d" 
-             d:DesignHeight="737"
-             x:Name="p_Clients" Width="1145">
-    <Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="87" VerticalAlignment="Top" Width="1139">
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Height="50" Margin="300,15,0,0" VerticalAlignment="Top" Width="180" FontSize="22" />
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Height="50" Margin="30,15,0,0" VerticalAlignment="Top" Width="180" FontSize="22"/>
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Height="50" Margin="30,15,0,0" VerticalAlignment="Top" Width="180" FontSize="22"/>
+             d:DesignHeight="600" d:DesignWidth="800"
+             x:Name="p_Clients" >
+    <Grid x:Name="G1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border Background="#FF505883" Margin="0,0,0,-4" Grid.Column="1" BorderThickness="2,0,0,0"/>
+        <StackPanel Orientation="Horizontal" Height="87" VerticalAlignment="Top" Grid.Column="1" Margin="5,9,-78,0">
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Add"/>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Change"/>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Del"/>
         </StackPanel>
-        <DataGrid HorizontalAlignment="Left" Margin="24,87,0,0" VerticalAlignment="Top" Height="612" Width="1080"/>
+        <DataGrid Margin="14,100,12,10" Grid.Column="1"/>
     </Grid>
 </UserControl>

@@ -20,10 +20,14 @@ namespace CRM
     /// </summary>
     public partial class Zadachi : UserControl
     {
-        public Zadachi()
+        public Zadachi(ref Grid rG)
         {
             InitializeComponent();
+            Menu m = new Menu(rG,p_Zadachi);
+            G1.Children.Add(m);
+                       
         }
+
 
         private void Button_Add(object sender, RoutedEventArgs e)
         {
@@ -42,5 +46,6 @@ namespace CRM
             Delete delete_Zad = new Delete();
             delete_Zad.Show();
         }
+       
     }
 }

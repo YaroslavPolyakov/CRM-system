@@ -23,6 +23,8 @@ namespace CRM
         public MainWindow()
         {
             InitializeComponent();
+            Zadachi Z = new Zadachi(ref G);
+            G.Children.Add(Z);
         }
 
        
