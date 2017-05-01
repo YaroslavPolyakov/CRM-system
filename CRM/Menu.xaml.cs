@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 namespace CRM
 {
     /// <summary>
@@ -31,17 +30,17 @@ namespace CRM
         }
 
 
-        private void Button_Zadachi(object sender, RoutedEventArgs e)
+        private void Button_Tasks(object sender, RoutedEventArgs e)
         {
             u.Visibility = Visibility.Collapsed;
-            Zadachi Z = new Zadachi(ref g);
-            g.Children.Add(Z);
+            Tasks T = new Tasks(ref g);
+            g.Children.Add(T);
         }
 
         private void Button_Command(object sender, RoutedEventArgs e)
         {
             u.Visibility = Visibility.Collapsed;
-            Team T = new Team(ref g);
+            Managers T = new Managers(ref g);
             g.Children.Add(T);
         }
 

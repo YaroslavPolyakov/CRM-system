@@ -35,9 +35,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +71,42 @@
     <Compile Include="Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BD\CatalogGroupManager.cs">
+      <DependentUpon>CRMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\CatalogPosition.cs">
+      <DependentUpon>CRMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\CatalogStatu.cs">
+      <DependentUpon>CRMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\CatalogTask.cs">
+      <DependentUpon>CRMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Client.cs">
+      <DependentUpon>CRMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\CRMModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\CRMModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\CRMModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Manager.cs">
+      <DependentUpon>CRMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Task.cs">
+      <DependentUpon>CRMModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Change.xaml.cs">
       <DependentUpon>Change.xaml</DependentUpon>
     </Compile>
@@ -72,11 +119,11 @@
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Team.xaml.cs">
-      <DependentUpon>Team.xaml</DependentUpon>
+    <Compile Include="Managers.xaml.cs">
+      <DependentUpon>Managers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Zadachi.xaml.cs">
-      <DependentUpon>Zadachi.xaml</DependentUpon>
+    <Compile Include="Tasks.xaml.cs">
+      <DependentUpon>Tasks.xaml</DependentUpon>
     </Compile>
     <Page Include="Add.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -117,11 +164,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Team.xaml">
+    <Page Include="Managers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Zadachi.xaml">
+    <Page Include="Tasks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,6 +191,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="BD\CRMModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CRMModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BD\CRMModel.edmx.diagram">
+      <DependentUpon>CRMModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -160,7 +215,21 @@
     <Resource Include="Resources\private.png" />
     <Resource Include="Resources\user.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="BD\CRMModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CRMModel.edmx</DependentUpon>
+      <LastGenOutput>CRMModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BD\CRMModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CRMModel.edmx</DependentUpon>
+      <LastGenOutput>CRMModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

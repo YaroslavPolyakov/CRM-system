@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace CRM
 {
     /// <summary>
@@ -19,9 +20,11 @@ namespace CRM
     /// </summary>
     public partial class LogIn : Window
     {
+
         public LogIn()
         {
             InitializeComponent();
+           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

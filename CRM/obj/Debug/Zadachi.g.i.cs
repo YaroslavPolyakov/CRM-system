@@ -38,12 +38,12 @@ namespace CRM {
     /// <summary>
     /// Zadachi
     /// </summary>
-    public partial class Zadachi : System.Windows.Controls.UserControl, System.Windows.Markup.IComponentConnector {
+    public partial class Tasks : System.Windows.Controls.UserControl, System.Windows.Markup.IComponentConnector {
         
         
         #line 9 "..\..\Zadachi.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal CRM.Zadachi p_Zadachi;
+        internal CRM.Tasks p_Zadachi;
         
         #line default
         #line hidden
@@ -87,7 +87,7 @@ namespace CRM {
             switch (connectionId)
             {
             case 1:
-            this.p_Zadachi = ((CRM.Zadachi)(target));
+            this.p_Zadachi = ((CRM.Tasks)(target));
             return;
             case 2:
             this.G1 = ((System.Windows.Controls.Grid)(target));

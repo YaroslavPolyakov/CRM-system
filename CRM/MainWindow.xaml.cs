@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
 
 namespace CRM
 {
@@ -20,11 +21,15 @@ namespace CRM
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
-            Zadachi Z = new Zadachi(ref G);
-            G.Children.Add(Z);
+            Managers M = new Managers(ref G);
+            G.Children.Add(M);
+
+            
+
         }
 
        
