@@ -7,16 +7,13 @@
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="CRM" Height="427.676" Width="447.221" Background="#FF1F233E" MinHeight="470" MinWidth="470">
     <Grid Width="450" Height="450" Background="#FF1F233E">
-        <Button Content="Вход" HorizontalAlignment="Center" Margin="90,364,90,0" VerticalAlignment="Top" Width="270" Height="49" Background="#FF00A8AC" FontFamily="Roboto Th" FontSize="18" Foreground="White" BorderBrush="{x:Null}" Click="Button_Click"/>
-        <Label Content="КОМПАНИЯ" HorizontalAlignment="Left" Margin="168,72,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Roboto Th"/>
-
-        <TextBox  HorizontalAlignment="Center" Height="50" Margin="91,180,90,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269" RenderTransformOrigin="0.5,0.5" VerticalContentAlignment="Center" Padding="10,0,0,0" FontSize="16" BorderBrush="{x:Null}" FontFamily="Roboto Th"/>
-        <PasswordBox HorizontalAlignment="Center" Margin="91,265,90,0" VerticalAlignment="Top" Width="269" Height="50" Password="" VerticalContentAlignment="Center" Padding="10,0,0,0" FontSize="16" BorderBrush="{x:Null}" FontFamily="Roboto Th"/>
-
-
+        
         <Image HorizontalAlignment="Left" Source="Resources/logo.png" Height="100" Margin="68,44,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label x:Name="label" Content="Логин" HorizontalAlignment="Left" Margin="195,148,0,0" VerticalAlignment="Top" FontSize="17"  Foreground="#FF1ECCD1" Width="59" RenderTransformOrigin="0.197,0.513" FontFamily="Roboto Th"/>
-        <Label x:Name="label_Copy" Content="Пароль" HorizontalAlignment="Left" Margin="191,233,0,0" VerticalAlignment="Top" FontSize="17" Foreground="#FF1ECCD1" Width="69" RenderTransformOrigin="0.197,0.513" FontFamily="Roboto Th"/>
-
+        <Label Content="КОМПАНИЯ" HorizontalAlignment="Left" Margin="168,72,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Roboto Th"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="195,148,0,0" VerticalAlignment="Top" FontSize="17"  Foreground="#FF1ECCD1" Width="59" RenderTransformOrigin="0.197,0.513" FontFamily="Roboto Th"/>
+        <TextBox x:Name="loginTextBox" HorizontalAlignment="Center" Height="50" Margin="91,180,90,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269" RenderTransformOrigin="0.5,0.5" VerticalContentAlignment="Center" Padding="10,0,0,0" FontSize="16" BorderBrush="{x:Null}" FontFamily="Roboto Th"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="191,233,0,0" VerticalAlignment="Top" FontSize="17" Foreground="#FF1ECCD1" Width="69" RenderTransformOrigin="0.197,0.513" FontFamily="Roboto Th"/>
+        <PasswordBox x:Name="passwordPasswordBox" HorizontalAlignment="Center" Margin="91,265,90,0" VerticalAlignment="Top" Width="269" Height="50" Password="" VerticalContentAlignment="Center" Padding="10,0,0,0" FontSize="16" BorderBrush="{x:Null}" FontFamily="Roboto Th"/>
+        <Button Content="Вход" HorizontalAlignment="Center" Margin="90,364,90,0" VerticalAlignment="Top" Width="270" Height="49" Background="#FF00A8AC" FontFamily="Roboto Th" FontSize="18" Foreground="White" BorderBrush="{x:Null}" Click="Button_Click"/>
     </Grid>
 </Window>

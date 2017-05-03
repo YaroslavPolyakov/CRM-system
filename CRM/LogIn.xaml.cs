@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CRM.BD;
 
 
 namespace CRM
@@ -29,9 +30,30 @@ namespace CRM
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWnd = new MainWindow();
-            mainWnd.Show();
-            this.Close();
+            /*using (CRMContext dbContext = new CRMContext())
+            {
+                var m = new BD.Managers();
+                m.Tasks
+                dbContext.Managers.Add();// добавление данных
+                dbContext.Entry(new object()).State = System.Data.Entity.EntityState.Deleted;// remove или этот способ
+                dbContext.SaveChanges();
+            }*/
+
+
+            using (CRMContext dbContext = new CRMContext())
+            {
+                foreach (var item in dbContext.Managers)
+                {
+                    if( item.Login == loginTextBox.Text && item.Password == passwordPasswordBox.Password)
+                        {
+                            MainWindow mainWnd = new MainWindow();
+                            mainWnd.Show();
+                            this.Close();
+                        }
+                }
+                
+            }
+            
         }
 
        

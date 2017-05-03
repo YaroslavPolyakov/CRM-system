@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CRM.BD;
 
 namespace CRM
 {
@@ -26,6 +27,7 @@ namespace CRM
             Menu m = new Menu(rG, p_Clients);
             G1.Children.Add(m);
 
+           
         }
         private void Button_Add(object sender, RoutedEventArgs e)
         {

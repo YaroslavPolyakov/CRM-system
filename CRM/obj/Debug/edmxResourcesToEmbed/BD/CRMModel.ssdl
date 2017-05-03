@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище CRMModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CatalogGroupManagers">
+    <Key>
+      <PropertyRef Name="Group" />
+    </Key>
+    <Property Name="Group" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatalogPositions">
+    <Key>
+      <PropertyRef Name="Position" />
+    </Key>
+    <Property Name="Position" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Pay" Type="money" />
+  </EntityType>
+  <EntityType Name="CatalogStatus">
+    <Key>
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Name="Status" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatalogTasks">
+    <Key>
+      <PropertyRef Name="Task" />
+    </Key>
+    <Property Name="Task" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Group" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="char" MaxLength="15" />
+    <Property Name="Email" Type="char" MaxLength="30" />
+    <Property Name="CheckingAccount" Type="char" MaxLength="10" />
+    <Property Name="Bank" Type="nvarchar" MaxLength="15" />
+    <Property Name="Director" Type="nvarchar" MaxLength="20" />
+    <Property Name="Accountant" Type="nvarchar" MaxLength="20" />
+    <Property Name="Info" Type="text" />
+  </EntityType>
+  <EntityType Name="Managers">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Login" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Position" Type="nvarchar" MaxLength="20" />
+    <Property Name="Group" Type="nvarchar" MaxLength="20" />
+    <Property Name="Address" Type="nvarchar" MaxLength="30" />
+    <Property Name="Phone" Type="char" MaxLength="15" />
+    <Property Name="Passport" Type="char" MaxLength="9" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="DateRecruitment" Type="date" />
+    <Property Name="Email" Type="char" MaxLength="20" />
+    <Property Name="Info" Type="text" />
+  </EntityType>
+  <EntityType Name="Tasks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Client" Type="nvarchar" MaxLength="15" />
+    <Property Name="Manager" Type="nvarchar" MaxLength="40" />
+    <Property Name="Task" Type="nvarchar" MaxLength="30" />
+    <Property Name="Info" Type="text" />
+    <Property Name="DateStart" Type="date" />
+    <Property Name="DateComplete" Type="date" />
+    <Property Name="Status" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <Association Name="FK_Задачи_Группы задач">
+    <End Role="CatalogTasks" Type="Self.CatalogTasks" Multiplicity="0..1" />
+    <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatalogTasks">
+        <PropertyRef Name="Task" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="Task" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Задачи_Клиенты">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
+    <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Name" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="Client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Задачи_Сотрудники1">
+    <End Role="Managers" Type="Self.Managers" Multiplicity="0..1" />
+    <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Managers">
+        <PropertyRef Name="Name" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="Manager" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Задачи_Справочник состояний">
+    <End Role="CatalogStatus" Type="Self.CatalogStatus" Multiplicity="0..1" />
+    <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatalogStatus">
+        <PropertyRef Name="Status" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Сотрудники_Справочник групп сотрудников">
+    <End Role="CatalogGroupManagers" Type="Self.CatalogGroupManagers" Multiplicity="0..1" />
+    <End Role="Managers" Type="Self.Managers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatalogGroupManagers">
+        <PropertyRef Name="Group" />
+      </Principal>
+      <Dependent Role="Managers">
+        <PropertyRef Name="Group" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Сотрудники_Справочник должностей">
+    <End Role="CatalogPositions" Type="Self.CatalogPositions" Multiplicity="0..1" />
+    <End Role="Managers" Type="Self.Managers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatalogPositions">
+        <PropertyRef Name="Position" />
+      </Principal>
+      <Dependent Role="Managers">
+        <PropertyRef Name="Position" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище CRMModelContainer">
+    <EntitySet Name="CatalogGroupManagers" EntityType="Self.CatalogGroupManagers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatalogPositions" EntityType="Self.CatalogPositions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatalogStatus" EntityType="Self.CatalogStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatalogTasks" EntityType="Self.CatalogTasks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Managers" EntityType="Self.Managers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Задачи_Группы задач" Association="Self.FK_Задачи_Группы задач">
+      <End Role="CatalogTasks" EntitySet="CatalogTasks" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Задачи_Клиенты" Association="Self.FK_Задачи_Клиенты">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Задачи_Сотрудники1" Association="Self.FK_Задачи_Сотрудники1">
+      <End Role="Managers" EntitySet="Managers" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Задачи_Справочник состояний" Association="Self.FK_Задачи_Справочник состояний">
+      <End Role="CatalogStatus" EntitySet="CatalogStatus" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Сотрудники_Справочник групп сотрудников" Association="Self.FK_Сотрудники_Справочник групп сотрудников">
+      <End Role="CatalogGroupManagers" EntitySet="CatalogGroupManagers" />
+      <End Role="Managers" EntitySet="Managers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Сотрудники_Справочник должностей" Association="Self.FK_Сотрудники_Справочник должностей">
+      <End Role="CatalogPositions" EntitySet="CatalogPositions" />
+      <End Role="Managers" EntitySet="Managers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

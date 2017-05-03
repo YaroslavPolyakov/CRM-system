@@ -18,15 +18,11 @@ E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.csproj.Genera
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.exe
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.pdb
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\EntityFramework.dll
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\EntityFramework.SqlServer.dll
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\EntityFramework.xml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\EntityFramework.SqlServer.xml
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\ru\EntityFramework.resources.dll
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Delete.g.cs
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM_Content.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add.baml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change.baml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Delete.baml
@@ -34,3 +30,5 @@ E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Tasks.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Tasks.baml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Managers.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Managers.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\EntityFramework.dll
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\EntityFramework.SqlServer.dll
