@@ -44,8 +44,8 @@ namespace CRM
 
         private void Button_Add(object sender, RoutedEventArgs e)
         {
-            Add add_Task = new Add();
-            add_Task.Show();
+            Add_Manager add_Manager = new Add_Manager();
+            add_Manager.Show();
         }
 
         private void Button_Change(object sender, RoutedEventArgs e)
