@@ -18,7 +18,18 @@
             <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Change"/>
             <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Del"/>
         </StackPanel>
-        <DataGrid Margin="14,100,12,10" Grid.Column="1">
+        <DataGrid x:Name="dg_Clients" Margin="14,100,12,10" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Имя" />
+                <DataGridTextColumn Binding="{Binding Address}" Header="Адрес" />
+                <DataGridTextColumn Binding="{Binding Phone}" Header="Телефон" />
+                <DataGridTextColumn Binding="{Binding Email}" Header="E-mail" />
+                <DataGridTextColumn Binding="{Binding CheckingAccount}" Header="Расчетный счет" />
+                <DataGridTextColumn Binding="{Binding Bank}" Header="Bank" />
+                <DataGridTextColumn Binding="{Binding Director}" Header="Директор" />
+                <DataGridTextColumn Binding="{Binding Accountant}" Header="Бухгалтер" />
+                <DataGridTextColumn Binding="{Binding Info}" Header="Информация" />
+            </DataGrid.Columns>
         </DataGrid>
         <Label Content="Clients" Grid.Column="1" HorizontalAlignment="Left" Margin="268,340,0,0" VerticalAlignment="Top"/>
     </Grid>

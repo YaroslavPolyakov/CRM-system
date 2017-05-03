@@ -78,7 +78,6 @@
     <Compile Include="BD\Clients.cs" />
     <Compile Include="BD\CRMContext.cs" />
     <Compile Include="BD\Managers.cs" />
-    <Compile Include="BD\sysdiagrams.cs" />
     <Compile Include="BD\Tasks.cs" />
     <Compile Include="Change.xaml.cs">
       <DependentUpon>Change.xaml</DependentUpon>

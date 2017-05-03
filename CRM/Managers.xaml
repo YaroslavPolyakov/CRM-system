@@ -26,7 +26,7 @@
                 <DataGridTextColumn Binding="{Binding Position}" Header="Должность" />
                 <DataGridTextColumn Binding="{Binding Group}" Header="Группа" />
                 <DataGridTextColumn Binding="{Binding Address}" Header="Адрес" />
-                <DataGridTextColumn Binding="{Binding Phone}" Header=s"Телефон" />
+                <DataGridTextColumn Binding="{Binding Phone}" Header="Телефон" />
                 <DataGridTextColumn Binding="{Binding Passport}" Header="Пасспорт" />
                 <DataGridTextColumn Binding="{Binding DateOfBirth}" Header="Дата рождения" />
                 <DataGridTextColumn Binding="{Binding DateRecruitment}" Header="Дата приема на работу" />

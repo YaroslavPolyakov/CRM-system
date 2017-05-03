@@ -27,7 +27,14 @@ namespace CRM
             Menu m = new Menu(rG, p_Clients);
             G1.Children.Add(m);
 
-           
+            using (CRMContext dbContext = new CRMContext())
+            {
+                foreach (var item in dbContext.Clients)
+                {
+                    dg_Clients.Items.Add(item);
+                }
+            }
+
         }
         private void Button_Add(object sender, RoutedEventArgs e)
         {

@@ -9,25 +9,24 @@
     <Grid>
         <Label x:Name="label" FontFamily="Roboto Th" Foreground="White" Content="Дата исполения задачи" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="143"/>
         <Label x:Name="label1" FontFamily="Roboto Th" Foreground="White" Content="Описание задания" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="listBox" FontFamily="Roboto Th" Foreground="White" HorizontalAlignment="Left" Height="69" Margin="10,81,0,0" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="listBox" FontFamily="Roboto Th"  HorizontalAlignment="Left" Height="69" Margin="10,81,0,0" VerticalAlignment="Top" Width="200"/>
         <Label x:Name="label2" FontFamily="Roboto Th" Foreground="White" Content="Результаты выполнения" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="listBox1" FontFamily="Roboto Th" Foreground="White" HorizontalAlignment="Left" Height="95" Margin="10,181,0,0" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="listBox1" FontFamily="Roboto Th"  HorizontalAlignment="Left" Height="95" Margin="10,181,0,0" VerticalAlignment="Top" Width="200"/>
         <Label x:Name="label3" FontFamily="Roboto Th" Foreground="White" Content="Дата постановки задачи" HorizontalAlignment="Left" Margin="266,10,0,0" VerticalAlignment="Top" Height="33" Width="145" RenderTransformOrigin="0.479,0.244"/>
         <Label x:Name="label4" FontFamily="Roboto Th" Foreground="White" Content="Срок исполнения" HorizontalAlignment="Left" Margin="266,37,0,0" VerticalAlignment="Top"/>
         <DatePicker HorizontalAlignment="Left" Margin="153,11,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" FontFamily="Roboto Th" Foreground="White" HorizontalAlignment="Left" Height="23" Margin="389,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="86"/>
+        <TextBox x:Name="textBox" FontFamily="Roboto Th"  HorizontalAlignment="Left" Height="23" Margin="389,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="86"/>
         <Label x:Name="label5" FontFamily="Roboto Th" Foreground="White" Content="дней" HorizontalAlignment="Left" Margin="475,37,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.255,0.264"/>
         <Label x:Name="label6" FontFamily="Roboto Th" Foreground="White" Content="Исполнитель" HorizontalAlignment="Left" Margin="266,95,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label7" FontFamily="Roboto Th" Foreground="White" Content="Клиент" HorizontalAlignment="Left" Margin="266,119,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label8" FontFamily="Roboto Th" Foreground="White" Content="Задача" HorizontalAlignment="Left" Margin="266,142,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label9" FontFamily="Roboto Th" Foreground="White" Content="Состояние" HorizontalAlignment="Left" Margin="266,163,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="listBox2" FontFamily="Roboto Th" Foreground="White" HorizontalAlignment="Left" Height="18" Margin="402,126,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="listBox3" FontFamily="Roboto Th" Foreground="White" HorizontalAlignment="Left" Height="17" Margin="402,149,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="listBox4" FontFamily="Roboto Th" Foreground="White" HorizontalAlignment="Left" Height="18" Margin="402,171,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="listBox5" FontFamily="Roboto Th" Foreground="White" HorizontalAlignment="Left" Height="19" Margin="402,102,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="listBox2" FontFamily="Roboto Th"  HorizontalAlignment="Left" Height="18" Margin="402,126,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="listBox3" FontFamily="Roboto Th"  HorizontalAlignment="Left" Height="17" Margin="402,149,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="listBox4" FontFamily="Roboto Th"  HorizontalAlignment="Left" Height="18" Margin="402,171,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="listBox5" FontFamily="Roboto Th"  HorizontalAlignment="Left" Height="19" Margin="402,102,0,0" VerticalAlignment="Top" Width="100"/>
         <Button x:Name="button" Background="#FF00A8AC" FontFamily="Roboto Th" Foreground="White" Content="Оформить" HorizontalAlignment="Left" Margin="331,251,0,0" VerticalAlignment="Top" Width="88" Height="28"/>
         <Button x:Name="button1" Background="#FF00A8AC" FontFamily="Roboto Th" Foreground="White" Content="Отмена" HorizontalAlignment="Left" Margin="424,251,0,0" VerticalAlignment="Top" Width="86" Height="28"/>
         <DatePicker HorizontalAlignment="Left" Margin="411,11,0,0" VerticalAlignment="Top"/>
-
     </Grid>
 </Window>
