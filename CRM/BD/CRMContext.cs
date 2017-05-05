@@ -8,7 +8,7 @@ namespace CRM.BD
     public partial class CRMContext : DbContext
     {
         public CRMContext()
-            : base("name=CRMContext2")
+            : base("name=CRMContext1")
         {
         }
 
