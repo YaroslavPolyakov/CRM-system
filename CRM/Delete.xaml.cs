@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CRM.BD;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,34 @@ namespace CRM
     /// </summary>
     public partial class Delete : Window
     {
+        
         public Delete()
         {
             InitializeComponent();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+               /* using (CRMContext dbContext = new CRMContext())
+                {
+                    BD.Tasks t = new BD.Tasks();
+                    t.Id = Id;
+                    foreach (var item in dbContext.Tasks)
+                    {
+                        if (item.Id == t.Id)
+                        {
+                            dbContext.Tasks.Remove(item);
+                            dbContext.SaveChanges();
+                        }
+                    }
+                }
+            */
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

@@ -50,6 +50,10 @@ namespace CRM
                             mainWnd.Show();
                             this.Close();
                         }
+                    else
+                    {
+                        popup1.IsOpen = true;
+                    }
                 }
                 
             }

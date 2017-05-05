@@ -8,7 +8,7 @@
         Title="Удаление"  Height="147.439" Width="261.952" Background="#FF505883" ResizeMode="NoResize">
     <Grid>
         <Label x:Name="label" Foreground="White" FontFamily="Roboto Th" Content="Удалить запись?" HorizontalAlignment="Left" Margin="79,26,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Background="#FF00A8AC" FontFamily="Roboto Th" Foreground="White" Content="Да" HorizontalAlignment="Left" Margin="32,69,0,0" VerticalAlignment="Top" Width="88" Height="28"/>
-        <Button x:Name="button1" Background="#FF00A8AC" FontFamily="Roboto Th" Foreground="White" Content="Нет" HorizontalAlignment="Left" Margin="141,69,0,0" VerticalAlignment="Top" Width="88" Height="28"/>
+        <Button x:Name="button" Background="#FF00A8AC" FontFamily="Roboto Th" Foreground="White" Content="Да" HorizontalAlignment="Left" Margin="32,69,0,0" VerticalAlignment="Top" Width="88" Height="28" Click="button_Click"/>
+        <Button x:Name="button1" Background="#FF00A8AC" FontFamily="Roboto Th" Foreground="White" Content="Нет" HorizontalAlignment="Left" Margin="141,69,0,0" VerticalAlignment="Top" Width="88" Height="28" Click="button1_Click"/>
     </Grid>
 </Window>
