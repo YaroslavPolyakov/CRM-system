@@ -41,21 +41,18 @@ namespace CRM
         {
             if (del_obj != null)
             {
-                if (del_obj is BD.Tasks)
-                {
                     using (CRMContext dbContext = new CRMContext())
                     {
                         dbContext.Entry(del_obj).State = System.Data.Entity.EntityState.Deleted;
                         dbContext.SaveChanges();
                     }
-                }
             }
             this.Close(); 
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            
+            this.Close();   
         }
     }
 }

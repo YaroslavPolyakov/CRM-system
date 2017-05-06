@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CRM.BD;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,22 +20,67 @@ namespace CRM
     /// </summary>
     public partial class Change_Manager : Window
     {
+        public BD.Managers del_manager = null;
         public Change_Manager(BD.Managers manager)
         {
             InitializeComponent();
-            tb_name.Text = manager.Name;
+            using (CRMContext dbContext = new CRMContext())
+            {
+                foreach (var item in dbContext.CatalogPositions)
+                {
+                    cb_position.Items.Add(item.Position);
+                }
+                foreach (var item in dbContext.CatalogGroupManagers)
+                {
+                    cb_group.Items.Add(item.Group);
+                }
+                tb_name.Text = manager.Name;
+                tb_login.Text = manager.Login;
+                tb_password.Text = manager.Password;
+                cb_position.SelectedItem = manager.Position;
+                cb_group.SelectedItem = manager.Group;
+                tb_address.Text = manager.Address;
+                tb_phone.Text = manager.Phone;
+                tb_passport.Text = manager.Passport;
+                d_dateofbirth.SelectedDate = manager.DateOfBirth;
+                d_daterecruitment.SelectedDate = manager.DateRecruitment;
+                tb_email.Text = manager.Email;
+                tb_info.Text = manager.Info;
+                del_manager = manager;
+            }
             
+
         }
         
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            using (CRMContext dbContext = new CRMContext())
+            {
+                var manager = new BD.Managers();
+                manager.Name = tb_name.Text;
+                manager.Login = tb_login.Text;
+                manager.Password = tb_password.Text;
+                manager.Position = cb_position.SelectedItem.ToString();
+                manager.Group = cb_group.SelectedItem.ToString();
+                manager.Address = tb_address.Text;
+                manager.Phone = tb_phone.Text;
+                manager.Passport = tb_passport.Text;
+                manager.DateOfBirth = d_dateofbirth.SelectedDate;
+                manager.DateRecruitment = d_daterecruitment.SelectedDate;
+                manager.Email = tb_email.Text;
+                manager.Info = tb_info.Text;
+                dbContext.Entry(del_manager).State = System.Data.Entity.EntityState.Deleted;
+                dbContext.Managers.Add(manager);
+                dbContext.SaveChanges();
+            }
+            this.Close();
             
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

@@ -43,7 +43,7 @@ namespace CRM
                 var manager = new BD.Managers();
                 manager.Name = tb_name.Text;
                 manager.Login = tb_login.Text;
-                manager.Password = tb_login.Text;
+                manager.Password = tb_password.Text;
                 manager.Position = cb_position.SelectedItem.ToString();
                 manager.Group = cb_group.SelectedItem.ToString();
                 manager.Address = tb_address.Text;
@@ -56,6 +56,12 @@ namespace CRM
                 dbContext.Managers.Add(manager);
                 dbContext.SaveChanges();
             }
+            this.Close();
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
