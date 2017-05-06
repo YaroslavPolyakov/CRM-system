@@ -51,7 +51,7 @@ namespace CRM
 
         private void Button_Del(object sender, RoutedEventArgs e)
         {
-            Delete delete_Zad = new Delete();
+            Delete delete_Zad = new Delete((BD.Tasks)dg_Tasks.SelectedItem);
             delete_Zad.Show();
         }
        

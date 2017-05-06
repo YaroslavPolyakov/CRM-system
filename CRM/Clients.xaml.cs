@@ -50,7 +50,7 @@ namespace CRM
 
         private void Button_Del(object sender, RoutedEventArgs e)
         {
-            Delete delete_Zad = new Delete();
+            Delete delete_Zad = new Delete((BD.Clients)dg_Clients.SelectedItem);
             delete_Zad.Show();
         }
     }

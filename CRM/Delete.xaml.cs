@@ -20,29 +20,37 @@ namespace CRM
     /// </summary>
     public partial class Delete : Window
     {
-        
-        public Delete()
+        object del_obj;
+        public Delete(BD.Tasks t)
         {
             InitializeComponent();
+            del_obj = t;
         }
-
+        public Delete(BD.Managers m)
+        {
+            InitializeComponent();
+            del_obj = m;
+        }
+        public Delete(BD.Clients c)
+        {
+            InitializeComponent();
+            del_obj = c;
+        }
+        
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
-               /* using (CRMContext dbContext = new CRMContext())
+            if (del_obj != null)
+            {
+                if (del_obj is BD.Tasks)
                 {
-                    BD.Tasks t = new BD.Tasks();
-                    t.Id = Id;
-                    foreach (var item in dbContext.Tasks)
+                    using (CRMContext dbContext = new CRMContext())
                     {
-                        if (item.Id == t.Id)
-                        {
-                            dbContext.Tasks.Remove(item);
-                            dbContext.SaveChanges();
-                        }
+                        dbContext.Entry(del_obj).State = System.Data.Entity.EntityState.Deleted;
+                        dbContext.SaveChanges();
                     }
                 }
-            */
+            }
+            this.Close(); 
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
