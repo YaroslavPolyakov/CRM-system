@@ -23,6 +23,25 @@ namespace CRM
         public Add()
         {
             InitializeComponent();
+            using (CRMContext dbContext = new CRMContext())
+            {
+                foreach (var item in dbContext.CatalogTasks)
+                {
+                    l_task.Items.Add(item.Task);
+                }
+                foreach (var item in dbContext.CatalogStatus)
+                {
+                    l_status.Items.Add(item.Status);
+                }
+                foreach (var item in dbContext.Managers)
+                {
+                    l_manager.Items.Add(item.Name);
+                }
+                foreach (var item in dbContext.Clients)
+                {
+                    l_client.Items.Add(item.Name);
+                }
+            }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -41,6 +60,11 @@ namespace CRM
                 dbContext.Tasks.Add(task);
                 dbContext.SaveChanges();
             }
+        }
+
+        private void l_status_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
