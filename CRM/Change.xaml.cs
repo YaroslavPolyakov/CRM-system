@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CRM.BD;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,64 @@ namespace CRM
     /// </summary>
     public partial class Change : Window
     {
-        public Change()
+        public BD.Tasks del_task = null;
+        public Change(BD.Tasks task)
         {
             InitializeComponent();
+            using (CRMContext dbContext = new CRMContext())
+            {
+                foreach (var item in dbContext.CatalogTasks)
+                {
+                    l_task.Items.Add(item.Task);
+                }
+                foreach (var item in dbContext.CatalogStatus)
+                {
+                    l_status.Items.Add(item.Status);
+                }
+                foreach (var item in dbContext.Managers)
+                {
+                    l_manager.Items.Add(item.Name);
+                }
+                foreach (var item in dbContext.Clients)
+                {
+                    l_client.Items.Add(item.Name);
+                }
+                l_id.Text = task.Id.ToString();
+                l_manager.Text = task.Manager;
+                l_info.Text = task.Info;
+                l_status.Text = task.Status;
+                l_client.Text = task.Client;
+                l_task.Text = task.Task;
+                d_complete.SelectedDate = task.DateComplete;
+                d_start.SelectedDate = task.DateStart;
+                del_task = task;               
+            }
+            
+            
+        }
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            using (CRMContext dbContext = new CRMContext())
+            {
+                
+                var task = new BD.Tasks();
+                task.Id = Convert.ToInt32(l_id.Text);
+                task.Client = l_client.Text;
+                task.Manager = l_manager.Text;
+                task.Task = l_task.Text;
+                task.Info = l_info.Text;
+                task.Status = l_status.Text;
+                task.DateStart = d_start.SelectedDate;
+                task.DateComplete = d_complete.SelectedDate;
+                dbContext.Entry(del_task).State = System.Data.Entity.EntityState.Deleted;
+                dbContext.Tasks.Add(task);
+                dbContext.SaveChanges();
+            }
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

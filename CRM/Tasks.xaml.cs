@@ -45,7 +45,7 @@ namespace CRM
 
         private void Button_Change(object sender, RoutedEventArgs e)
         {
-            Change change_Zad = new Change();
+            Change change_Zad = new Change ((BD.Tasks)dg_Tasks.SelectedItem);
             change_Zad.Show();
         }
 

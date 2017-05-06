@@ -44,8 +44,8 @@ namespace CRM
 
         private void Button_Change(object sender, RoutedEventArgs e)
         {
-            Change change_Zad = new Change();
-            change_Zad.Show();
+            //Change change_Zad = new Change();
+            //change_Zad.Show();
         }
 
         private void Button_Del(object sender, RoutedEventArgs e)

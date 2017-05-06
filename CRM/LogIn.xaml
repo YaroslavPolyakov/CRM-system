@@ -35,7 +35,10 @@
                    AllowsTransparency="True" 
                    PopupAnimation="Slide"
                    HorizontalOffset="453">
-                <TextBlock Background="#FF00A8AC" Foreground="White">
+                <TextBlock TextAlignment="Center"
+                           FontSize="14"
+                           Background="#FF00A8AC" 
+                           Foreground="White">
                     Неверный логин или пароль
                 </TextBlock>
             </Popup>

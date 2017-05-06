@@ -31,13 +31,12 @@ namespace CRM
 
 
             using (CRMContext dbContext = new CRMContext())
-           {
+            {
                 foreach (var item in dbContext.Managers)
                 {
                     dg_Managers.Items.Add(item);
                 }
             }
-
 
         }
 
@@ -50,7 +49,8 @@ namespace CRM
 
         private void Button_Change(object sender, RoutedEventArgs e)
         {
-            Change change_Task = new Change();
+            
+            Change_Manager change_Task = new Change_Manager((BD.Managers)dg_Managers.SelectedItem);
             change_Task.Show();
         }
 
