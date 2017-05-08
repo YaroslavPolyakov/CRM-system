@@ -20,11 +20,7 @@ E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.pdb
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\EntityFramework.xml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\bin\Debug\EntityFramework.SqlServer.xml
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add.g.cs
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Delete.g.cs
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add.baml
-E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change.baml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Delete.baml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Tasks.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Tasks.baml
@@ -68,3 +64,13 @@ h:\Univer\Учеба\Курсач\miniCRM\CRM\obj\Debug\CRM.Properties.Resources
 h:\Univer\Учеба\Курсач\miniCRM\CRM\obj\Debug\CRM.csproj.GenerateResource.Cache
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add_Manager.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add_Manager.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change_Manager.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change_Manager.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add_Task.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change_Task.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add_Task.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change_Task.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add_Client.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change_Client.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add_Client.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change_Client.baml

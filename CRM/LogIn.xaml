@@ -31,10 +31,10 @@
                    StaysOpen="False" 
                    Placement="Relative" 
                    MinHeight="25" 
-                   MinWidth="455" 
+                   MinWidth="453" 
                    AllowsTransparency="True" 
                    PopupAnimation="Slide"
-                   HorizontalOffset="453">
+                   HorizontalOffset="-1">
                 <TextBlock TextAlignment="Center"
                            FontSize="14"
                            Background="#FF00A8AC" 

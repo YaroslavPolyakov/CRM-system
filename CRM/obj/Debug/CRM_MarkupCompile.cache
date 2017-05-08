@@ -4,30 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< Updated upstream
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\
-=======
-H:\Univer\Учеба\Курсач\miniCRM\CRM\obj\Debug\
->>>>>>> Stashed changes
 CRM
 none
 false
 DEBUG;TRACE
-<<<<<<< Updated upstream
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\App.xaml
-10-1137753500
+13-799241121
 
-221521741785
+25-842869728
 201399551846
-Add_Manager.xaml;Add.xaml;Change.xaml;Clients.xaml;LogIn.xaml;MainWindow.xaml;Delete.xaml;Menu.xaml;Managers.xaml;Tasks.xaml;
-=======
-H:\Univer\Учеба\Курсач\miniCRM\CRM\App.xaml
-9617626238
-
-21-545201403
-20-71423432
-Add.xaml;Change.xaml;Clients.xaml;LogIn.xaml;MainWindow.xaml;Delete.xaml;Menu.xaml;Managers.xaml;Tasks.xaml;
->>>>>>> Stashed changes
+Add_Manager.xaml;Add_Client.xaml;Add_Task.xaml;Change_Manager.xaml;Change_Client.xaml;Change_Task.xaml;Clients.xaml;LogIn.xaml;MainWindow.xaml;Delete.xaml;Menu.xaml;Managers.xaml;Tasks.xaml;
 
 False
 
