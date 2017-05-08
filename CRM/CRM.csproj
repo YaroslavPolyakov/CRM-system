@@ -85,6 +85,9 @@
     <Compile Include="BD\CRMContext.cs" />
     <Compile Include="BD\Managers.cs" />
     <Compile Include="BD\Tasks.cs" />
+    <Compile Include="Calendar.xaml.cs">
+      <DependentUpon>Calendar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Change_Manager.xaml.cs">
       <DependentUpon>Change_Manager.xaml</DependentUpon>
     </Compile>
@@ -120,6 +123,10 @@
     <Page Include="Add_Task.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calendar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Change_Manager.xaml">
       <Generator>MSBuild:Compile</Generator>

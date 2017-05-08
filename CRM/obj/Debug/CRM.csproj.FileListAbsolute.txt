@@ -74,3 +74,5 @@ E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add_Client.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change_Client.g.cs
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Add_Client.baml
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Change_Client.baml
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Calendar.g.cs
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\Calendar.baml
