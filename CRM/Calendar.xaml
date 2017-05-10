@@ -15,7 +15,7 @@
         <Border Background="#FF505883" Margin="0,0,0,-4" Grid.Column="1" BorderThickness="2,0,0,0"/>
         <StackPanel Orientation="Horizontal" Height="87" VerticalAlignment="Top" Grid.Column="1" Margin="5,9,-78,0">
         </StackPanel>
-        <DataGrid x:Name="dg_Managers"  SelectedItem="{Binding Selected, Mode=TwoWay}" Margin="14,100,12,10" Grid.Column="1">
+        <DataGrid x:Name="dg_Managers"  Margin="14,100,12,10" Grid.Column="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}" Header="ФИО"/>
                 <DataGridTextColumn Binding="{Binding Login}" Header="Логин"/>
