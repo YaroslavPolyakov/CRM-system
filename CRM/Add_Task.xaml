@@ -11,7 +11,7 @@
         <Label x:Name="label1" FontFamily="Roboto Th" Foreground="White" Content="Дополнительная &#xD;&#xA;информация" HorizontalAlignment="Left" Margin="13,224,0,0" VerticalAlignment="Top" Height="46" Width="105"/>
         <ComboBox x:Name="l_task" FontFamily="Roboto Th" HorizontalAlignment="Left" Height="19" Margin="123,106,0,0" VerticalAlignment="Top" Width="181"/>
         <Label x:Name="label2" FontFamily="Roboto Th" Foreground="White" Content="Статус" HorizontalAlignment="Left" Margin="13,133,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.351,0.315"/>
-        <ComboBox x:Name="l_status" FontFamily="Roboto Th"  HorizontalAlignment="Left" Height="19" Margin="123,134,0,0" VerticalAlignment="Top" Width="183" SelectionChanged="l_status_SelectionChanged"/>
+        <ComboBox x:Name="l_status" FontFamily="Roboto Th"  HorizontalAlignment="Left" Height="19" Margin="123,134,0,0" VerticalAlignment="Top" Width="183"/>
         <Label x:Name="label3" FontFamily="Roboto Th" Foreground="White" Content="Дата завершения задачи" HorizontalAlignment="Left" Margin="13,188,0,0" VerticalAlignment="Top" Height="23" Width="145" RenderTransformOrigin="0.479,0.244"/>
         <DatePicker x:Name="d_start" HorizontalAlignment="Left" Margin="179,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.754,3.496" Height="23" Width="127"/>
         <Label x:Name="label6" FontFamily="Roboto Th" Foreground="White" Content="ID" HorizontalAlignment="Left" Margin="13,13,0,0" VerticalAlignment="Top"/>

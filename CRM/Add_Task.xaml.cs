@@ -63,9 +63,6 @@ namespace CRM
             this.Close();
         }
 
-        private void l_status_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            this.Close();
-        }
+       
     }
 }

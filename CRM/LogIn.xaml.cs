@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -28,23 +29,21 @@ namespace CRM
            
         }
 
+
+        
+
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            /*using (CRMContext dbContext = new CRMContext())
-            {
-                var m = new BD.Managers();
-                m.Tasks
-                dbContext.Managers.Add();// добавление данных
-                dbContext.Entry(new object()).State = System.Data.Entity.EntityState.Deleted;// remove или этот способ
-                dbContext.SaveChanges();
-            }*/
+            
 
 
             using (CRMContext dbContext = new CRMContext())
             {
                 foreach (var item in dbContext.Managers)
                 {
-                    if( item.Login == loginTextBox.Text && item.Password == passwordPasswordBox.Password)
+                    if(Hash.PasswordsMatch(Hash.EncryptPassword(loginTextBox.Text,passwordPasswordBox.Password),item.Password))
                         {
                             MainWindow mainWnd = new MainWindow();
                             mainWnd.Show();

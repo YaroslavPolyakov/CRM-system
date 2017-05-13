@@ -15,21 +15,12 @@
         <Border Background="#FF505883" Margin="0,0,0,-4" Grid.Column="1" BorderThickness="2,0,0,0"/>
         <StackPanel Orientation="Horizontal" Height="87" VerticalAlignment="Top" Grid.Column="1" Margin="5,9,-78,0">
         </StackPanel>
-        <DataGrid x:Name="dg_Managers"  Margin="14,100,12,10" Grid.Column="1">
+        <DataGrid x:Name="dg_Calendar"  Margin="14,100,12,10" Grid.Column="1">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Name}" Header="ФИО"/>
-                <DataGridTextColumn Binding="{Binding Login}" Header="Логин"/>
-                <DataGridTextColumn Binding="{Binding Password}" Header="Пароль" />
-                <DataGridTextColumn Binding="{Binding Position}" Header="Должность" />
-                <DataGridTextColumn Binding="{Binding Group}" Header="Группа" />
-                <DataGridTextColumn Binding="{Binding Address}" Header="Адрес" />
-                <DataGridTextColumn Binding="{Binding Phone}" Header="Телефон" />
-                <DataGridTextColumn Binding="{Binding Passport}" Header="Пасспорт" />
-                <DataGridTextColumn Binding="{Binding DateOfBirth}" Header="Дата рождения" />
-                <DataGridTextColumn Binding="{Binding DateRecruitment}" Header="Дата приема на работу" />
-                <DataGridTextColumn Binding="{Binding Email}" Header="E-mail"/>
-                <DataGridTextColumn Binding="{Binding Info}" Header="Информация"/>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Менеджер"/>
             </DataGrid.Columns>
+            <ScrollBar Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="177,580,0,0" VerticalAlignment="Top"/>
         </DataGrid>
+        
     </Grid>
 </UserControl>

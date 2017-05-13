@@ -8,7 +8,7 @@ namespace CRM.BD
     public partial class CRMContext : DbContext
     {
         public CRMContext()
-            : base("name=CRMContext1")
+            : base("name=CRMContext")
         {
         }
 
@@ -18,6 +18,7 @@ namespace CRM.BD
         public virtual DbSet<CatalogTasks> CatalogTasks { get; set; }
         public virtual DbSet<Clients> Clients { get; set; }
         public virtual DbSet<Managers> Managers { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tasks> Tasks { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -49,6 +50,10 @@ namespace CRM.BD
                 .HasMany(e => e.Tasks)
                 .WithOptional(e => e.Clients)
                 .HasForeignKey(e => e.Client);
+
+            modelBuilder.Entity<Managers>()
+                .Property(e => e.Password)
+                .IsFixedLength();
 
             modelBuilder.Entity<Managers>()
                 .Property(e => e.Phone)
