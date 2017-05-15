@@ -38,20 +38,20 @@ namespace CRM
         }
         private void Button_Add(object sender, RoutedEventArgs e)
         {
-            Add add_Zad = new Add();
-            add_Zad.Show();
+            Add_Client add_client = new Add_Client();
+            add_client.Show();
         }
 
         private void Button_Change(object sender, RoutedEventArgs e)
         {
-            //Change change_Zad = new Change();
-            //change_Zad.Show();
+            Change_Client change_client = new Change_Client((BD.Clients)dg_Clients.SelectedItem);
+            change_client.Show();
         }
 
         private void Button_Del(object sender, RoutedEventArgs e)
         {
-            Delete delete_Zad = new Delete((BD.Clients)dg_Clients.SelectedItem);
-            delete_Zad.Show();
+            Delete delete_client = new Delete((BD.Clients)dg_Clients.SelectedItem);
+            delete_client.Show();
         }
     }
 }

@@ -22,7 +22,6 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}" Header="ФИО"/>
                 <DataGridTextColumn Binding="{Binding Login}" Header="Логин"/>
-                <DataGridTextColumn Binding="{Binding Password}" Header="Пароль" />
                 <DataGridTextColumn Binding="{Binding Position}" Header="Должность" />
                 <DataGridTextColumn Binding="{Binding Group}" Header="Группа" />
                 <DataGridTextColumn Binding="{Binding Address}" Header="Адрес" />
@@ -34,6 +33,5 @@
                 <DataGridTextColumn Binding="{Binding Info}" Header="Информация"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label Content="Managers" Grid.Column="1" HorizontalAlignment="Left" Margin="226,335,0,0" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>

@@ -71,8 +71,11 @@
     <Compile Include="Add_Manager.xaml.cs">
       <DependentUpon>Add_Manager.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Add.xaml.cs">
-      <DependentUpon>Add.xaml</DependentUpon>
+    <Compile Include="Add_Client.xaml.cs">
+      <DependentUpon>Add_Client.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Task.xaml.cs">
+      <DependentUpon>Add_Task.xaml</DependentUpon>
     </Compile>
     <Compile Include="BD\CatalogGroupManagers.cs" />
     <Compile Include="BD\CatalogPositions.cs" />
@@ -81,12 +84,19 @@
     <Compile Include="BD\Clients.cs" />
     <Compile Include="BD\CRMContext.cs" />
     <Compile Include="BD\Managers.cs" />
+    <Compile Include="BD\sysdiagrams.cs" />
     <Compile Include="BD\Tasks.cs" />
+    <Compile Include="Calendar.xaml.cs">
+      <DependentUpon>Calendar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Change_Manager.xaml.cs">
       <DependentUpon>Change_Manager.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Change.xaml.cs">
-      <DependentUpon>Change.xaml</DependentUpon>
+    <Compile Include="Change_Client.xaml.cs">
+      <DependentUpon>Change_Client.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Change_Task.xaml.cs">
+      <DependentUpon>Change_Task.xaml</DependentUpon>
     </Compile>
     <Compile Include="Clients.xaml.cs">
       <DependentUpon>Clients.xaml</DependentUpon>
@@ -94,6 +104,7 @@
     <Compile Include="Delete.xaml.cs">
       <DependentUpon>Delete.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Hash.cs" />
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
@@ -110,15 +121,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Add.xaml">
+    <Page Include="Add_Client.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Add_Task.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calendar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Change_Manager.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Change.xaml">
+    <Page Include="Change_Client.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Change_Task.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

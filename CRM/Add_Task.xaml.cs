@@ -60,11 +60,9 @@ namespace CRM
                 dbContext.Tasks.Add(task);
                 dbContext.SaveChanges();
             }
+            this.Close();
         }
 
-        private void l_status_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+       
     }
 }

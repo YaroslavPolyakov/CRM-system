@@ -1,6 +1,8 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -36,6 +38,9 @@ namespace CRM
             }
         }
 
+       
+
+
         private void button_Click(object sender, RoutedEventArgs e)
         {
             using (CRMContext dbContext = new CRMContext())
@@ -43,7 +48,7 @@ namespace CRM
                 var manager = new BD.Managers();
                 manager.Name = tb_name.Text;
                 manager.Login = tb_login.Text;
-                manager.Password = tb_password.Text;
+                manager.Password = Hash.EncryptPassword(tb_login.Text, tb_password.Text);
                 manager.Position = cb_position.SelectedItem.ToString();
                 manager.Group = cb_group.SelectedItem.ToString();
                 manager.Address = tb_address.Text;
@@ -55,6 +60,7 @@ namespace CRM
                 manager.Info = tb_info.Text;
                 dbContext.Managers.Add(manager);
                 dbContext.SaveChanges();
+                
             }
             this.Close();
         }

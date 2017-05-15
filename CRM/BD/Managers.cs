@@ -23,8 +23,8 @@ namespace CRM.BD
         public string Login { get; set; }
 
         [Required]
-        [StringLength(20)]
-        public string Password { get; set; }
+        [MaxLength(50)]
+        public byte[] Password { get; set; }
 
         [StringLength(20)]
         public string Position { get; set; }

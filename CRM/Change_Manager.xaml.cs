@@ -36,7 +36,6 @@ namespace CRM
                 }
                 tb_name.Text = manager.Name;
                 tb_login.Text = manager.Login;
-                tb_password.Text = manager.Password;
                 cb_position.SelectedItem = manager.Position;
                 cb_group.SelectedItem = manager.Group;
                 tb_address.Text = manager.Address;
@@ -60,7 +59,7 @@ namespace CRM
                 var manager = new BD.Managers();
                 manager.Name = tb_name.Text;
                 manager.Login = tb_login.Text;
-                manager.Password = tb_password.Text;
+                if (tb_password.Text!=null) manager.Password = Hash.EncryptPassword(tb_login.Text, tb_password.Text);
                 manager.Position = cb_position.SelectedItem.ToString();
                 manager.Group = cb_group.SelectedItem.ToString();
                 manager.Address = tb_address.Text;

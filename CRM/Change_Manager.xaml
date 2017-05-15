@@ -193,7 +193,7 @@
                 Background="#FF00A8AC" 
                 FontFamily="Roboto Th" 
                 Foreground="White" 
-                Content="Добавить" 
+                Content="Изменить" 
                 HorizontalAlignment="Left" 
                 Margin="300,215,0,0" 
                 VerticalAlignment="Top" 
