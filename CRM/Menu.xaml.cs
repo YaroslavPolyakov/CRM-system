@@ -63,15 +63,11 @@ namespace CRM
             P.show();*/
         }
 
-<<<<<<< HEAD
-        
-=======
         private void Button_Calendar(object sender, RoutedEventArgs e)
         {
             u.Visibility = Visibility.Collapsed;
             Calendar C = new Calendar(ref g);
             g.Children.Add(C);
         }
->>>>>>> origin/master
     }
 }
