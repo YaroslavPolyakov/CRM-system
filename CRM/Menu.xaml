@@ -19,6 +19,7 @@
             <Button  Foreground="White" Padding="20,0" HorizontalContentAlignment="Left" FontSize="22" FontFamily="Roboto Th" Background="#FF384067" Content="Команда" Height="61" BorderBrush="#FF1A2340" BorderThickness="0,1" Click="Button_Command"/>
             <Button  Foreground="White" Padding="20,0" HorizontalContentAlignment="Left" FontSize="22" FontFamily="Roboto Th" Background="#FF384067" Content="Клиенты" Height="61" BorderBrush="#FF1A2340" BorderThickness="0,1" Click="Button_Clients"/>
             <Button  Foreground="White" Padding="20,0" HorizontalContentAlignment="Left" FontSize="22" FontFamily="Roboto Th" Background="#FF384067" Content="Параметры" Height="61" BorderBrush="#FF1A2340" BorderThickness="0,1" Click="Button_Param"/>
+            <Button  Foreground="White" Padding="20,0" HorizontalContentAlignment="Left" FontSize="22" FontFamily="Roboto Th" Background="#FF384067" Content="Поиск" Height="61" BorderBrush="#FF1A2340" BorderThickness="0,1" Click="Button_Search"/>
 
         </StackPanel>
 

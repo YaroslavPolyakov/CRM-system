@@ -51,10 +51,18 @@ namespace CRM
             g.Children.Add(C);
         }
 
+        private void Button_Search(object sender, RoutedEventArgs e)
+        {
+            u.Visibility = Visibility.Collapsed;
+            Search S = new Search(ref g);
+            g.Children.Add(S);
+        }
         private void Button_Param(object sender, RoutedEventArgs e)
         {
             /*Param P = new Param();
             P.show();*/
         }
+
+        
     }
 }
