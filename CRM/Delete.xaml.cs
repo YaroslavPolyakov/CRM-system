@@ -36,7 +36,27 @@ namespace CRM
             InitializeComponent();
             del_obj = c;
         }
-        
+        public Delete(BD.CatalogGroupManagers cg)
+        {
+            InitializeComponent();
+            del_obj = cg;
+        }
+        public Delete(BD.CatalogPositions cp)
+        {
+            InitializeComponent();
+            del_obj = cp;
+        }
+        public Delete(BD.CatalogStatus cs)
+        {
+            InitializeComponent();
+            del_obj = cs;
+        }
+        public Delete(BD.CatalogTasks ct)
+        {
+            InitializeComponent();
+            del_obj = ct;
+        }
+
         private void button_Click(object sender, RoutedEventArgs e)
         {
             if (del_obj != null)
