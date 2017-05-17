@@ -7,24 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800"
              x:Name="p_Search" >
-    
-        <Grid x:Name="G1">
+
+    <Grid x:Name="G1">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="240"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Border Background="#FF505883" Margin="0,0,0,-4" Grid.Column="2" BorderThickness="2,0,0,0">
-            <TextBox x:Name="search_task" HorizontalAlignment="Center" TextWrapping="Wrap" Margin="120,53,292,0" Text="" VerticalAlignment="Top" Width="146" RenderTransformOrigin="0.5,0.5" VerticalContentAlignment="Center" Padding="10,0,0,0" FontSize="16" BorderBrush="{x:Null}" FontFamily="Roboto Th" Height="38" TextChanged="search_task_TextChanged"/>
+            <TextBox HorizontalContentAlignment="Center" x:Name="search_task" HorizontalAlignment="Center" TextWrapping="Wrap" Margin="80,42,87,0" Text="" VerticalAlignment="Top" Width="391" RenderTransformOrigin="0.5,0.5" VerticalContentAlignment="Center" Padding="10,0,0,0" FontSize="16" BorderBrush="{x:Null}" FontFamily="Roboto Th" Height="30
+                     " TextChanged="search_task_TextChanged"/>
         </Border>
         <StackPanel Orientation="Horizontal" Height="87" VerticalAlignment="Top" Grid.Column="1" Margin="5,9,-78,0">
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Margin="30,15,0,46.2" Width="70" FontSize="22" Click="Button_Change"/>
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Margin="30,15,0,46.2" Width="60" FontSize="22" Click="Button_Add"/>
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="30,15,0,46.2" Width="61" FontSize="22" Click="Button_Del"/>
             <Label Content="Search" Grid.Column="1" HorizontalAlignment="Left" Margin="268,340,0,0" VerticalAlignment="Top"/>
 
         </StackPanel>
-        
-        <DataGrid x:Name="dg_Tasks" Margin="14,101,12,68" Grid.Column="1">
+
+        <DataGrid x:Name="dg_Tasks" Margin="13,120,13,330" Grid.Column="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id}" Header="ID"/>
                 <DataGridTextColumn Binding="{Binding Client}" Header="Заказчик"/>
@@ -36,7 +34,7 @@
                 <DataGridTextColumn Binding="{Binding Status}" Header="Статус" />
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="dg_Managers"  SelectedItem="{Binding Selected, Mode=TwoWay}" Margin="16,222,10,10" Grid.Column="1">
+        <DataGrid x:Name="dg_Managers"  SelectedItem="{Binding Selected, Mode=TwoWay}" Margin="13,270,13,180" Grid.Column="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}" Header="ФИО"/>
                 <DataGridTextColumn Binding="{Binding Login}" Header="Логин"/>
@@ -52,7 +50,7 @@
                 <DataGridTextColumn Binding="{Binding Info}" Header="Информация"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="dg_Clients" Margin="16,348,10,103" Grid.Column="1">
+        <DataGrid x:Name="dg_Clients" Margin="13,420,13,30" Grid.Column="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}" Header="Имя" />
                 <DataGridTextColumn Binding="{Binding Address}" Header="Адрес" />
