@@ -59,8 +59,9 @@ namespace CRM
         }
         private void Button_Param(object sender, RoutedEventArgs e)
         {
-            /*Param P = new Param();
-            P.show();*/
+            u.Visibility = Visibility.Collapsed;
+            Param P = new Param(ref g);
+            g.Children.Add(P);
         }
 
         private void Button_Calendar(object sender, RoutedEventArgs e)

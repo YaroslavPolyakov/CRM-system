@@ -59,9 +59,11 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -89,6 +91,9 @@
     <Compile Include="Calendar.xaml.cs">
       <DependentUpon>Calendar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChangeCatalog.xaml.cs">
+      <DependentUpon>ChangeCatalog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Change_Manager.xaml.cs">
       <DependentUpon>Change_Manager.xaml</DependentUpon>
     </Compile>
@@ -104,12 +109,18 @@
     <Compile Include="Delete.xaml.cs">
       <DependentUpon>Delete.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DialogSelectFolder.xaml.cs">
+      <DependentUpon>DialogSelectFolder.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Hash.cs" />
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Managers.xaml.cs">
       <DependentUpon>Managers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Param.xaml.cs">
+      <DependentUpon>Param.xaml</DependentUpon>
     </Compile>
     <Compile Include="Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
@@ -133,6 +144,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ChangeCatalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Change_Manager.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -148,6 +163,10 @@
     <Page Include="Clients.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DialogSelectFolder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="LogIn.xaml">
       <SubType>Designer</SubType>
@@ -177,6 +196,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Managers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Param.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
