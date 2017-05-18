@@ -70,6 +70,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Add_cGroup.xaml.cs">
+      <DependentUpon>Add_cGroup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Add_Manager.xaml.cs">
       <DependentUpon>Add_Manager.xaml</DependentUpon>
     </Compile>
@@ -128,6 +131,10 @@
     <Compile Include="Tasks.xaml.cs">
       <DependentUpon>Tasks.xaml</DependentUpon>
     </Compile>
+    <Page Include="Add_cGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Add_Manager.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

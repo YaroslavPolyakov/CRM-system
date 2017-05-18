@@ -46,19 +46,23 @@ namespace CRM
 
         private void Button_Add1(object sender, RoutedEventArgs e)
         {
-
+            Add_cGroup a = new Add_cGroup();
+            a.Show();
         }
         private void Button_Add2(object sender, RoutedEventArgs e)
         {
-
+            //Add_Group A = new Add_Group();
+            //A.Show();
         }
         private void Button_Add3(object sender, RoutedEventArgs e)
         {
-
+           // Add_Group A = new Add_Group();
+           // A.Show();
         }
         private void Button_Add4(object sender, RoutedEventArgs e)
         {
-
+           // Add_Group A = new Add_Group();
+          //  A.Show();
         }
 
         private void Button_Change(object sender, RoutedEventArgs e)
