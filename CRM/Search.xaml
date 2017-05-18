@@ -17,12 +17,9 @@
             <TextBox HorizontalContentAlignment="Center" x:Name="search_task" HorizontalAlignment="Center" TextWrapping="Wrap" Margin="80,42,87,0" Text="" VerticalAlignment="Top" Width="391" RenderTransformOrigin="0.5,0.5" VerticalContentAlignment="Center" Padding="10,0,0,0" FontSize="16" BorderBrush="{x:Null}" FontFamily="Roboto Th" Height="30
                      " TextChanged="search_task_TextChanged"/>
         </Border>
-        <StackPanel Orientation="Horizontal" Height="87" VerticalAlignment="Top" Grid.Column="1" Margin="5,9,-78,0">
-            <Label Content="Search" Grid.Column="1" HorizontalAlignment="Left" Margin="268,340,0,0" VerticalAlignment="Top"/>
 
-        </StackPanel>
-
-        <DataGrid x:Name="dg_Tasks" Margin="13,120,13,330" Grid.Column="1">
+        <StackPanel Grid.Column="1" Margin="25,88,34,10">
+        <DataGrid x:Name="dg_Tasks"  Grid.Column="1" Height="80" Margin="0,0,-0.2,0">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id}" Header="ID"/>
                 <DataGridTextColumn Binding="{Binding Client}" Header="Заказчик"/>
@@ -34,23 +31,23 @@
                 <DataGridTextColumn Binding="{Binding Status}" Header="Статус" />
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="dg_Managers"  SelectedItem="{Binding Selected, Mode=TwoWay}" Margin="13,270,13,180" Grid.Column="1">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Name}" Header="ФИО"/>
-                <DataGridTextColumn Binding="{Binding Login}" Header="Логин"/>
-                <DataGridTextColumn Binding="{Binding Password}" Header="Пароль" />
-                <DataGridTextColumn Binding="{Binding Position}" Header="Должность" />
-                <DataGridTextColumn Binding="{Binding Group}" Header="Группа" />
-                <DataGridTextColumn Binding="{Binding Address}" Header="Адрес" />
-                <DataGridTextColumn Binding="{Binding Phone}" Header="Телефон" />
-                <DataGridTextColumn Binding="{Binding Passport}" Header="Пасспорт" />
-                <DataGridTextColumn Binding="{Binding DateOfBirth}" Header="Дата рождения" />
-                <DataGridTextColumn Binding="{Binding DateRecruitment}" Header="Дата приема на работу" />
-                <DataGridTextColumn Binding="{Binding Email}" Header="E-mail"/>
-                <DataGridTextColumn Binding="{Binding Info}" Header="Информация"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <DataGrid x:Name="dg_Clients" Margin="13,420,13,30" Grid.Column="1">
+            <DataGrid x:Name="dg_Managers"  SelectedItem="{Binding Selected, Mode=TwoWay}"  Margin="0,0,-0.2,0" Height="99">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}" Header="ФИО"/>
+                    <DataGridTextColumn Binding="{Binding Login}" Header="Логин"/>
+                    <DataGridTextColumn Binding="{Binding Password}" Header="Пароль" />
+                    <DataGridTextColumn Binding="{Binding Position}" Header="Должность" />
+                    <DataGridTextColumn Binding="{Binding Group}" Header="Группа" />
+                    <DataGridTextColumn Binding="{Binding Address}" Header="Адрес" />
+                    <DataGridTextColumn Binding="{Binding Phone}" Header="Телефон" />
+                    <DataGridTextColumn Binding="{Binding Passport}" Header="Пасспорт" />
+                    <DataGridTextColumn Binding="{Binding DateOfBirth}" Header="Дата рождения" />
+                    <DataGridTextColumn Binding="{Binding DateRecruitment}" Header="Дата приема на работу" />
+                    <DataGridTextColumn Binding="{Binding Email}" Header="E-mail"/>
+                    <DataGridTextColumn Binding="{Binding Info}" Header="Информация"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid x:Name="dg_Clients" Grid.Column="1" Height="102" Margin="0,0,-0.2,0">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}" Header="Имя" />
                 <DataGridTextColumn Binding="{Binding Address}" Header="Адрес" />
@@ -63,5 +60,6 @@
                 <DataGridTextColumn Binding="{Binding Info}" Header="Информация" />
             </DataGrid.Columns>
         </DataGrid>
+        </StackPanel>
     </Grid>
 </UserControl>

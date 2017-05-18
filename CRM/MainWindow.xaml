@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CRM"
         mc:Ignorable="d"
-        Title="CRM" Height="600" Width="800" Background="#FF1F233E" MinHeight="600" MinWidth="800" MaxHeight="1080" MaxWidth="1920"
+        Title="CRM" Height="600" Width="800" Background="#FF1F233E" MinHeight="600" MinWidth="800" MaxHeight="1080" MaxWidth="1920" WindowState="Maximized"
         WindowStartupLocation="CenterScreen">
 
     <Grid x:Name="G">

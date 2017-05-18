@@ -23,7 +23,7 @@
         <TextBox x:Name="l_info" FontFamily="Roboto Th"  HorizontalAlignment="Left" Height="62" Margin="123,218,0,0" VerticalAlignment="Top" Width="183"/>
         <TextBox x:Name="l_id" FontFamily="Roboto Th"  HorizontalAlignment="Left" Height="19" Margin="123,15,0,0" VerticalAlignment="Top" Width="183"/>
         <Button x:Name="button" Background="#FF00A8AC" FontFamily="Roboto Th" Foreground="White" Content="Изменить" HorizontalAlignment="Left" Margin="116,297,0,0" VerticalAlignment="Top" Width="88" Height="28" Click="button_Click" />
-        <Button x:Name="button1" Background="#FF00A8AC" FontFamily="Roboto Th" Foreground="White" Content="Отмена" HorizontalAlignment="Left" Margin="216,297,0,0" VerticalAlignment="Top" Width="88" Height="28"/>
+        <Button x:Name="button1" Background="#FF00A8AC" FontFamily="Roboto Th" Foreground="White" Content="Отмена" HorizontalAlignment="Left" Margin="216,297,0,0" VerticalAlignment="Top" Width="88" Height="28" Click="button1_Click"/>
         <DatePicker x:Name="d_complete" HorizontalAlignment="Left" Margin="179,187,0,0" VerticalAlignment="Top" Height="23" Width="127" RenderTransformOrigin="-0.575,3.862"/>
     </Grid>
 </Window>

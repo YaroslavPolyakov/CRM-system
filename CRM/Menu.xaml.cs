@@ -20,6 +20,7 @@ namespace CRM
     public partial class Menu : UserControl
     {
         UserControl u = null;
+
         Grid g = null;
        
         public Menu(Grid rG,UserControl rU)

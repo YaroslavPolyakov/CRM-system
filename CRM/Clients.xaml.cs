@@ -44,8 +44,15 @@ namespace CRM
 
         private void Button_Change(object sender, RoutedEventArgs e)
         {
-            Change_Client change_client = new Change_Client((BD.Clients)dg_Clients.SelectedItem);
-            change_client.Show();
+            if (dg_Clients.SelectedItem != null)
+            {
+                Change_Client change_client = new Change_Client((BD.Clients)dg_Clients.SelectedItem);
+                change_client.Show();
+            }
+            else
+            {
+                MessageBox.Show("Выберите клиента.","Ошибка",MessageBoxButton.OK,MessageBoxImage.Error);
+            }
         }
 
         private void Button_Del(object sender, RoutedEventArgs e)

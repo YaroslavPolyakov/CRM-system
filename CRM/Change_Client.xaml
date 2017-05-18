@@ -26,7 +26,7 @@
         <Label x:Name="label33" FontFamily="Roboto Th" Foreground="White" Content="Бухгалтер" HorizontalAlignment="Left" Margin="13,191,0,0" VerticalAlignment="Top" Height="23" Width="145" RenderTransformOrigin="0.479,0.244"/>
         <Label x:Name="label1" FontFamily="Roboto Th" Foreground="White" Content="Дополнительная &#xD;&#xA;информация" HorizontalAlignment="Left" Margin="13,223,0,0" VerticalAlignment="Top" Height="46" Width="105"/>
         <Button x:Name="button" Background="#FF00A8AC" FontFamily="Roboto Th" Foreground="White" Content="Изменить" HorizontalAlignment="Left" Margin="123,305,0,0" VerticalAlignment="Top" Width="88" Height="28" Click="button_Click" />
-        <Button x:Name="button1" Background="#FF00A8AC" FontFamily="Roboto Th" Foreground="White" Content="Отмена" HorizontalAlignment="Left" Margin="218,305,0,0" VerticalAlignment="Top" Width="88" Height="28"/>
+        <Button x:Name="button1" Background="#FF00A8AC" FontFamily="Roboto Th" Foreground="White" Content="Отмена" HorizontalAlignment="Left" Margin="218,305,0,0" VerticalAlignment="Top" Width="88" Height="28" Click="button1_Click"/>
 
     </Grid>
 </Window>

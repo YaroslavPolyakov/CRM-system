@@ -45,8 +45,15 @@ namespace CRM
 
         private void Button_Change(object sender, RoutedEventArgs e)
         {
-            Change change_Zad = new Change ((BD.Tasks)dg_Tasks.SelectedItem);
-            change_Zad.Show();
+            if (dg_Tasks.SelectedItem != null)
+            {
+                Change change_Zad = new Change((BD.Tasks)dg_Tasks.SelectedItem);
+                change_Zad.Show();
+            }
+            else
+            {
+                MessageBox.Show("Выберите задачу.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void Button_Del(object sender, RoutedEventArgs e)

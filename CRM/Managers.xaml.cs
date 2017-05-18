@@ -49,9 +49,16 @@ namespace CRM
 
         private void Button_Change(object sender, RoutedEventArgs e)
         {
-            
-            Change_Manager change_Task = new Change_Manager((BD.Managers)dg_Managers.SelectedItem);
-            change_Task.Show();
+            if (dg_Managers.SelectedItem != null)
+            {
+                Change_Manager change_Task = new Change_Manager((BD.Managers)dg_Managers.SelectedItem);
+                change_Task.Show();
+            }
+            else
+            {
+                MessageBox.Show("Выберите менеджера.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
         }
 
         private void Button_Del(object sender, RoutedEventArgs e)

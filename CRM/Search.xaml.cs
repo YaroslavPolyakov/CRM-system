@@ -43,13 +43,19 @@ namespace CRM
                     {
                         dg_Tasks.Visibility = Visibility.Collapsed;
                     }
-                    else if (item.Task.ToString().ToLower().Contains(search) || (item.Id.ToString()).Contains(search) || (item.Client.ToString().ToLower()).Contains(search) || (item.Manager.ToString().ToLower()).Contains(search) || (item.Info.ToString().ToLower()).Contains(search) || (item.DateStart.ToString().ToLower()).Contains(search) || (item.DateComplete.ToString().Contains(search)) || (item.Status.ToString().ToLower()).Contains(search))
+                    else if ((item.Task.ToString().ToLower()).Contains(search) || (item.Id.ToString()).Contains(search) || (item.Client.ToString().ToLower()).Contains(search) || (item.Manager.ToString().ToLower()).Contains(search) || (item.Info.ToString().ToLower()).Contains(search) || (item.DateStart.ToString().ToLower()).Contains(search) || (item.DateComplete.ToString().Contains(search)) || (item.Status.ToString().ToLower()).Contains(search))
                     {
                         dg_Tasks.Visibility = Visibility.Visible;
                         dg_Tasks.Items.Add(item);
                     }
-                    
+                    else if (dg_Tasks.Items.Count == 0)
+                    {
+                        dg_Tasks.Visibility = Visibility.Collapsed;
+                    }
+
                 }
+
+                
                 dg_Clients.Items.Clear();
                 foreach (var item in dbContext.Clients)
                 {
@@ -63,6 +69,13 @@ namespace CRM
                         dg_Clients.Visibility = Visibility.Visible;
                         dg_Clients.Items.Add(item);
                     }
+                    else if (dg_Clients.Items.Count == 0)
+                    {
+                        dg_Clients.Visibility = Visibility.Collapsed;
+                    }
+
+
+
                 }
                 dg_Managers.Items.Clear();
                 foreach (var item in dbContext.Managers)
@@ -77,8 +90,12 @@ namespace CRM
                         dg_Managers.Visibility = Visibility.Visible;
                         dg_Managers.Items.Add(item);
                     }
+                    else if (dg_Managers.Items.Count == 0) 
+                    {
+                        dg_Managers.Visibility = Visibility.Collapsed;
+                    }             
                 }
-
+                
             }
         }
     }
