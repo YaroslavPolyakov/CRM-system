@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CRM.BD;
+using System.ComponentModel.DataAnnotations;
 
 namespace CRM
 {
@@ -58,11 +59,27 @@ namespace CRM
                 manager.DateRecruitment = d_daterecruitment.SelectedDate;
                 manager.Email = tb_email.Text;
                 manager.Info = tb_info.Text;
-                dbContext.Managers.Add(manager);
-                dbContext.SaveChanges();
-                
+
+                var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+                var context = new ValidationContext(manager);
+                if (!Validator.TryValidateObject(manager, context, results, true))
+                {
+                    foreach (var error in results)
+                    {
+                        MessageBox.Show(error.ErrorMessage);
+                    }
+                }
+                else
+                {
+                    dbContext.Managers.Add(manager);
+                    dbContext.SaveChanges();
+                }
+                if (Validator.TryValidateObject(manager, context, results, true))
+                {
+                    this.Close();
+                }
+
             }
-            this.Close();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

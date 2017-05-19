@@ -58,8 +58,15 @@ namespace CRM
 
         private void Button_Del(object sender, RoutedEventArgs e)
         {
-            Delete delete_Zad = new Delete((BD.Tasks)dg_Tasks.SelectedItem);
-            delete_Zad.Show();
+            if (dg_Tasks.SelectedItem != null)
+            {
+                Delete delete_Zad = new Delete((BD.Tasks)dg_Tasks.SelectedItem);
+                delete_Zad.Show();
+            }
+            else
+            {
+                MessageBox.Show("Выберите задачу.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
        
     }

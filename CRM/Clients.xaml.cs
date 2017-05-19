@@ -57,8 +57,15 @@ namespace CRM
 
         private void Button_Del(object sender, RoutedEventArgs e)
         {
-            Delete delete_client = new Delete((BD.Clients)dg_Clients.SelectedItem);
-            delete_client.Show();
-        }
+            if (dg_Clients.SelectedItem != null)
+            {
+                Delete delete_client = new Delete((BD.Clients)dg_Clients.SelectedItem);
+                delete_client.Show();
+            }
+            else
+            {
+                MessageBox.Show("Выберите клиента.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+}
     }
 }

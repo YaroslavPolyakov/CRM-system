@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CRM.BD;
+using System.ComponentModel.DataAnnotations;
 
 namespace CRM
 {
@@ -39,12 +40,28 @@ namespace CRM
                 client.Director = tb_director.Text;
                 client.Accountant = tb_acccountant.Text;
                 client.Info = tb_info.Text;
-                dbContext.Clients.Add(client);
-                dbContext.SaveChanges();
+
+                var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+                var context = new ValidationContext(client);
+                if (!Validator.TryValidateObject(client, context, results, true))
+                {
+                    foreach (var error in results)
+                    {
+                        MessageBox.Show(error.ErrorMessage);
+                    }
+                }
+                else
+                {
+                    dbContext.Clients.Add(client);
+                    dbContext.SaveChanges();
+                }
+                if (Validator.TryValidateObject(client, context, results, true))
+                {
+                    this.Close();
+                }
             }
-            this.Close();
+
         }
-        яяя
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

@@ -15,28 +15,36 @@ namespace CRM.BD
         }
 
         [Key]
-        [StringLength(15)]
+        [StringLength(15,MinimumLength =3)]
+        [Required]
         public string Name { get; set; }
 
-        [StringLength(50)]
+        [Required]
+        [StringLength(50, MinimumLength = 5)]
         public string Address { get; set; }
 
-        [StringLength(15)]
+        [Required]
+        [StringLength(15, MinimumLength = 3)]
         public string Phone { get; set; }
 
-        [StringLength(30)]
+        [Required]
+        [StringLength(30, MinimumLength = 6)]
         public string Email { get; set; }
 
-        [StringLength(10)]
+        [Required]
+        [StringLength(10, MinimumLength = 3)]
         public string CheckingAccount { get; set; }
 
-        [StringLength(15)]
+        [Required]
+        [StringLength(15, MinimumLength = 3)]
         public string Bank { get; set; }
 
-        [StringLength(20)]
+        [Required]
+        [StringLength(20, MinimumLength = 3)]
         public string Director { get; set; }
 
-        [StringLength(20)]
+        [Required]
+        [StringLength(20, MinimumLength = 3)]
         public string Accountant { get; set; }
 
         [Column(TypeName = "text")]

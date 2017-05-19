@@ -63,8 +63,15 @@ namespace CRM
 
         private void Button_Del(object sender, RoutedEventArgs e)
         {
-            Delete delete_Task = new Delete((BD.Managers)dg_Managers.SelectedItem);
+            if (dg_Managers.SelectedItem != null)
+            {
+                Delete delete_Task = new Delete((BD.Managers)dg_Managers.SelectedItem);
             delete_Task.Show();
+            }
+            else
+            {
+                MessageBox.Show("Выберите менеджера.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
     }
