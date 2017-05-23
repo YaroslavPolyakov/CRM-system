@@ -13,6 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CRM.BD;
+using XMLE;
+using System.IO;
+using System.Xml.Serialization;
+using System.Xml.Linq;
+using System.Xml;
 
 namespace CRM
 {
@@ -51,14 +56,26 @@ namespace CRM
             }
             else
             {
-                MessageBox.Show("Выберите клиента.","Ошибка",MessageBoxButton.OK,MessageBoxImage.Error);
+                MessageBox.Show("Выберите клиента.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         private void Button_Del(object sender, RoutedEventArgs e)
         {
-            Delete delete_client = new Delete((BD.Clients)dg_Clients.SelectedItem);
-            delete_client.Show();
+            if (dg_Clients.SelectedItem != null)
+            {
+                Delete delete_client = new Delete((BD.Clients)dg_Clients.SelectedItem);
+                delete_client.Show();
+            }
+            else
+            {
+                MessageBox.Show("Выберите клиента.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void Button_Save(object sender, RoutedEventArgs e)
+        {/*
+            XMLE.XML.saveToXml(List <Clients>);*/
         }
     }
 }

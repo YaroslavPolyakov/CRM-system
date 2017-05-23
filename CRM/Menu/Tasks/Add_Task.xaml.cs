@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CRM.BD;
+using System.ComponentModel.DataAnnotations;
 
 namespace CRM
 {
@@ -57,10 +58,26 @@ namespace CRM
                 task.Status = l_status.Text;
                 task.DateStart = d_start.SelectedDate;
                 task.DateComplete = d_complete.SelectedDate;
-                dbContext.Tasks.Add(task);
-                dbContext.SaveChanges();
+
+                var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+                var context = new ValidationContext(task);
+                if (!Validator.TryValidateObject(task, context, results, true))
+                {
+                    foreach (var error in results)
+                    {
+                        MessageBox.Show(error.ErrorMessage);
+                    }
+                }
+                else
+                {
+                    dbContext.Tasks.Add(task);
+                    dbContext.SaveChanges();
+                }
+                if (Validator.TryValidateObject(task, context, results, true))
+                {
+                    this.Close();
+                }
             }
-            this.Close();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

@@ -1,6 +1,7 @@
 ﻿using CRM.BD;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,10 +57,26 @@ namespace CRM
                 client.Accountant = tb_acccountant.Text;
                 client.Info = tb_info.Text;
                 dbContext.Entry(del_client).State = System.Data.Entity.EntityState.Deleted;
-                dbContext.Clients.Add(client);
-                dbContext.SaveChanges();
+
+                var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+                var context = new ValidationContext(client);
+                if (!Validator.TryValidateObject(client, context, results, true))
+                {
+                    foreach (var error in results)
+                    {
+                        MessageBox.Show(error.ErrorMessage);
+                    }
+                }
+                else
+                {
+                    dbContext.Clients.Add(client);
+                    dbContext.SaveChanges();
+                }
+                if (Validator.TryValidateObject(client, context, results, true))
+                {
+                    this.Close();
+                }
             }
-            this.Close();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

@@ -1,6 +1,7 @@
 ﻿using CRM.BD;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,10 +71,26 @@ namespace CRM
                 manager.Email = tb_email.Text;
                 manager.Info = tb_info.Text;
                 dbContext.Entry(del_manager).State = System.Data.Entity.EntityState.Deleted;
-                dbContext.Managers.Add(manager);
-                dbContext.SaveChanges();
+
+                var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+                var context = new ValidationContext(manager);
+                if (!Validator.TryValidateObject(manager, context, results, true))
+                {
+                    foreach (var error in results)
+                    {
+                        MessageBox.Show(error.ErrorMessage);
+                    }
+                }
+                else
+                {
+                    dbContext.Managers.Add(manager);
+                    dbContext.SaveChanges();
+                }
+                if (Validator.TryValidateObject(manager, context, results, true))
+                {
+                    this.Close();
+                }
             }
-            this.Close();
             
         }
 

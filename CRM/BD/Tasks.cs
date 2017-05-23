@@ -8,28 +8,36 @@ namespace CRM.BD
 
     public partial class Tasks
     {
+        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
-        [StringLength(15)]
+
+        [StringLength(15,MinimumLength =3)]
         public string Client { get; set; }
 
-        [StringLength(40)]
+
+        [StringLength(40, MinimumLength = 3)]
         public string Manager { get; set; }
 
-        [StringLength(30)]
+        [Required]
+        [StringLength(30, MinimumLength = 3)]
         public string Task { get; set; }
 
+        [Required]
         [Column(TypeName = "text")]
         public string Info { get; set; }
 
+        [Required]
         [Column(TypeName = "date")]
         public DateTime? DateStart { get; set; }
 
+        [Required]
         [Column(TypeName = "date")]
         public DateTime? DateComplete { get; set; }
 
-        [StringLength(15)]
+        [Required]
+        [StringLength(15, MinimumLength = 3)]
         public string Status { get; set; }
 
         public virtual CatalogStatus CatalogStatus { get; set; }

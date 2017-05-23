@@ -15,7 +15,8 @@ namespace CRM.BD
         }
 
         [Key]
-        [StringLength(40)]
+        [Required]
+        [StringLength(40,MinimumLength = 3)]
         public string Name { get; set; }
 
         [Required]
@@ -23,31 +24,39 @@ namespace CRM.BD
         public string Login { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        [MaxLength(50),MinLength(8)]
         public byte[] Password { get; set; }
 
-        [StringLength(20)]
+        [Required]
+        [StringLength(20, MinimumLength = 3)]
         public string Position { get; set; }
 
-        [StringLength(20)]
+        [Required]
+        [StringLength(20, MinimumLength = 3)]
         public string Group { get; set; }
 
-        [StringLength(30)]
+        [Required]
+        [StringLength(30,MinimumLength = 3)]
         public string Address { get; set; }
 
-        [StringLength(15)]
+        [Required]
+        [StringLength(15, MinimumLength = 12)]
         public string Phone { get; set; }
 
-        [StringLength(9)]
+        [Required]
+        [StringLength(9,MinimumLength = 9)]
         public string Passport { get; set; }
 
+        [Required]
         [Column(TypeName = "date")]
         public DateTime? DateOfBirth { get; set; }
 
+        [Required]
         [Column(TypeName = "date")]
         public DateTime? DateRecruitment { get; set; }
 
-        [StringLength(20)]
+        [Required]
+        [StringLength(20,MinimumLength = 6)]
         public string Email { get; set; }
 
         [Column(TypeName = "text")]
