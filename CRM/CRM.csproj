@@ -131,6 +131,7 @@
     <Compile Include="Tasks.xaml.cs">
       <DependentUpon>Tasks.xaml</DependentUpon>
     </Compile>
+    <Compile Include="XML.cs" />
     <Page Include="Add_cGroup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

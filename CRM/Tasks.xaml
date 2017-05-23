@@ -18,7 +18,7 @@
             <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Change"/>
             <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Del"/>
         </StackPanel>
-        <DataGrid x:Name="dg_Tasks" Margin="14,100,12,10" Grid.Column="1">
+        <DataGrid x:Name="dg_Tasks" Margin="14,100,12,10" Grid.Column="1" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id}" Header="ID"/>
                 <DataGridTextColumn Binding="{Binding Client}" Header="Заказчик"/>

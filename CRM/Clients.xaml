@@ -12,23 +12,29 @@
             <ColumnDefinition Width="240"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Border Background="#FF505883" Margin="0,0,0,-4" Grid.Column="1" BorderThickness="2,0,0,0"/>
+        <Border Background="#FF505883" Margin="0,0,0,-4" Grid.Column="1" BorderThickness="2,0,0,0">
+            
+        </Border>
         <StackPanel Orientation="Horizontal" Height="87" VerticalAlignment="Top" Grid.Column="1" Margin="5,9,-78,0">
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Add"/>
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Change"/>
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Del"/>
+            <StackPanel.DataContext>
+                <XmlDataProvider x:Name="XMLData" Source="XMLFile1.xml" XPath="NomList/Nomenclature"/>
+            </StackPanel.DataContext>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Margin="30,15,0,22.2" Width="54" FontSize="22" Click="Button_Add"/>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Margin="30,15,0,22.2" Width="36" FontSize="22"  Click="Button_Change"/>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="30,15,0,22.2" Width="47" FontSize="22" Click="Button_Del"/>
+            <Button x:Name="button" Content="Сохранить" Margin="0,0,0,0.2" RenderTransformOrigin="3.707,0.436" Click="Button_Save"/>
         </StackPanel>
-        <DataGrid x:Name="dg_Clients" Margin="14,100,12,10" Grid.Column="1">
+        <DataGrid x:Name="dg_Clients" AutoGenerateColumns="False" ItemsSource="{Binding}" Margin="14,100,12,10"  Grid.Column="1" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Name}" Header="Имя" />
-                <DataGridTextColumn Binding="{Binding Address}" Header="Адрес" />
-                <DataGridTextColumn Binding="{Binding Phone}" Header="Телефон" />
-                <DataGridTextColumn Binding="{Binding Email}" Header="E-mail" />
-                <DataGridTextColumn Binding="{Binding CheckingAccount}" Header="Расчетный счет" />
-                <DataGridTextColumn Binding="{Binding Bank}" Header="Bank" />
-                <DataGridTextColumn Binding="{Binding Director}" Header="Директор" />
-                <DataGridTextColumn Binding="{Binding Accountant}" Header="Бухгалтер" />
-                <DataGridTextColumn Binding="{Binding Info}" Header="Информация" />
+                <DataGridTextColumn Binding="{Binding Name, Mode=TwoWay}" Header="Имя" />
+                <DataGridTextColumn Binding="{Binding Address, Mode=TwoWay}" Header="Адрес" />
+                <DataGridTextColumn Binding="{Binding Phone, Mode=TwoWay}" Header="Телефон" />
+                <DataGridTextColumn Binding="{Binding Email, Mode=TwoWay}" Header="E-mail" />
+                <DataGridTextColumn Binding="{Binding CheckingAccount, Mode=TwoWay}" Header="Расчетный счет" />
+                <DataGridTextColumn Binding="{Binding Bank, Mode=TwoWay}" Header="Bank" />
+                <DataGridTextColumn Binding="{Binding Director, Mode=TwoWay}" Header="Директор" />
+                <DataGridTextColumn Binding="{Binding Accountant, Mode=TwoWay}" Header="Бухгалтер" />
+                <DataGridTextColumn Binding="{Binding Info, Mode=TwoWay}" Header="Информация" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

@@ -5,7 +5,9 @@ namespace CRM.BD
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Xml.Serialization;
 
+    [Serializable]
     public partial class Clients
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -17,6 +19,7 @@ namespace CRM.BD
         [Key]
         [StringLength(15,MinimumLength =3)]
         [Required]
+        [XmlAttribute]
         public string Name { get; set; }
 
         [Required]
