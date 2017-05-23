@@ -70,6 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+<<<<<<< HEAD
     <Compile Include="Menu\Param\Add_cGroup.xaml.cs">
       <DependentUpon>Add_cGroup.xaml</DependentUpon>
     </Compile>
@@ -82,6 +83,32 @@
     <Compile Include="Menu\Param\Add_cTask.xaml.cs">
       <DependentUpon>Add_cTask.xaml</DependentUpon>
     </Compile>
+=======
+    <Compile Include="Menu\Param\Change_cGroup.xaml.cs">
+      <DependentUpon>Change_cGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Param\Change_cPosition.xaml.cs">
+      <DependentUpon>Change_cPosition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Param\Add_cPositions.xaml.cs">
+      <DependentUpon>Add_cPositions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Param\Change_cStatus.xaml.cs">
+      <DependentUpon>Change_cStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Param\Change_cTask.xaml.cs">
+      <DependentUpon>Change_cTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Param\Add_cTask.xaml.cs">
+      <DependentUpon>Add_cTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Param\Add_cStatus.xaml.cs">
+      <DependentUpon>Add_cStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Param\Add_cGroup.xaml.cs">
+      <DependentUpon>Add_cGroup.xaml</DependentUpon>
+    </Compile>
+>>>>>>> origin/master
     <Compile Include="Menu\Managers\Add_Manager.xaml.cs">
       <DependentUpon>Add_Manager.xaml</DependentUpon>
     </Compile>
@@ -106,6 +133,7 @@
     <Compile Include="Menu\Param\ChangeCatalog.xaml.cs">
       <DependentUpon>ChangeCatalog.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Menu\Param\Change_cGroup.xaml.cs">
       <DependentUpon>Change_cGroup.xaml</DependentUpon>
     </Compile>
@@ -118,6 +146,8 @@
     <Compile Include="Menu\Param\Change_cTask.xaml.cs">
       <DependentUpon>Change_cTask.xaml</DependentUpon>
     </Compile>
+=======
+>>>>>>> origin/master
     <Compile Include="Menu\Managers\Change_Manager.xaml.cs">
       <DependentUpon>Change_Manager.xaml</DependentUpon>
     </Compile>
@@ -152,8 +182,16 @@
     <Compile Include="Menu\Tasks\Tasks.xaml.cs">
       <DependentUpon>Tasks.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Menu\XML.cs" />
     <Page Include="Menu\Param\Add_cGroup.xaml">
+=======
+    <Page Include="Menu\Param\Change_cGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Param\Change_cPosition.xaml">
+>>>>>>> origin/master
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -161,8 +199,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+<<<<<<< HEAD
     <Page Include="Menu\Param\Add_cStatus.xaml">
       <Generator>MSBuild:Compile</Generator>
+=======
+    <Page Include="Menu\Param\Change_cStatus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Param\Change_cTask.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Param\Add_cTask.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Param\Add_cStatus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    </ItemGroup>
+    <ItemGroup>
+    <Page Include="Menu\Param\Add_cGroup.xaml">
+    <Compile Include="XML.cs" />
+    <Page Include="Add_cGroup.xaml">
+>>>>>>> origin/master
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Menu\Param\Add_cTask.xaml">
@@ -178,6 +240,7 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Menu\Tasks\Add_Task.xaml">
+<<<<<<< HEAD
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -191,14 +254,24 @@
     </Page>
     <Page Include="Menu\Param\Change_cGroup.xaml">
       <Generator>MSBuild:Compile</Generator>
+=======
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Calendar\Calendar.xaml">
+>>>>>>> origin/master
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Menu\Param\Change_cPosition.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+<<<<<<< HEAD
     <Page Include="Menu\Param\Change_cStatus.xaml">
       <Generator>MSBuild:Compile</Generator>
+=======
+    <Page Include="Menu\Param\ChangeCatalog.xaml">
+>>>>>>> origin/master
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Menu\Param\Change_cTask.xaml">
@@ -233,6 +306,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+<<<<<<< HEAD
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -245,6 +319,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Menu\Delete\Delete.xaml">
+=======
+ <Page Include="Menu\Delete\Delete.xaml">
+>>>>>>> origin/master
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -268,6 +345,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\Login\LogIn.xaml.cs">
+      <DependentUpon>LogIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

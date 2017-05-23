@@ -62,6 +62,10 @@ namespace CRM
             }
 
         }
+<<<<<<< HEAD:CRM/Menu/Clients/Add_Client.xaml.cs
+        
+=======
+>>>>>>> origin/master:CRM/Add_Client.xaml.cs
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
