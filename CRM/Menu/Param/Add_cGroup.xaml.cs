@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CRM.BD;
 
 namespace CRM
 {
@@ -23,5 +24,23 @@ namespace CRM
         {
             InitializeComponent();
         }
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            using (CRMContext dbContext = new CRMContext())
+            {
+                var group = new BD.CatalogGroupManagers();
+                group.Group = l_id.Text;
+                dbContext.CatalogGroupManagers.Add(group);
+                dbContext.SaveChanges();
+            }
+
+            this.Close();
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

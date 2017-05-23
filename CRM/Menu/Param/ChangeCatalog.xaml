@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:CRM"
         mc:Ignorable="d"
         Title="Редактор каталогов" Height="329.779" Width="382.721" Background="#FF505883" ResizeMode="NoResize">
+    
     <Grid>
         <TabControl>
             <TabItem Header="Группы менеджеров">

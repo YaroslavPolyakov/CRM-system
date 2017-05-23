@@ -16,35 +16,33 @@ using CRM.BD;
 namespace CRM
 {
     /// <summary>
-    /// Логика взаимодействия для Change.xaml
+    /// Логика взаимодействия для Add_cGroup.xaml
     /// </summary>
-    public partial class Add_Client : Window
+    public partial class Change_cPosition : Window
     {
-        public Add_Client()
+        BD.CatalogPositions position;
+        public Change_cPosition(BD.CatalogPositions rp)
         {
             InitializeComponent();
+            using (CRMContext dbContext = new CRMContext())
+            {
+                position = dbContext.CatalogPositions.Find(rp.Position);
+                l_id.Text = position.Position;
+                l_id_Copy.Text = position.Pay.Value.ToString();
+            }
         }
-
         private void button_Click(object sender, RoutedEventArgs e)
         {
             using (CRMContext dbContext = new CRMContext())
             {
-                var client = new BD.Clients();
-                client.Name = tb_name.Text;
-                client.Address = tb_address.Text;
-                client.Phone = tb_phone.Text;
-                client.Email = tb_email.Text;
-                client.CheckingAccount = tb_checkingAccoubt.Text;
-                client.Bank = tb_bank.Text;
-                client.Director = tb_director.Text;
-                client.Accountant = tb_acccountant.Text;
-                client.Info = tb_info.Text;
-                dbContext.Clients.Add(client);
+                position.Position = l_id.Text;
+                position.Pay = Convert.ToInt16(l_id_Copy.Text);
                 dbContext.SaveChanges();
             }
+
             this.Close();
         }
-        яяя
+
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

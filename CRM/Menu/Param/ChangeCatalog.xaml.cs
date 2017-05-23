@@ -46,46 +46,50 @@ namespace CRM
 
         private void Button_Add1(object sender, RoutedEventArgs e)
         {
-            Add_cGroup a = new Add_cGroup();
-            a.Show();
+            Add_cGroup w = new Add_cGroup();
+            w.Show();
         }
         private void Button_Add2(object sender, RoutedEventArgs e)
         {
-            //Add_Group A = new Add_Group();
-            //A.Show();
+            Add_cTask w = new Add_cTask();
+            w.Show();
         }
         private void Button_Add3(object sender, RoutedEventArgs e)
         {
-           // Add_Group A = new Add_Group();
-           // A.Show();
+            Add_cPositions w = new Add_cPositions();
+            w.Show();
         }
         private void Button_Add4(object sender, RoutedEventArgs e)
         {
-           // Add_Group A = new Add_Group();
-          //  A.Show();
+            Add_cStatus w = new Add_cStatus();
+            w.Show();
         }
 
         private void Button_Change(object sender, RoutedEventArgs e)
         {
             if (dg_cGroup.SelectedItem != null)
             {
-                Delete D = new Delete((BD.CatalogGroupManagers)dg_cGroup.SelectedItem);
+                Change_cGroup D = new Change_cGroup((BD.CatalogGroupManagers)dg_cGroup.SelectedItem);
                 D.Show();
+                dg_cGroup.SelectedItem = null;
             }
             if (dg_cPositions.SelectedItem != null)
             {
-                Delete D = new Delete((BD.CatalogPositions)dg_cPositions.SelectedItem);
+                Change_cPosition D = new Change_cPosition((BD.CatalogPositions)dg_cPositions.SelectedItem);
                 D.Show();
+                dg_cPositions.SelectedItem = null;
             }
             if (dg_cTask.SelectedItem != null)
             {
-                Delete D = new Delete((BD.CatalogTasks)dg_cTask.SelectedItem);
+                Change_cTask D = new Change_cTask((BD.CatalogTasks)dg_cTask.SelectedItem);
                 D.Show();
+                dg_cTask.SelectedItem = null;
             }
             if (dg_cStatus.SelectedItem != null)
             {
-                Delete D = new Delete((BD.CatalogStatus)dg_cStatus.SelectedItem);
+                Change_cStatus D = new Change_cStatus((BD.CatalogStatus)dg_cStatus.SelectedItem);
                 D.Show();
+                dg_cStatus.SelectedItem = null;
             }
         }
 
