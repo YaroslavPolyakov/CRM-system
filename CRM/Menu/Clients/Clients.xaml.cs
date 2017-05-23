@@ -76,7 +76,6 @@ namespace CRM
         private void Button_Save(object sender, RoutedEventArgs e)
         {
             List<BD.Clients> a = new List<BD.Clients>();
-
             using (CRMContext dbContext = new CRMContext())
             {
                 foreach (var item in dbContext.Clients)
