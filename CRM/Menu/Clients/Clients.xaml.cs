@@ -74,8 +74,17 @@ namespace CRM
         }
 
         private void Button_Save(object sender, RoutedEventArgs e)
-        {/*
-            XMLE.XML.saveToXml(List <Clients>);*/
+        {
+            List<BD.Clients> a = new List<BD.Clients>();
+
+            using (CRMContext dbContext = new CRMContext())
+            {
+                foreach (var item in dbContext.Clients)
+                {
+                    a.Add(item);
+                }
+            }
+            XMLE.XML.saveToXml(a);
         }
     }
 }
