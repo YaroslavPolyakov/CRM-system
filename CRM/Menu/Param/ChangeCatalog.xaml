@@ -1,0 +1,65 @@
+﻿<Window x:Class="CRM.ChangeCatalog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRM"
+        mc:Ignorable="d"
+        Title="Редактор каталогов" Height="329.779" Width="382.721" Background="#FF505883" ResizeMode="NoResize">
+    
+    <Grid>
+        <TabControl>
+            <TabItem Header="Группы менеджеров">
+                <Grid Background="#FFE5E5E5">
+                    <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Margin="90,10,194,230" FontSize="14" Click="Button_Add1"/>
+                    <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Margin="182,10,102,230" FontSize="14" Click="Button_Change"/>
+                    <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="274,10,10,230" FontSize="14" Click="Button_Del"/>
+                    <DataGrid x:Name="dg_cGroup" Margin="10,52,10,10">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Group}" Header="Имя" Width="200"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Типы задач">
+                <Grid Background="#FFE5E5E5">
+                    <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Margin="90,10,194,230" FontSize="14" Click="Button_Add2"/>
+                    <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Margin="182,10,102,230" FontSize="14" Click="Button_Change"/>
+                    <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="274,10,10,230" FontSize="14" Click="Button_Del"/>
+                    <DataGrid x:Name="dg_cTask" Margin="10,52,10,10">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Task}" Header="Тип" Width="150"/>
+                            <DataGridTextColumn Binding="{Binding Group}" Header="Группа" Width="150"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Должности">
+                <Grid Background="#FFE5E5E5">
+                    <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Margin="90,10,194,230" FontSize="14" Click="Button_Add3"/>
+                    <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Margin="182,10,102,230" FontSize="14" Click="Button_Change"/>
+                    <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="274,10,10,230" FontSize="14" Click="Button_Del"/>
+                    <DataGrid x:Name="dg_cPositions" Margin="10,52,10,10">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Position}" Header="Должности" Width="200"/>
+                            <DataGridTextColumn Binding="{Binding Pay}" Header="Зарплата" Width="200"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Состояния">
+                <Grid Background="#FFE5E5E5">
+                    <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Margin="90,10,194,230" FontSize="14" Click="Button_Add4"/>
+                    <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Margin="182,10,102,230" FontSize="14" Click="Button_Change"/>
+                    <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="274,10,10,230" FontSize="14" Click="Button_Del"/>
+                    <DataGrid x:Name="dg_cStatus" Margin="10,52,10,10">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Status}" Header="Состояние" Width="200"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

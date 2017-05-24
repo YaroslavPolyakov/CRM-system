@@ -70,16 +70,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Add_cGroup.xaml.cs">
+    <Compile Include="Menu\Param\Add_cGroup.xaml.cs">
       <DependentUpon>Add_cGroup.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Add_Manager.xaml.cs">
+    <Compile Include="Menu\Param\Add_cPositions.xaml.cs">
+      <DependentUpon>Add_cPositions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Param\Add_cStatus.xaml.cs">
+      <DependentUpon>Add_cStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Param\Add_cTask.xaml.cs">
+      <DependentUpon>Add_cTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Managers\Add_Manager.xaml.cs">
       <DependentUpon>Add_Manager.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Add_Client.xaml.cs">
+    <Compile Include="Menu\Clients\Add_Client.xaml.cs">
       <DependentUpon>Add_Client.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Add_Task.xaml.cs">
+    <Compile Include="Menu\Tasks\Add_Task.xaml.cs">
       <DependentUpon>Add_Task.xaml</DependentUpon>
     </Compile>
     <Compile Include="BD\CatalogGroupManagers.cs" />
@@ -91,96 +100,136 @@
     <Compile Include="BD\Managers.cs" />
     <Compile Include="BD\sysdiagrams.cs" />
     <Compile Include="BD\Tasks.cs" />
-    <Compile Include="Calendar.xaml.cs">
+    <Compile Include="Menu\Calendar\Calendar.xaml.cs">
       <DependentUpon>Calendar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ChangeCatalog.xaml.cs">
+    <Compile Include="Menu\Param\ChangeCatalog.xaml.cs">
       <DependentUpon>ChangeCatalog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Change_Manager.xaml.cs">
+    <Compile Include="Menu\Param\Change_cGroup.xaml.cs">
+      <DependentUpon>Change_cGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Param\Change_cPosition.xaml.cs">
+      <DependentUpon>Change_cPosition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Param\Change_cStatus.xaml.cs">
+      <DependentUpon>Change_cStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Param\Change_cTask.xaml.cs">
+      <DependentUpon>Change_cTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Managers\Change_Manager.xaml.cs">
       <DependentUpon>Change_Manager.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Change_Client.xaml.cs">
+    <Compile Include="Menu\Clients\Change_Client.xaml.cs">
       <DependentUpon>Change_Client.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Change_Task.xaml.cs">
+    <Compile Include="Menu\Tasks\Change_Task.xaml.cs">
       <DependentUpon>Change_Task.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Clients.xaml.cs">
+    <Compile Include="Menu\Clients\Clients.xaml.cs">
       <DependentUpon>Clients.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Delete.xaml.cs">
+    <Compile Include="Menu\Delete\Delete.xaml.cs">
       <DependentUpon>Delete.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DialogSelectFolder.xaml.cs">
+    <Compile Include="Menu\Param\DialogSelectFolder.xaml.cs">
       <DependentUpon>DialogSelectFolder.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Hash.cs" />
-    <Compile Include="Menu.xaml.cs">
+    <Compile Include="Menu\Login\Hash.cs" />
+    <Compile Include="Menu\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Managers.xaml.cs">
+    <Compile Include="Menu\Managers\Managers.xaml.cs">
       <DependentUpon>Managers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Param.xaml.cs">
+    <Compile Include="Menu\Param\Param.xaml.cs">
       <DependentUpon>Param.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Search.xaml.cs">
+    <Compile Include="Menu\Search\Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Tasks.xaml.cs">
+    <Compile Include="Menu\Tasks\Tasks.xaml.cs">
       <DependentUpon>Tasks.xaml</DependentUpon>
     </Compile>
-    <Compile Include="XML.cs" />
-    <Page Include="Add_cGroup.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Add_Manager.xaml">
+    <Compile Include="Menu\XML.cs" />
+    <Page Include="Menu\Param\Add_cGroup.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Add_Client.xaml">
+    <Page Include="Menu\Param\Add_cPositions.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Add_Task.xaml">
+    <Page Include="Menu\Param\Add_cStatus.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Calendar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ChangeCatalog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Change_Manager.xaml">
+    <Page Include="Menu\Param\Add_cTask.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Change_Client.xaml">
+    <Page Include="Menu\Managers\Add_Manager.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Change_Task.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Clients.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DialogSelectFolder.xaml">
+    <Page Include="Menu\Clients\Add_Client.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="LogIn.xaml">
+    <Page Include="Menu\Tasks\Add_Task.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Calendar\Calendar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Menu\Param\ChangeCatalog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Param\Change_cGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Param\Change_cPosition.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Param\Change_cStatus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Param\Change_cTask.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Managers\Change_Manager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Clients\Change_Client.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Tasks\Change_Task.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Clients\Clients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Param\DialogSelectFolder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\Login\LogIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -188,34 +237,34 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LogIn.xaml.cs">
+    <Compile Include="Menu\Login\LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Menu\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Delete.xaml">
+    <Page Include="Menu\Delete\Delete.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Menu.xaml">
+    <Page Include="Menu\Menu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Managers.xaml">
+    <Page Include="Menu\Managers\Managers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Param.xaml">
+    <Page Include="Menu\Param\Param.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Search.xaml">
+    <Page Include="Menu\Search\Search.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Tasks.xaml">
+    <Page Include="Menu\Tasks\Tasks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
