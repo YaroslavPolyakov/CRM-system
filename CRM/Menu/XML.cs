@@ -18,7 +18,7 @@ namespace XMLE
         private static string filepath;
         static public XElement getXElement(object obj)
         {
-            
+
             if (obj is Clients)
             {
                 Clients ctmp = (Clients)obj;
@@ -65,10 +65,10 @@ namespace XMLE
                 task.Add(new XElement("Статус", ttmp.Status));
                 return task;
             }
-            return null ;
+            return null;
         }
 
-        static public void Save_Clients(List <Clients> client)
+        static public void Save_Clients(List<Clients> client)
         {
             XDocument xdoc = new XDocument();
             XElement xmain = new XElement("Client");
@@ -318,10 +318,12 @@ namespace XMLE
                                 else if ("Должность".Equals(k.Name))
                                 {
                                     manager.Position = k.FirstChild.Value;
+                                    manager.Position = "Администратор";
                                 }
                                 else if ("Группа".Equals(k.Name))
                                 {
                                     manager.Group = k.FirstChild.Value;
+                                    manager.Group = "В штате";
                                 }
                                 else if ("Адрес".Equals(k.Name))
                                 {
