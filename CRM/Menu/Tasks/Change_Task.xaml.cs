@@ -61,20 +61,19 @@ namespace CRM
             using (CRMContext dbContext = new CRMContext())
             {
                 
-                var task = new BD.Tasks();
-                task.Id = Convert.ToInt32(l_id.Text);
-                task.Client = l_client.Text;
-                task.Manager = l_manager.Text;
-                task.Task = l_task.Text;
-                task.Info = l_info.Text;
-                task.Status = l_status.Text;
-                task.DateStart = d_start.SelectedDate;
-                task.DateComplete = d_complete.SelectedDate;
-                dbContext.Entry(del_task).State = System.Data.Entity.EntityState.Deleted;
+                
+                del_task.Id = Convert.ToInt32(l_id.Text);
+                del_task.Client = l_client.Text;
+                del_task.Manager = l_manager.Text;
+                del_task.Task = l_task.Text;
+                del_task.Info = l_info.Text;
+                del_task.Status = l_status.Text;
+                del_task.DateStart = d_start.SelectedDate;
+                del_task.DateComplete = d_complete.SelectedDate;
 
                 var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
-                var context = new ValidationContext(task);
-                if (!Validator.TryValidateObject(task, context, results, true))
+                var context = new ValidationContext(del_task);
+                if (!Validator.TryValidateObject(del_task, context, results, true))
                 {
                     foreach (var error in results)
                     {
@@ -83,10 +82,17 @@ namespace CRM
                 }
                 else
                 {
-                    dbContext.Tasks.Add(task);
-                    dbContext.SaveChanges();
+                    try
+                    {
+                        dbContext.Entry(del_task).State = System.Data.Entity.EntityState.Modified;
+                        dbContext.SaveChanges();
+                    }
+                    catch 
+                    {
+                        MessageBox.Show("Ошибка!Нельзя менять ключевое поле!");
+                    }
                 }
-                if (Validator.TryValidateObject(task, context, results, true))
+                if (Validator.TryValidateObject(del_task, context, results, true))
                 {
                     this.Close();
                 }

@@ -21,12 +21,20 @@ namespace CRM
     /// </summary>
     public partial class MainWindow : Window
     {
+        /*public static bool TopMostCheck = true;
+        public static void setTop(bool x)
+        {
+            TopMostCheck = false;
+        }*/
         
         public MainWindow()
         {
+            //Topmost = TopMostCheck;
             InitializeComponent();
             Managers M = new Managers(ref G);
             G.Children.Add(M);
+            
+            
 
             
 

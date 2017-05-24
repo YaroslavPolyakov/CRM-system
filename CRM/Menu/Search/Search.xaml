@@ -19,19 +19,19 @@
         </Border>
 
         <StackPanel Grid.Column="1" Margin="25,88,34,10">
-        <DataGrid x:Name="dg_Tasks"  Grid.Column="1" Height="80" Margin="0,0,-0.2,0">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Id}" Header="ID"/>
-                <DataGridTextColumn Binding="{Binding Client}" Header="Заказчик"/>
-                <DataGridTextColumn Binding="{Binding Manager}" Header="Исполнитель" />
-                <DataGridTextColumn Binding="{Binding Task}" Header="Задача" />
-                <DataGridTextColumn Binding="{Binding Info}" Header="Информация" />
-                <DataGridTextColumn Binding="{Binding DateStart}" Header="Дата начала" />
-                <DataGridTextColumn Binding="{Binding DateComplete}" Header="Дата завершения" />
-                <DataGridTextColumn Binding="{Binding Status}" Header="Статус" />
-            </DataGrid.Columns>
-        </DataGrid>
-            <DataGrid x:Name="dg_Managers"  SelectedItem="{Binding Selected, Mode=TwoWay}"  Margin="0,0,-0.2,0" Height="99">
+            <DataGrid x:Name="dg_Tasks"  Grid.Column="1" Height="162">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id}" Header="ID"/>
+                    <DataGridTextColumn Binding="{Binding Client}" Header="Заказчик"/>
+                    <DataGridTextColumn Binding="{Binding Manager}" Header="Исполнитель" />
+                    <DataGridTextColumn Binding="{Binding Task}" Header="Задача" />
+                    <DataGridTextColumn Binding="{Binding Info}" Header="Информация" />
+                    <DataGridTextColumn Binding="{Binding DateStart}" Header="Дата начала" />
+                    <DataGridTextColumn Binding="{Binding DateComplete}" Header="Дата завершения" />
+                    <DataGridTextColumn Binding="{Binding Status}" Header="Статус" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid x:Name="dg_Managers"  SelectedItem="{Binding Selected, Mode=TwoWay}" Height="161">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Name}" Header="ФИО"/>
                     <DataGridTextColumn Binding="{Binding Login}" Header="Логин"/>
@@ -47,19 +47,19 @@
                     <DataGridTextColumn Binding="{Binding Info}" Header="Информация"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid x:Name="dg_Clients" Grid.Column="1" Height="102" Margin="0,0,-0.2,0">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Name}" Header="Имя" />
-                <DataGridTextColumn Binding="{Binding Address}" Header="Адрес" />
-                <DataGridTextColumn Binding="{Binding Phone}" Header="Телефон" />
-                <DataGridTextColumn Binding="{Binding Email}" Header="E-mail" />
-                <DataGridTextColumn Binding="{Binding CheckingAccount}" Header="Расчетный счет" />
-                <DataGridTextColumn Binding="{Binding Bank}" Header="Bank" />
-                <DataGridTextColumn Binding="{Binding Director}" Header="Директор" />
-                <DataGridTextColumn Binding="{Binding Accountant}" Header="Бухгалтер" />
-                <DataGridTextColumn Binding="{Binding Info}" Header="Информация" />
-            </DataGrid.Columns>
-        </DataGrid>
+            <DataGrid x:Name="dg_Clients" Grid.Column="1" Height="171">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}" Header="Имя" />
+                    <DataGridTextColumn Binding="{Binding Address}" Header="Адрес" />
+                    <DataGridTextColumn Binding="{Binding Phone}" Header="Телефон" />
+                    <DataGridTextColumn Binding="{Binding Email}" Header="E-mail" />
+                    <DataGridTextColumn Binding="{Binding CheckingAccount}" Header="Расчетный счет" />
+                    <DataGridTextColumn Binding="{Binding Bank}" Header="Bank" />
+                    <DataGridTextColumn Binding="{Binding Director}" Header="Директор" />
+                    <DataGridTextColumn Binding="{Binding Accountant}" Header="Бухгалтер" />
+                    <DataGridTextColumn Binding="{Binding Info}" Header="Информация" />
+                </DataGrid.Columns>
+            </DataGrid>
         </StackPanel>
     </Grid>
 </UserControl>

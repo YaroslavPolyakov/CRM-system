@@ -133,9 +133,6 @@
     <Compile Include="Menu\Delete\Delete.xaml.cs">
       <DependentUpon>Delete.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Menu\Param\DialogSelectFolder.xaml.cs">
-      <DependentUpon>DialogSelectFolder.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Menu\Login\Hash.cs" />
     <Compile Include="Menu\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
@@ -220,10 +217,6 @@
     <Page Include="Menu\Clients\Clients.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Menu\Param\DialogSelectFolder.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Menu\Login\LogIn.xaml">
       <SubType>Designer</SubType>

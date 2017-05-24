@@ -20,14 +20,13 @@ namespace CRM
     /// <summary>
     /// Логика взаимодействия для Param.xaml
     /// </summary>
-    /*Параметрый приложения 
+    /*Параметры приложения 
      !вход только администраторам
      -изменение логотипа
      -редактор каталогов
-     -папка для сохранения xml
      -поверх всех окон
-     -шрифты 
-     -цвета
+     -статистика
+     
 
      */
     public partial class Param : System.Windows.Controls.UserControl
@@ -35,6 +34,7 @@ namespace CRM
 
         public Param(ref Grid rG)
         {
+            
             InitializeComponent();
             Menu m = new Menu(rG, p_Param);
             G1.Children.Add(m);
@@ -73,15 +73,26 @@ namespace CRM
             ChangeCatalog F = new ChangeCatalog();
             F.Show();
         }  
-        private void Button2_Click(object sender, RoutedEventArgs e)
-        {
-            DialogSelectFolder SelectFolder = new DialogSelectFolder();
-            SelectFolder.ShowDialog();
-            this.textBlock1.Text = csPathToFolder.PathOfSelectedFolder;
-        }
+        
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            using (CRMContext dbContext = new CRMContext())
+            {
+                foreach (var item in dbContext.Tasks)
+                {
+                    dbContext.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                }
+                foreach (var item in dbContext.Managers)
+                {
+                    dbContext.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                }
+                foreach (var item in dbContext.Clients)
+                {
+                    dbContext.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                }
+                dbContext.SaveChanges();
 
+            }
         }
         public static class csPathToFolder
         {
@@ -90,6 +101,10 @@ namespace CRM
 
         }
 
-       
+        /*private void checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            MainWindow.setTop(true);
+            
+        }*/
     }
 }

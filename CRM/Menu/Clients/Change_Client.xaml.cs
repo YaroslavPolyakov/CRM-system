@@ -24,6 +24,7 @@ namespace CRM
         public BD.Clients del_client = null;
         public Change_Client(BD.Clients client)
         {
+            
             InitializeComponent();
             using (CRMContext dbContext = new CRMContext())
             {
@@ -45,22 +46,20 @@ namespace CRM
         {
             using (CRMContext dbContext = new CRMContext())
             {
-                var client = new BD.Clients();
 
-                client.Name = tb_name.Text;
-                client.Address = tb_address.Text;
-                client.Phone = tb_phone.Text;
-                client.Email = tb_email.Text;
-                client.CheckingAccount = tb_checkingAccoubt.Text;
-                client.Bank = tb_bank.Text;
-                client.Director = tb_director.Text;
-                client.Accountant = tb_acccountant.Text;
-                client.Info = tb_info.Text;
-                dbContext.Entry(del_client).State = System.Data.Entity.EntityState.Deleted;
+                del_client.Name = tb_name.Text;
+                del_client.Address = tb_address.Text;
+                del_client.Phone = tb_phone.Text;
+                del_client.Email = tb_email.Text;
+                del_client.CheckingAccount = tb_checkingAccoubt.Text;
+                del_client.Bank = tb_bank.Text;
+                del_client.Director = tb_director.Text;
+                del_client.Accountant = tb_acccountant.Text;
+                del_client.Info = tb_info.Text;
 
                 var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
-                var context = new ValidationContext(client);
-                if (!Validator.TryValidateObject(client, context, results, true))
+                var context = new ValidationContext(del_client);
+                if (!Validator.TryValidateObject(del_client, context, results, true))
                 {
                     foreach (var error in results)
                     {
@@ -69,10 +68,17 @@ namespace CRM
                 }
                 else
                 {
-                    dbContext.Clients.Add(client);
-                    dbContext.SaveChanges();
+                    try
+                    {
+                        dbContext.Entry(del_client).State = System.Data.Entity.EntityState.Modified;
+                        dbContext.SaveChanges();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ошибка!Нельзя менять ключевое поле!");
+                    }
                 }
-                if (Validator.TryValidateObject(client, context, results, true))
+                if (Validator.TryValidateObject(del_client, context, results, true))
                 {
                     this.Close();
                 }

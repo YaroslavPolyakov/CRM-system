@@ -35,7 +35,9 @@ namespace CRM
             using (CRMContext dbContext = new CRMContext())
             {
                 group.Group = l_id.Text;
+                dbContext.Entry(group).State = System.Data.Entity.EntityState.Modified;
                 dbContext.SaveChanges();
+                
             }
 
             this.Close();

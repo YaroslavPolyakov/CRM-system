@@ -57,24 +57,22 @@ namespace CRM
         {
             using (CRMContext dbContext = new CRMContext())
             {
-                var manager = new BD.Managers();
-                manager.Name = tb_name.Text;
-                manager.Login = tb_login.Text;
-                if (tb_password.Text!=null) manager.Password = Hash.EncryptPassword(tb_login.Text, tb_password.Text);
-                manager.Position = cb_position.SelectedItem.ToString();
-                manager.Group = cb_group.SelectedItem.ToString();
-                manager.Address = tb_address.Text;
-                manager.Phone = tb_phone.Text;
-                manager.Passport = tb_passport.Text;
-                manager.DateOfBirth = d_dateofbirth.SelectedDate;
-                manager.DateRecruitment = d_daterecruitment.SelectedDate;
-                manager.Email = tb_email.Text;
-                manager.Info = tb_info.Text;
-                dbContext.Entry(del_manager).State = System.Data.Entity.EntityState.Deleted;
+                del_manager.Name = tb_name.Text;
+                del_manager.Login = tb_login.Text;
+                if (tb_password.Text!=null) del_manager.Password = Hash.EncryptPassword(tb_login.Text, tb_password.Text);
+                del_manager.Position = cb_position.SelectedItem.ToString();
+                del_manager.Group = cb_group.SelectedItem.ToString();
+                del_manager.Address = tb_address.Text;
+                del_manager.Phone = tb_phone.Text;
+                del_manager.Passport = tb_passport.Text;
+                del_manager.DateOfBirth = d_dateofbirth.SelectedDate;
+                del_manager.DateRecruitment = d_daterecruitment.SelectedDate;
+                del_manager.Email = tb_email.Text;
+                del_manager.Info = tb_info.Text;
 
                 var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
-                var context = new ValidationContext(manager);
-                if (!Validator.TryValidateObject(manager, context, results, true))
+                var context = new ValidationContext(del_manager);
+                if (!Validator.TryValidateObject(del_manager, context, results, true))
                 {
                     foreach (var error in results)
                     {
@@ -83,10 +81,17 @@ namespace CRM
                 }
                 else
                 {
-                    dbContext.Managers.Add(manager);
-                    dbContext.SaveChanges();
+                    try
+                    {
+                        dbContext.Entry(del_manager).State = System.Data.Entity.EntityState.Modified;
+                        dbContext.SaveChanges();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ошибка!Нельзя менять ключевое поле!");
+                    }
                 }
-                if (Validator.TryValidateObject(manager, context, results, true))
+                if (Validator.TryValidateObject(del_manager, context, results, true))
                 {
                     this.Close();
                 }

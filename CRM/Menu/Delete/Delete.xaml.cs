@@ -29,7 +29,7 @@ namespace CRM
         public Delete(BD.Managers m)
         {
             InitializeComponent();
-            del_obj = m;
+            if (m.Name != "Харсеко Никита Игоревич") del_obj = m;
         }
         public Delete(BD.Clients c)
         {
@@ -63,7 +63,7 @@ namespace CRM
             {
                     using (CRMContext dbContext = new CRMContext())
                     {
-                        dbContext.Entry(del_obj).State = System.Data.Entity.EntityState.Deleted;
+                    dbContext.Entry(del_obj).State = System.Data.Entity.EntityState.Deleted;
                         dbContext.SaveChanges();
                     }
             }
