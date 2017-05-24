@@ -4,16 +4,40 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\
+=======
+<<<<<<< HEAD
+h:\Univer\Учеба\Курсач\CRM\CRM\obj\Debug\
+=======
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\obj\Debug\
+>>>>>>> origin/master
+>>>>>>> origin/master
 CRM
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\App.xaml
 26831789550
 
 4519145075
 22-1930691408
+=======
+<<<<<<< HEAD
+h:\Univer\Учеба\Курсач\CRM\CRM\App.xaml
+26831789550
+
+45-1811477685
+22-983105164
+=======
+E:\Универ\2 курс\SEM4\Курсач\CRM\CRM\App.xaml
+26831789550
+
+4519145075
+22-1930691408
+>>>>>>> origin/master
+>>>>>>> origin/master
 Menu\Param\Add_cGroup.xaml;Menu\Param\Add_cPositions.xaml;Menu\Param\Add_cStatus.xaml;Menu\Param\Add_cTask.xaml;Menu\Managers\Add_Manager.xaml;Menu\Clients\Add_Client.xaml;Menu\Tasks\Add_Task.xaml;Menu\Calendar\Calendar.xaml;Menu\Param\ChangeCatalog.xaml;Menu\Param\Change_cGroup.xaml;Menu\Param\Change_cPosition.xaml;Menu\Param\Change_cStatus.xaml;Menu\Param\Change_cTask.xaml;Menu\Managers\Change_Manager.xaml;Menu\Clients\Change_Client.xaml;Menu\Tasks\Change_Task.xaml;Menu\Clients\Clients.xaml;Menu\Param\DialogSelectFolder.xaml;Menu\Login\LogIn.xaml;Menu\MainWindow.xaml;Menu\Delete\Delete.xaml;Menu\Menu.xaml;Menu\Managers\Managers.xaml;Menu\Param\Param.xaml;Menu\Search\Search.xaml;Menu\Tasks\Tasks.xaml;
 
 False

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<client>
+  <clients name="Артель">
+    <address>Минск, Краснозвездный 14</address>
+    <phone>+375295658125  </phone>
+    <email>artel@mail.ru                 </email>
+    <checkingaccount>3540004874</checkingaccount>
+    <bank>ВТБ</bank>
+    <director>Гунь С.</director>
+    <accountant>Воронкова Е.</accountant>
+    <info />
+  </clients>
+  <clients name="ИП Наумович">
+    <address>Минск, Гагарина 14</address>
+    <phone>+375298686788  </phone>
+    <email>d.naum@mail.ru                </email>
+    <checkingaccount>3540006444</checkingaccount>
+    <bank>Сбербанк</bank>
+    <director>Наумович Д.</director>
+    <accountant>Алексеева А.</accountant>
+    <info>Видеомъемка</info>
+  </clients>
+  <clients name="Крона">
+    <address>Минск, Краснозвездный 14</address>
+    <phone>+375255565856  </phone>
+    <email>korona@gmail.com              </email>
+    <checkingaccount>3540004873</checkingaccount>
+    <bank>ВТБ</bank>
+    <director>Гунь С.</director>
+    <accountant>Козлова О.</accountant>
+    <info />
+  </clients>
+  <clients name="НьюАрт">
+    <address>Минск, Сурганова 16</address>
+    <phone>+375446585151  </phone>
+    <email>new_art@hotmail.com           </email>
+    <checkingaccount>3540006487</checkingaccount>
+    <bank>Беларусбанк</bank>
+    <director>Прокопчук О.</director>
+    <accountant>Дмитров П.</accountant>
+    <info />
+  </clients>
+  <clients name="Фишка.бай">
+    <address>Минск, Академия наук 5</address>
+    <phone>+375293245567  </phone>
+    <email>fishka@yandex.by              </email>
+    <checkingaccount>3540003655</checkingaccount>
+    <bank>МТБанк</bank>
+    <director>Афанасьева Д.</director>
+    <accountant>Захаренко А.</accountant>
+    <info />
+  </clients>
+</client>
