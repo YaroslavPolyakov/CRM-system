@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,9 +31,27 @@ namespace CRM
             {
                 var position = new BD.CatalogPositions();
                 position.Position = l_position.Text;
-                position.Pay = Convert.ToDecimal(l_pay.Text);
-                dbContext.CatalogPositions.Add(position);
-                dbContext.SaveChanges();
+                if (l_pay.Text != "") position.Pay = Convert.ToDecimal(l_pay.Text);
+                else position.Pay = Convert.ToDecimal(1);
+                
+                var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+                var context = new ValidationContext(position);
+                if (!Validator.TryValidateObject(position, context, results, true))
+                {
+                    foreach (var error in results)
+                    {
+                        MessageBox.Show(error.ErrorMessage);
+                    }
+                }
+                else
+                {
+                    dbContext.CatalogPositions.Add(position);
+                    dbContext.SaveChanges();
+                }
+                if (Validator.TryValidateObject(position, context, results, true))
+                {
+                    this.Close();
+                }
 
             }
             this.Close();

@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.XPath;
+using CRM;
 using CRM.BD;
 
 namespace XMLE
@@ -19,9 +20,9 @@ namespace XMLE
         static public XElement getXElement(object obj)
         {
 
-            if (obj is Clients)
+            if (obj is CRM.BD.Clients)
             {
-                Clients ctmp = (Clients)obj;
+                CRM.BD.Clients ctmp = (CRM.BD.Clients)obj;
                 XElement client = new XElement("Client");
                 client.Add(new XElement("Название", ctmp.Name));
                 client.Add(new XElement("Адрес", ctmp.Address));
@@ -34,12 +35,14 @@ namespace XMLE
                 client.Add(new XElement("Информация", ctmp.Info));
                 return client;
             }
-            if (obj is Managers)
+            if (obj is CRM.BD.Managers)
             {
-                Managers mtmp = (Managers)obj;
+                CRM.BD.Managers mtmp = (CRM.BD.Managers)obj;
                 XElement manager = new XElement("Manager");
                 manager.Add(new XElement("ФИО", mtmp.Name));
                 manager.Add(new XElement("Логин", mtmp.Login));
+                //manager.Add(new XElement("Пароль", mtmp.Password));
+                manager.Add(new XElement("Пароль", Encoding.Default.GetString(mtmp.Password)));
                 manager.Add(new XElement("Должность", mtmp.Position));
                 manager.Add(new XElement("Группа", mtmp.Group));
                 manager.Add(new XElement("Адрес", mtmp.Address));
@@ -51,9 +54,9 @@ namespace XMLE
                 manager.Add(new XElement("Информация", mtmp.Info));
                 return manager;
             }
-            if (obj is Tasks)
+            if (obj is CRM.BD.Tasks)
             {
-                Tasks ttmp = (Tasks)obj;
+                CRM.BD.Tasks ttmp = (CRM.BD.Tasks)obj;
                 XElement task = new XElement("Task");
                 task.Add(new XElement("ID", ttmp.Id));
                 task.Add(new XElement("Заказчик", ttmp.Client));
@@ -68,11 +71,11 @@ namespace XMLE
             return null;
         }
 
-        static public void Save_Clients(List<Clients> client)
+        static public void Save_Clients(List<CRM.BD.Clients> client)
         {
             XDocument xdoc = new XDocument();
             XElement xmain = new XElement("Client");
-            foreach (Clients tmp in client)
+            foreach (CRM.BD.Clients tmp in client)
             {
                 xmain.Add(XML.getXElement(tmp));
             }
@@ -84,11 +87,11 @@ namespace XMLE
                 return;
             xdoc.Save(sfd.FileName);
         }
-        static public void Save_Managers(List<Managers> manager)
+        static public void Save_Managers(List<CRM.BD.Managers> manager)
         {
             XDocument xdoc = new XDocument();
             XElement xmain = new XElement("Manager");
-            foreach (Managers tmp in manager)
+            foreach (CRM.BD.Managers tmp in manager)
             {
                 xmain.Add(XML.getXElement(tmp));
             }
@@ -101,11 +104,11 @@ namespace XMLE
 
             xdoc.Save(sfd.FileName);
         }
-        static public void Save_Tasks(List<Tasks> task)
+        static public void Save_Tasks(List<CRM.BD.Tasks> task)
         {
             XDocument xdoc = new XDocument();
             XElement xmain = new XElement("Task");
-            foreach (Tasks tmp in task)
+            foreach (CRM.BD.Tasks tmp in task)
             {
                 xmain.Add(XML.getXElement(tmp));
             }
@@ -306,7 +309,8 @@ namespace XMLE
                             manager = new CRM.BD.Managers();
 
                             for (XmlNode k = d.FirstChild; k != null; k = k.NextSibling)
-                            {
+                            { 
+                                
                                 if ("ФИО".Equals(k.Name))
                                 {
                                     manager.Name = k.FirstChild.Value;
@@ -318,12 +322,10 @@ namespace XMLE
                                 else if ("Должность".Equals(k.Name))
                                 {
                                     manager.Position = k.FirstChild.Value;
-                                    manager.Position = "Администратор";
                                 }
                                 else if ("Группа".Equals(k.Name))
                                 {
                                     manager.Group = k.FirstChild.Value;
-                                    manager.Group = "В штате";
                                 }
                                 else if ("Адрес".Equals(k.Name))
                                 {
@@ -332,6 +334,15 @@ namespace XMLE
                                 else if ("Телефон".Equals(k.Name))
                                 {
                                     manager.Phone = k.FirstChild.Value;
+                                }
+                                else if ("Пасспорт".Equals(k.Name))
+                                {
+                                    manager.Passport = k.FirstChild.Value;
+                                }
+                                else if ("Пароль".Equals(k.Name))
+                                {
+                                    //manager.Password = Hash.EncryptPassword(manager.Login, "1111");
+                                    manager.Password = Encoding.Default.GetBytes(k.FirstChild.Value);
                                 }
                                 else if ("Дата_рождения".Equals(k.Name))
                                 {
@@ -361,6 +372,7 @@ namespace XMLE
                                 {
                                     MessageBox.Show("Ошибка!" + ee.Message);
                                 }
+
                             }
                         }
                     }

@@ -15,7 +15,8 @@ namespace CRM.BD
         }
 
         [Key]
-        [StringLength(20)]
+        [Required]
+        [StringLength(20, MinimumLength = 4)]
         public string Group { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

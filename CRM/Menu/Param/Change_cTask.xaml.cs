@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,7 +39,31 @@ namespace CRM
             {
                 task.Task = l_id.Text;
                 task.Group = l_id_Copy.Text;
-                dbContext.SaveChanges();
+                var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+                var context = new ValidationContext(task);
+                if (!Validator.TryValidateObject(task, context, results, true))
+                {
+                    foreach (var error in results)
+                    {
+                        MessageBox.Show(error.ErrorMessage);
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        dbContext.Entry(task).State = System.Data.Entity.EntityState.Modified;
+                        dbContext.SaveChanges();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ошибка!");
+                    }
+                }
+                if (Validator.TryValidateObject(task, context, results, true))
+                {
+                    this.Close();
+                }
             }
 
             this.Close();

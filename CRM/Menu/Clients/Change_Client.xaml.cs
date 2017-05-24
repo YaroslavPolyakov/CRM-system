@@ -75,7 +75,7 @@ namespace CRM
                     }
                     catch
                     {
-                        MessageBox.Show("Ошибка!Нельзя менять ключевое поле!");
+                        MessageBox.Show("Ошибка!");
                     }
                 }
                 if (Validator.TryValidateObject(del_client, context, results, true))

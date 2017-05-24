@@ -15,9 +15,10 @@ namespace CRM.BD
         }
 
         [Key]
+        [Required]
         [StringLength(20)]
         public string Position { get; set; }
-
+        
         [Column(TypeName = "money")]
         public decimal? Pay { get; set; }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,11 +31,25 @@ namespace CRM
             {
                 var group = new BD.CatalogGroupManagers();
                 group.Group = l_id.Text;
-                dbContext.CatalogGroupManagers.Add(group);
-                dbContext.SaveChanges();
+                var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+                var context = new ValidationContext(group);
+                if (!Validator.TryValidateObject(group, context, results, true))
+                {
+                    foreach (var error in results)
+                    {
+                        MessageBox.Show(error.ErrorMessage);
+                    }
+                }
+                else
+                {
+                    dbContext.CatalogGroupManagers.Add(group);
+                    dbContext.SaveChanges();
+                }
+                if (Validator.TryValidateObject(group, context, results, true))
+                {
+                    this.Close();
+                }
             }
-
-            this.Close();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

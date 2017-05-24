@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,11 +31,26 @@ namespace CRM
             {
                 var status = new BD.CatalogStatus();
                 status.Status = l_id.Text;
-                dbContext.CatalogStatus.Add(status);
-                dbContext.SaveChanges();
+                var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+                var context = new ValidationContext(status);
+                if (!Validator.TryValidateObject(status, context, results, true))
+                {
+                    foreach (var error in results)
+                    {
+                        MessageBox.Show(error.ErrorMessage);
+                    }
+                }
+                else
+                {
+                    dbContext.CatalogStatus.Add(status);
+                    dbContext.SaveChanges();
+                }
+                if (Validator.TryValidateObject(status, context, results, true))
+                {
+                    this.Close();
+                }
 
             }
-            this.Close();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

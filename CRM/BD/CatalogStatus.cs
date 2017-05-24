@@ -1,3 +1,4 @@
+
 namespace CRM.BD
 {
     using System;
@@ -15,9 +16,11 @@ namespace CRM.BD
         }
 
         [Key]
-        [StringLength(15)]
+        [Required]
+        [StringLength(15 ,MinimumLength = 4)]
         public string Status { get; set; }
 
+        [Required]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tasks> Tasks { get; set; }
     }

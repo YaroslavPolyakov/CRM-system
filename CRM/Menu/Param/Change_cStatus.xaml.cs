@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -35,11 +36,33 @@ namespace CRM
         {
             using (CRMContext dbContext = new CRMContext())
             {
-                status.Status = l_id.Text;
-                dbContext.SaveChanges();
+                status.Status = l_id.Text; var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+                var context = new ValidationContext(status);
+                if (!Validator.TryValidateObject(status, context, results, true))
+                {
+                    foreach (var error in results)
+                    {
+                        MessageBox.Show(error.ErrorMessage);
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        dbContext.Entry(status).State = System.Data.Entity.EntityState.Modified;
+                        dbContext.SaveChanges();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ошибка!");
+                    }
+                }
+                if (Validator.TryValidateObject(status, context, results, true))
+                {
+                    this.Close();
+                }
             }
             
-            this.Close();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

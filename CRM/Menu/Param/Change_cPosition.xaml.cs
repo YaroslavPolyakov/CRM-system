@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,7 +38,32 @@ namespace CRM
             {
                 position.Position = l_id.Text;
                 position.Pay = Convert.ToInt16(l_id_Copy.Text);
-                dbContext.SaveChanges();
+                
+                var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+                var context = new ValidationContext(position);
+                if (!Validator.TryValidateObject(position, context, results, true))
+                {
+                    foreach (var error in results)
+                    {
+                        MessageBox.Show(error.ErrorMessage);
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        dbContext.Entry(position).State = System.Data.Entity.EntityState.Modified;
+                        dbContext.SaveChanges();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ошибка!");
+                    }
+                }
+                if (Validator.TryValidateObject(position, context, results, true))
+                {
+                    this.Close();
+                }
             }
 
             this.Close();

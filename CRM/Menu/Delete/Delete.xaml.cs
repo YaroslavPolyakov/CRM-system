@@ -29,7 +29,7 @@ namespace CRM
         public Delete(BD.Managers m)
         {
             InitializeComponent();
-            if (m.Name != "Харсеко Никита Игоревич") del_obj = m;
+            /*if (m.Name != "Харсеко Никита Игоревич")*/ del_obj = m;
         }
         public Delete(BD.Clients c)
         {
