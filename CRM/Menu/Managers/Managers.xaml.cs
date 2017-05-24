@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CRM.BD;
+using XMLE;
 
 namespace CRM
 {
@@ -72,6 +73,25 @@ namespace CRM
             {
                 MessageBox.Show("Выберите менеджера.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void Button_Save(object sender, RoutedEventArgs e)
+        {
+            List<BD.Managers> manager = new List<BD.Managers>();
+            using (CRMContext dbContext = new CRMContext())
+            {
+                foreach (var item in dbContext.Managers)
+                {
+                    manager.Add(item);
+                }
+            }
+            XMLE.XML.Save_Managers(manager);
+        }
+
+        private void Button_Open(object sender, RoutedEventArgs e)
+        {
+            List<BD.Managers> manager = new List<BD.Managers>();
+            XML.openXml_managers();
         }
 
     }

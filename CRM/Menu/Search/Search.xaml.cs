@@ -26,9 +26,9 @@ namespace CRM
             InitializeComponent();
             Menu m = new Menu(rG, p_Search);
             G1.Children.Add(m);
-            /*dg_Clients.Visibility = Visibility.Collapsed;
+            dg_Clients.Visibility = Visibility.Collapsed;
             dg_Tasks.Visibility = Visibility.Collapsed;
-            dg_Managers.Visibility = Visibility.Collapsed;*/
+            dg_Managers.Visibility = Visibility.Collapsed;
         }
 
         private void search_task_TextChanged(object sender, TextChangedEventArgs e)

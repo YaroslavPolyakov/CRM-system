@@ -16,8 +16,10 @@
         <StackPanel Orientation="Horizontal" Height="87" VerticalAlignment="Top" Grid.Column="1" Margin="5,9,-78,0">
             <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Add"/>
             <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Margin="30,0,0,22.2" Width="145" FontSize="22" Click="Button_Change" Height="50" VerticalAlignment="Bottom"/>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Сохранить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Save"/>
             <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Del"/>
-        </StackPanel>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Открыть" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Open"/>
+         </StackPanel>
         <DataGrid x:Name="dg_Managers"  SelectedItem="{Binding Selected, Mode=TwoWay}" Margin="14,100,12,10" Grid.Column="1" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}" Header="ФИО"/>

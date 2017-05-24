@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CRM.BD;
+using XMLE;
+using System.Xml.Linq;
 
 namespace CRM
 {
@@ -24,7 +26,7 @@ namespace CRM
         public Tasks(ref Grid rG)
         {
             InitializeComponent();
-            Menu m = new Menu(rG,p_Tasks);
+            Menu m = new Menu(rG, p_Tasks);
             G1.Children.Add(m);
 
             using (CRMContext dbContext = new CRMContext())
@@ -68,6 +70,24 @@ namespace CRM
                 MessageBox.Show("Выберите задачу.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-       
+
+        private void Button_Save(object sender, RoutedEventArgs e)
+        {
+            List<BD.Tasks> task = new List<BD.Tasks>();
+            using (CRMContext dbContext = new CRMContext())
+            {
+                foreach (var item in dbContext.Tasks)
+                {
+                    task.Add(item);
+                }
+            }
+            XMLE.XML.Save_Tasks(task);
+        }
+
+        private void Button_Open(object sender, RoutedEventArgs e)
+        {
+            List<BD.Tasks> client = new List<BD.Tasks>();
+            XML.openXml_tasks();
+        }
     }
 }

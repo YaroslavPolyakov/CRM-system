@@ -5,28 +5,24 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CRM"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="800"
-             x:Name="p_Clients" >
-    <Grid x:Name="G1">
+             d:DesignHeight="600"
+             x:Name="p_Clients" d:DesignWidth="800" >
+    <Grid x:Name="G1" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="240"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Border Background="#FF505883" Margin="0,0,0,-4" Grid.Column="1" BorderThickness="2,0,0,0">
-            
-        </Border>
+        <Border Background="#FF505883" Margin="0,0,0,-4" Grid.Column="1" BorderThickness="2,0,0,0 " />
         <StackPanel Orientation="Horizontal" Height="87" VerticalAlignment="Top" Grid.Column="1" Margin="5,9,-78,0">
-            <StackPanel.DataContext>
-                <XmlDataProvider x:Name="XMLData" Source="XMLFile1.xml" XPath="NomList/Nomenclature"/>
-            </StackPanel.DataContext>
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Margin="30,15,0,22.2" Width="54" FontSize="22" Click="Button_Add"/>
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Margin="30,15,0,22.2" Width="36" FontSize="22"  Click="Button_Change"/>
-            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="30,15,0,22.2" Width="47" FontSize="22" Click="Button_Del"/>
-            <Button x:Name="button" Content="Сохранить" Margin="0,0,0,0.2" RenderTransformOrigin="3.707,0.436" Click="Button_Save"/>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Добавить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Add"/>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Изменить" Margin="30,0,0,22.2" Width="145" FontSize="22" Click="Button_Change" Height="50" VerticalAlignment="Bottom"/>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Сохранить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Save"/>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Del"/>
+            <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Открыть" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Open"/>
         </StackPanel>
-        <DataGrid x:Name="dg_Clients" AutoGenerateColumns="False" ItemsSource="{Binding}" Margin="14,100,12,10"  Grid.Column="1" IsReadOnly="True">
+        <DataGrid x:Name="dg_Clients" Margin="14,100,12,10"  Grid.Column="1" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Name, Mode=TwoWay}" Header="Имя" />
+                <DataGridTextColumn Binding="{Binding Name, Mode=TwoWay}" Header="Название" />
                 <DataGridTextColumn Binding="{Binding Address, Mode=TwoWay}" Header="Адрес" />
                 <DataGridTextColumn Binding="{Binding Phone, Mode=TwoWay}" Header="Телефон" />
                 <DataGridTextColumn Binding="{Binding Email, Mode=TwoWay}" Header="E-mail" />
