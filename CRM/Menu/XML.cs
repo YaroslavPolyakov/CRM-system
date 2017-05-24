@@ -18,7 +18,7 @@ namespace XMLE
         private static string filepath;
         static public XElement getXElement(object obj)
         {
-            
+
             if (obj is Clients)
             {
                 Clients ctmp = (Clients)obj;
@@ -65,10 +65,10 @@ namespace XMLE
                 task.Add(new XElement("Статус", ttmp.Status));
                 return task;
             }
-            return null ;
+            return null;
         }
 
-        static public void Save_Clients(List <Clients> client)
+        static public void Save_Clients(List<Clients> client)
         {
             XDocument xdoc = new XDocument();
             XElement xmain = new XElement("Client");
