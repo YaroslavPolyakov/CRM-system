@@ -28,6 +28,8 @@ namespace CRM
             InitializeComponent();
             u = rU;
             g = rG;
+            if (!IAm.isAdmin) mb_param.Visibility = Visibility.Collapsed;
+
         }
 
 

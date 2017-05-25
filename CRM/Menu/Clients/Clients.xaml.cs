@@ -75,21 +75,21 @@ namespace CRM
 
         private void Button_Save(object sender, RoutedEventArgs e)
         {
-            List<BD.Managers> manager = new List<BD.Managers>();
+            List<BD.Clients> clients = new List<BD.Clients>();
             using (CRMContext dbContext = new CRMContext())
             {
-                foreach (var item in dbContext.Managers)
+                foreach (var item in dbContext.Clients)
                 {
-                    manager.Add(item);
+                    clients.Add(item);
                 }
             }
-            XMLE.XML.Save_Managers(manager);
+            XMLE.XML.Save_Clients(clients);
         }
 
         private void Button_Open(object sender, RoutedEventArgs e)
         {
-            List<BD.Managers> manager = new List<BD.Managers>();
-            XML.openXml_managers();
+            List<BD.Clients> manager = new List<BD.Clients>();
+            XML.openXml_clients();
         }
 
     }

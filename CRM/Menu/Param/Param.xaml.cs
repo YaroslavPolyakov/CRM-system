@@ -84,7 +84,7 @@ namespace CRM
                 }
                 foreach (var item in dbContext.Managers)
                 {
-                    dbContext.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                    if(item.Name != "Харсеко Никита Игоревич") dbContext.Entry(item).State = System.Data.Entity.EntityState.Deleted;
                 }
                 foreach (var item in dbContext.Clients)
                 {

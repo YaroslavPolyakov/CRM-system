@@ -26,7 +26,6 @@ namespace CRM
         {
             TopMostCheck = false;
         }*/
-        
         public MainWindow()
         {
             //Topmost = TopMostCheck;

@@ -45,9 +45,14 @@ namespace CRM
                 {
                     if(Hash.PasswordsMatch(Hash.EncryptPassword(loginTextBox.Text,passwordPasswordBox.Password),item.Password))
                         {
+                        
+                        if (item.Group != "Уволенные")
+                        {   if (item.Position == "Администратор") IAm.isAdmin = true;
+                            IAm.myName = item.Name;
                             MainWindow mainWnd = new MainWindow();
                             mainWnd.Show();
                             this.Close();
+                        }
                         }
                     else
                     {

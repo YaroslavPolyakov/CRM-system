@@ -70,6 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Menu\IAm.cs" />
     <Compile Include="Menu\Param\Add_cGroup.xaml.cs">
       <DependentUpon>Add_cGroup.xaml</DependentUpon>
     </Compile>

@@ -33,7 +33,7 @@ namespace CRM
             {
                 foreach (var item in dbContext.Tasks)
                 {
-                    dg_Tasks.Items.Add(item);
+                    if (IAm.isAdmin || IAm.myName == item.Manager) dg_Tasks.Items.Add(item);
                 }
             }
         }
@@ -49,8 +49,15 @@ namespace CRM
         {
             if (dg_Tasks.SelectedItem != null)
             {
-                Change change_Zad = new Change((BD.Tasks)dg_Tasks.SelectedItem);
-                change_Zad.Show();
+                if (IAm.isAdmin || IAm.myName == ((BD.Tasks)dg_Tasks.SelectedItem).Manager)
+                {
+                    Change change_Zad = new Change((BD.Tasks)dg_Tasks.SelectedItem);
+                    change_Zad.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Вы не имеете прав на изменение этой задачи!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
             else
             {
@@ -62,8 +69,15 @@ namespace CRM
         {
             if (dg_Tasks.SelectedItem != null)
             {
-                Delete delete_Zad = new Delete((BD.Tasks)dg_Tasks.SelectedItem);
-                delete_Zad.Show();
+                if (IAm.isAdmin && IAm.myName != ((BD.Tasks)dg_Tasks.SelectedItem).Manager)
+                {
+                    Delete delete_Zad = new Delete((BD.Tasks)dg_Tasks.SelectedItem);
+                    delete_Zad.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Вы не имеете прав на удаление этой задачи!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
             else
             {
