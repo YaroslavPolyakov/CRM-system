@@ -34,15 +34,15 @@
             <DataGrid x:Name="dg_Managers"  SelectedItem="{Binding Selected, Mode=TwoWay}" Height="161">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Name}" Header="ФИО"/>
-                    <DataGridTextColumn Binding="{Binding Login}" Header="Логин"/>
-                    <DataGridTextColumn Binding="{Binding Password}" Header="Пароль" />
-                    <DataGridTextColumn Binding="{Binding Position}" Header="Должность" />
+                    <DataGridTextColumn x:Name="dgc_login" Binding="{Binding Login}" Header="Логин"/>
+                    <DataGridTextColumn x:Name="dgc_pass" Binding="{Binding Password}" Header="Пароль" />
+                    <DataGridTextColumn  Binding="{Binding Position}" Header="Должность" />
                     <DataGridTextColumn Binding="{Binding Group}" Header="Группа" />
-                    <DataGridTextColumn Binding="{Binding Address}" Header="Адрес" />
-                    <DataGridTextColumn Binding="{Binding Phone}" Header="Телефон" />
-                    <DataGridTextColumn Binding="{Binding Passport}" Header="Пасспорт" />
-                    <DataGridTextColumn Binding="{Binding DateOfBirth}" Header="Дата рождения" />
-                    <DataGridTextColumn Binding="{Binding DateRecruitment}" Header="Дата приема на работу" />
+                    <DataGridTextColumn x:Name="dgc_address" Binding="{Binding Address}" Header="Адрес" />
+                    <DataGridTextColumn x:Name="dgc_phone" Binding="{Binding Phone}" Header="Телефон" />
+                    <DataGridTextColumn x:Name="dgc_passp" Binding="{Binding Passport}" Header="Пасспорт" />
+                    <DataGridTextColumn x:Name="dgc_dateB" Binding="{Binding DateOfBirth}" Header="Дата рождения" />
+                    <DataGridTextColumn x:Name="dgc_dateR" Binding="{Binding DateRecruitment}" Header="Дата приема на работу" />
                     <DataGridTextColumn Binding="{Binding Email}" Header="E-mail"/>
                     <DataGridTextColumn Binding="{Binding Info}" Header="Информация"/>
                 </DataGrid.Columns>

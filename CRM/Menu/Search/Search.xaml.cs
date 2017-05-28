@@ -29,6 +29,15 @@ namespace CRM
             dg_Clients.Visibility = Visibility.Collapsed;
             dg_Tasks.Visibility = Visibility.Collapsed;
             dg_Managers.Visibility = Visibility.Collapsed;
+            if (!IAm.isAdmin)
+            {
+                dg_Managers.Columns.Remove(dgc_address);
+                dg_Managers.Columns.Remove(dgc_dateB);
+                dg_Managers.Columns.Remove(dgc_dateR);
+                dg_Managers.Columns.Remove(dgc_login);
+                dg_Managers.Columns.Remove(dgc_pass);
+                dg_Managers.Columns.Remove(dgc_passp);
+            }
         }
 
         private void search_task_TextChanged(object sender, TextChangedEventArgs e)

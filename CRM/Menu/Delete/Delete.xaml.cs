@@ -60,15 +60,22 @@ namespace CRM
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            if (del_obj != null)
+            try
             {
+                if (del_obj != null)
+                {
                     using (CRMContext dbContext = new CRMContext())
                     {
-                    dbContext.Entry(del_obj).State = System.Data.Entity.EntityState.Deleted;
+                        dbContext.Entry(del_obj).State = System.Data.Entity.EntityState.Deleted;
                         dbContext.SaveChanges();
                     }
+                }
+                this.Close();
             }
-            this.Close(); 
+            catch(Exception ex)
+            {
+                MessageBox.Show("Ошибка! Сначала удалите задачи c этим менеджером/клиентом!" );
+            }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

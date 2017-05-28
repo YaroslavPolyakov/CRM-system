@@ -41,8 +41,7 @@ namespace XMLE
                 XElement manager = new XElement("Manager");
                 manager.Add(new XElement("ФИО", mtmp.Name));
                 manager.Add(new XElement("Логин", mtmp.Login));
-                //manager.Add(new XElement("Пароль", mtmp.Password));
-                manager.Add(new XElement("Пароль", Encoding.Default.GetString(mtmp.Password)));
+                manager.Add(new XElement("Пароль", mtmp.Password));
                 manager.Add(new XElement("Должность", mtmp.Position));
                 manager.Add(new XElement("Группа", mtmp.Group));
                 manager.Add(new XElement("Адрес", mtmp.Address));
@@ -51,7 +50,8 @@ namespace XMLE
                 manager.Add(new XElement("Дата_рождения", mtmp.DateOfBirth));
                 manager.Add(new XElement("Дата_приема_на_работу", mtmp.DateRecruitment));
                 manager.Add(new XElement("E_mail", mtmp.Email));
-                manager.Add(new XElement("Информация", mtmp.Info));
+                if (mtmp.Info != null) manager.Add(new XElement("Информация", mtmp.Info));
+                else manager.Add(new XElement("Информация", ""));
                 return manager;
             }
             if (obj is CRM.BD.Tasks)
@@ -93,7 +93,7 @@ namespace XMLE
             XElement xmain = new XElement("Manager");
             foreach (CRM.BD.Managers tmp in manager)
             {
-                xmain.Add(XML.getXElement(tmp));
+                if(tmp.Name!="Харсеко Никита Игоревич") xmain.Add(XML.getXElement(tmp));
             }
             xdoc.Add(xmain);
             SaveFileDialog sfd = new SaveFileDialog();
@@ -341,8 +341,8 @@ namespace XMLE
                                 }
                                 else if ("Пароль".Equals(k.Name))
                                 {
-                                    //manager.Password = Hash.EncryptPassword(manager.Login, "1111");
-                                    manager.Password = Encoding.Default.GetBytes(k.FirstChild.Value);
+                                    manager.Password = Hash.EncryptPassword(manager.Login, "1111");
+                                    //manager.Password = Encoding.Default.GetBytes(k.FirstChild.Value);
                                 }
                                 else if ("Дата_рождения".Equals(k.Name))
                                 {

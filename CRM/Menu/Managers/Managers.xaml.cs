@@ -36,7 +36,6 @@ namespace CRM
                 dg_Managers.Columns.Remove(dgc_dateR);
                 dg_Managers.Columns.Remove(dgc_login);
                 dg_Managers.Columns.Remove(dgc_pass);
-                dg_Managers.Columns.Remove(dgc_phone);
                 b_o.Visibility = Visibility.Collapsed;
             }
 

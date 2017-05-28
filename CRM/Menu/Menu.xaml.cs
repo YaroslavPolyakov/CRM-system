@@ -30,6 +30,7 @@ namespace CRM
             g = rG;
             if (!IAm.isAdmin) mb_param.Visibility = Visibility.Collapsed;
 
+
         }
 
 

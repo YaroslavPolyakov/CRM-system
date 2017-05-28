@@ -30,7 +30,7 @@ namespace CRM
         {
             //Topmost = TopMostCheck;
             InitializeComponent();
-            Managers M = new Managers(ref G);
+            Calendar M = new Calendar(ref G);
             G.Children.Add(M);
             
             
