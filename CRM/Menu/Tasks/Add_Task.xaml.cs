@@ -55,7 +55,14 @@ namespace CRM
                 task.Manager = l_manager.Text;
                 task.Task = l_task.Text;
                 task.Info = l_info.Text;
-                task.Status = l_status.Text;
+                foreach (var item in dbContext.CatalogStatus)
+                {
+                    if (item.Status == l_status.SelectedItem.ToString())
+                    {
+                        task.Status = item.Id;
+                    }
+                    
+                }
                 task.DateStart = d_start.SelectedDate;
                 task.DateComplete = d_complete.SelectedDate;
 

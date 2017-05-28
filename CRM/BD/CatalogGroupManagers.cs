@@ -14,9 +14,11 @@ namespace CRM.BD
             Managers = new HashSet<Managers>();
         }
 
-        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int Id { get; set; }
+
         [Required]
-        [StringLength(20, MinimumLength = 4)]
+        [StringLength(20)]
         public string Group { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

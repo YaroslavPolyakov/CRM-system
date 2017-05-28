@@ -51,7 +51,14 @@ namespace CRM
                 manager.Login = tb_login.Text;
                 manager.Password = Hash.EncryptPassword(tb_login.Text, tb_password.Text);
                 manager.Position = cb_position.SelectedItem.ToString();
-                manager.Group = cb_group.SelectedItem.ToString();
+                foreach (var item in dbContext.CatalogGroupManagers)
+                {
+                    if (item.Group == cb_group.SelectedItem.ToString())
+                    {
+                        manager.Group = item.Id;
+                    }
+                    
+                }
                 manager.Address = tb_address.Text;
                 manager.Phone = tb_phone.Text;
                 manager.Passport = tb_passport.Text;

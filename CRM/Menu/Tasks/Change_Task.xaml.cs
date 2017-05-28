@@ -46,7 +46,14 @@ namespace CRM
                 l_id.Text = task.Id.ToString();
                 l_manager.Text = task.Manager;
                 l_info.Text = task.Info;
-                l_status.Text = task.Status;
+                foreach (var item in dbContext.CatalogStatus)
+                {
+                    if (item.Id == task.Status)
+                    {
+                        l_status.SelectedItem = item.Status;
+                    }
+
+                }
                 l_client.Text = task.Client;
                 l_task.Text = task.Task;
                 d_complete.SelectedDate = task.DateComplete;
@@ -67,7 +74,14 @@ namespace CRM
                 del_task.Manager = l_manager.Text;
                 del_task.Task = l_task.Text;
                 del_task.Info = l_info.Text;
-                del_task.Status = l_status.Text;
+                foreach (var item in dbContext.CatalogStatus)
+                {
+                    if (item.Status == l_status.SelectedItem.ToString())
+                    {
+                        del_task.Status = item.Id;
+                    }
+                    
+                }
                 del_task.DateStart = d_start.SelectedDate;
                 del_task.DateComplete = d_complete.SelectedDate;
 

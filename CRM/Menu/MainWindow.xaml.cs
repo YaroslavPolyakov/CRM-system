@@ -32,6 +32,7 @@ namespace CRM
             InitializeComponent();
             Calendar M = new Calendar(ref G);
             G.Children.Add(M);
+            IAm.isAdmin = true;
             
             
 

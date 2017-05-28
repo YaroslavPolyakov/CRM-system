@@ -70,6 +70,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BD\CatalogGroupManagers.cs" />
+    <Compile Include="BD\CatalogPositions.cs" />
+    <Compile Include="BD\CatalogStatus.cs" />
+    <Compile Include="BD\CatalogTasks.cs" />
+    <Compile Include="BD\Clients.cs" />
+    <Compile Include="BD\CRMContext.cs" />
+    <Compile Include="BD\Managers.cs" />
+    <Compile Include="BD\sysdiagrams.cs" />
+    <Compile Include="BD\Tasks.cs" />
     <Compile Include="Menu\IAm.cs" />
     <Compile Include="Menu\Param\Add_cGroup.xaml.cs">
       <DependentUpon>Add_cGroup.xaml</DependentUpon>
@@ -92,15 +101,6 @@
     <Compile Include="Menu\Tasks\Add_Task.xaml.cs">
       <DependentUpon>Add_Task.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BD\CatalogGroupManagers.cs" />
-    <Compile Include="BD\CatalogPositions.cs" />
-    <Compile Include="BD\CatalogStatus.cs" />
-    <Compile Include="BD\CatalogTasks.cs" />
-    <Compile Include="BD\Clients.cs" />
-    <Compile Include="BD\CRMContext.cs" />
-    <Compile Include="BD\Managers.cs" />
-    <Compile Include="BD\sysdiagrams.cs" />
-    <Compile Include="BD\Tasks.cs" />
     <Compile Include="Menu\Calendar\Calendar.xaml.cs">
       <DependentUpon>Calendar.xaml</DependentUpon>
     </Compile>

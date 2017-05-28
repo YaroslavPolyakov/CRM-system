@@ -15,12 +15,10 @@ namespace CRM.BD
         }
 
         [Key]
-        [Required]
-        [StringLength(30, MinimumLength = 4)]
+        [StringLength(30)]
         public string Task { get; set; }
 
-        [Required]
-        [StringLength(20, MinimumLength = 4)]
+        [StringLength(20)]
         public string Group { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

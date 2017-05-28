@@ -5,9 +5,7 @@ namespace CRM.BD
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-    using System.Xml.Serialization;
 
-    [Serializable]
     public partial class Clients
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -17,37 +15,28 @@ namespace CRM.BD
         }
 
         [Key]
-        [StringLength(15,MinimumLength =3)]
-        [Required]
-        [XmlAttribute]
+        [StringLength(15)]
         public string Name { get; set; }
 
-        [Required]
-        [StringLength(50, MinimumLength = 5)]
+        [StringLength(50)]
         public string Address { get; set; }
 
-        [Required]
-        [StringLength(15, MinimumLength = 3)]
+        [StringLength(15)]
         public string Phone { get; set; }
 
-        [Required]
-        [StringLength(30, MinimumLength = 6)]
+        [StringLength(30)]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(10, MinimumLength = 3)]
+        [StringLength(10)]
         public string CheckingAccount { get; set; }
 
-        [Required]
-        [StringLength(15, MinimumLength = 3)]
+        [StringLength(15)]
         public string Bank { get; set; }
 
-        [Required]
-        [StringLength(20, MinimumLength = 3)]
+        [StringLength(20)]
         public string Director { get; set; }
 
-        [Required]
-        [StringLength(20, MinimumLength = 3)]
+        [StringLength(20)]
         public string Accountant { get; set; }
 
         [Column(TypeName = "text")]
