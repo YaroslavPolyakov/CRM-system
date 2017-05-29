@@ -44,6 +44,7 @@ namespace CRM
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+
             using (CRMContext dbContext = new CRMContext())
             {
                 var manager = new BD.Managers();
