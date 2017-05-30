@@ -32,9 +32,9 @@ namespace CRM.BD
         [MinLength(8, ErrorMessage = "Поле 'Пароль' не должно содержать менее 8 символов")]
         public byte[] Password { get; set; }
 
-        [Required]
+        
         public string Position { get; set; }
-        [Required]
+        
         public int? Group { get; set; }
 
         [Required]

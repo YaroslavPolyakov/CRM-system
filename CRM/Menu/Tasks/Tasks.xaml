@@ -26,9 +26,9 @@
                 <DataGridTextColumn Binding="{Binding Client}" Header="Заказчик"/>
                 <DataGridTextColumn Binding="{Binding Manager}" Header="Исполнитель" />
                 <DataGridTextColumn Binding="{Binding Task}" Header="Задача" />
-                <DataGridTextColumn Binding="{Binding Info}" Header="Информация" />
                 <DataGridTextColumn Binding="{Binding DateStart}" Header="Дата начала" />
                 <DataGridTextColumn Binding="{Binding DateComplete}" Header="Дата завершения" />
+                <DataGridTextColumn Binding="{Binding Info}" Header="Информация" />
                 <DataGridTextColumn Binding="{Binding Status}" Header="Статус" />
             </DataGrid.Columns>
         </DataGrid>

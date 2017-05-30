@@ -13,29 +13,35 @@
             <ColumnDefinition Width="240"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Border Background="#FF505883" Margin="0,0,0,-4" BorderThickness="2,0,0,0" Grid.Column="1"/>
-        <Grid Grid.Column="1" Margin="25,0"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="552">
+        <Border Background="#FF505883" Margin="0,-2" BorderThickness="2,0,0,0" Grid.Column="1">
+
+        </Border>
+        <Grid Grid.Column="1" Margin="25,0"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="396">
             <Button HorizontalAlignment="Center" Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Редактор каталогов"  FontSize="22" Margin="124,36,110,0" Width="276" Height="47" VerticalAlignment="Top" Click="Button_Click" />
             <Button HorizontalAlignment="Center" Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Очистить Базу Данных"  FontSize="22" Margin="124,93,110,0" Width="276" Height="47" VerticalAlignment="Top" Click="Button_Click_1" />
-            <Label Content="Заказов:" Foreground="White" HorizontalAlignment="Left" Margin="56,160,0,0" VerticalAlignment="Top" Height="23" Width="204"/>
-            <Label Content="Клиентов:" Foreground="White" HorizontalAlignment="Left" Margin="277,160,0,0" VerticalAlignment="Top" Height="23" Width="195"/>
-            <Label Content="Менеджеров:" Foreground="White" HorizontalAlignment="Left" Margin="277,183,0,0" VerticalAlignment="Top" Height="23" Width="195"/>
-            <Label x:Name="countTask" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="161,160,0,0" VerticalAlignment="Top" Height="23" Width="101"/>
-            <Label x:Name="countClients" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="362,160,0,0" VerticalAlignment="Top" Height="23" Width="112" RenderTransformOrigin="0.5,0.5"/>
-            <Label x:Name="countManagers" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="362,183,0,0" VerticalAlignment="Top" Height="23" Width="112"/>
-            <Label Content="Выполненные:" Foreground="White" HorizontalAlignment="Left" Margin="56,183,0,0" VerticalAlignment="Top" Height="23" Width="204"/>
-            <Label x:Name="countComplete" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="161,183,0,0" VerticalAlignment="Top" Height="23" Width="101"/>
-            <Label Content="В процессе:" Foreground="White" HorizontalAlignment="Left" Margin="56,206,0,0" VerticalAlignment="Top" Height="23" Width="204"/>
-            <Label x:Name="countInProcess" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="161,206,0,0" VerticalAlignment="Top" Height="23" Width="101"/>
-            <Label Content="Отменены:" Foreground="White" HorizontalAlignment="Left" Margin="56,229,0,0" VerticalAlignment="Top" Height="23" Width="204"/>
-            <Label x:Name="countCancel" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="161,229,0,0" VerticalAlignment="Top" Height="23" Width="101"/>
-            <Label Content="Не выполненные:" Foreground="White" HorizontalAlignment="Left" Margin="56,251,0,0" VerticalAlignment="Top" Height="23" Width="204"/>
-            <Label x:Name="countNoComplete" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="161,251,0,0" VerticalAlignment="Top" Height="23" Width="101"/>
-            <DataGrid x:Name="dg_cGroup" Margin="27,279,20,10">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Group}" Header="Имя" Width="200"/>
-                </DataGrid.Columns>
-            </DataGrid>
+            <Label Content="Заказов:" Foreground="White" HorizontalAlignment="Left" Margin="35,169,0,0" VerticalAlignment="Top" Height="23" Width="204"/>
+            <Label Content="Клиентов:" Foreground="White" HorizontalAlignment="Left" Margin="198,169,0,0" VerticalAlignment="Top" Height="23" Width="195"/>
+            <Label Content="Сегодня:" Foreground="White" HorizontalAlignment="Left" Margin="336,194,-21,0" VerticalAlignment="Top" Height="23" Width="195"/>
+            <Label Content="За неделю:" Foreground="White" HorizontalAlignment="Left" Margin="336,217,-21,0" VerticalAlignment="Top" Height="23" Width="195"/>
+            <Label Content="За месяц:" Foreground="White" HorizontalAlignment="Left" Margin="336,239,-21,0" VerticalAlignment="Top" Height="23" Width="195"/>
+
+
+            <Label Content="Менеджеров:" Foreground="White" HorizontalAlignment="Left" Margin="334,169,-19,0" VerticalAlignment="Top" Height="23" Width="195"/>
+
+            <Label x:Name="countTask" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="140,169,0,0" VerticalAlignment="Top" Height="23" Width="101"/>
+            <Label x:Name="countClients" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="287,169,0,0" VerticalAlignment="Top" Height="23" Width="112" RenderTransformOrigin="0.5,0.5"/>
+            <Label x:Name="countManagers" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="427,169,-29,0" VerticalAlignment="Top" Height="23" Width="112"/>
+            <Label Content="Выполненные:" Foreground="White" HorizontalAlignment="Left" Margin="35,192,0,0" VerticalAlignment="Top" Height="23" Width="204"/>
+            <Label x:Name="countComplete" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="140,192,0,0" VerticalAlignment="Top" Height="23" Width="101"/>
+            <Label Content="В процессе:" Foreground="White" HorizontalAlignment="Left" Margin="35,215,0,0" VerticalAlignment="Top" Height="23" Width="204"/>
+            <Label x:Name="countInProcess" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="140,215,0,0" VerticalAlignment="Top" Height="23" Width="101"/>
+            <Label Content="Отменены:" Foreground="White" HorizontalAlignment="Left" Margin="35,238,0,0" VerticalAlignment="Top" Height="23" Width="204"/>
+            <Label x:Name="countCancel" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="140,238,0,0" VerticalAlignment="Top" Height="23" Width="101"/>
+            <Label Content="Не выполненные:" Foreground="White" HorizontalAlignment="Left" Margin="35,260,0,0" VerticalAlignment="Top" Height="23" Width="204"/>
+            <Label x:Name="countNoComplete" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="140,260,0,0" VerticalAlignment="Top" Height="23" Width="101"/>
+            <Label x:Name="countManToday" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="427,194,-18,0" VerticalAlignment="Top" Height="23" Width="101"/>
+            <Label x:Name="countManWeek" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="427,217,-18,0" VerticalAlignment="Top" Height="23" Width="101"/>
+            <Label x:Name="countManMonth" Foreground="White" Content="X" HorizontalAlignment="Left" Margin="427,239,-18,0" VerticalAlignment="Top" Height="23" Width="101"/>
 
 
         </Grid>

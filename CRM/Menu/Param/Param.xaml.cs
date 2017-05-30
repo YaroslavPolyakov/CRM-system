@@ -40,7 +40,7 @@ namespace CRM
             G1.Children.Add(m);
             using (CRMContext dbContext = new CRMContext())
             {
-                int cl=0, ma = 0, ta = 0, tcp = 0,tnp=0, tp = 0, tc = 0;
+                int cl=0, ma = 0, ta = 0, tcp = 0,tnp=0, tp = 0, tc = 0,mt=0,mw=0,mm=0;
                 foreach (var item in dbContext.Clients)
                 {
                     cl++;
@@ -48,6 +48,9 @@ namespace CRM
                 foreach (var item in dbContext.Managers)
                 {
                     ma++;
+                    if (item.DateRecruitment<=DateTime.Today && item.DateRecruitment > (DateTime.Today).AddDays(-1)) mt++;
+                    if (item.DateRecruitment <= (DateTime.Today).AddDays(-1) && item.DateRecruitment >= (DateTime.Today).AddDays(-7)) mw++;
+                    if (item.DateRecruitment <= (DateTime.Today).AddDays(-7) && item.DateRecruitment >= (DateTime.Today).AddMonths(-1)) mm++;
                 }
                 foreach (var item in dbContext.Tasks)
                 {
@@ -64,6 +67,9 @@ namespace CRM
                 countCancel.Content = tc;
                 countNoComplete.Content = tnp;
                 countInProcess.Content = tp;
+                countManToday.Content = mt;
+                countManWeek.Content = mw;
+                countManMonth.Content = mm;
 
             }
         }
