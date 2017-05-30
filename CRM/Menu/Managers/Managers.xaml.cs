@@ -23,6 +23,7 @@ namespace CRM
     /// </summary>
     public partial class Managers : UserControl
     {
+        
         public Managers(ref Grid rG)
         {
             InitializeComponent();
@@ -41,6 +42,8 @@ namespace CRM
 
             using (CRMContext dbContext = new CRMContext())
             {
+                
+
                 foreach (var item in dbContext.Managers)
                 {
                     dg_Managers.Items.Add(item);

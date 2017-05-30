@@ -16,7 +16,8 @@
                     <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="274,10,10,230" FontSize="14" Click="Button_Del"/>
                     <DataGrid x:Name="dg_cGroup" Margin="10,52,10,10">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{Binding Group}" Header="Имя" Width="200"/>
+                            <DataGridTextColumn Binding="{Binding Id}" Header="ID" />
+                            <DataGridTextColumn Binding="{Binding Group}" Header="Имя" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -28,8 +29,8 @@
                     <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="274,10,10,230" FontSize="14" Click="Button_Del"/>
                     <DataGrid x:Name="dg_cTask" Margin="10,52,10,10">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{Binding Task}" Header="Тип" Width="150"/>
-                            <DataGridTextColumn Binding="{Binding Group}" Header="Группа" Width="150"/>
+                            <DataGridTextColumn Binding="{Binding Task}" Header="Тип" />
+                            <DataGridTextColumn Binding="{Binding Group}" Header="Группа"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -41,8 +42,8 @@
                     <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="274,10,10,230" FontSize="14" Click="Button_Del"/>
                     <DataGrid x:Name="dg_cPositions" Margin="10,52,10,10">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{Binding Position}" Header="Должности" Width="200"/>
-                            <DataGridTextColumn Binding="{Binding Pay}" Header="Зарплата" Width="200"/>
+                            <DataGridTextColumn Binding="{Binding Position}" Header="Должности" />
+                            <DataGridTextColumn Binding="{Binding Pay}" Header="Зарплата" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -54,6 +55,8 @@
                     <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="274,10,10,230" FontSize="14" Click="Button_Del"/>
                     <DataGrid x:Name="dg_cStatus" Margin="10,52,10,10">
                         <DataGrid.Columns>
+
+                            <DataGridTextColumn Binding="{Binding Id}" Header="ID"/>
                             <DataGridTextColumn Binding="{Binding Status}" Header="Состояние" Width="200"/>
                         </DataGrid.Columns>
                     </DataGrid>

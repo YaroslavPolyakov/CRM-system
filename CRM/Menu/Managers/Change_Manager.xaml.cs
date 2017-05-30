@@ -39,15 +39,6 @@ namespace CRM
                 tb_login.Text = manager.Login;
                 cb_position.SelectedItem = manager.Position;
                 cb_group.SelectedItem = manager.Group;
-                
-                    foreach (var item in dbContext.CatalogGroupManagers)
-                    {
-                    if (item.Id == manager.Group)
-                    {
-                        cb_group.SelectedItem = item.Group;
-                    }
-                    
-                    }
                 tb_address.Text = manager.Address;
                 tb_phone.Text = manager.Phone;
                 tb_passport.Text = manager.Passport;
@@ -70,14 +61,7 @@ namespace CRM
                 del_manager.Login = tb_login.Text;
                 if (tb_password.Text!=null) del_manager.Password = Hash.EncryptPassword(tb_login.Text, tb_password.Text);
                 del_manager.Position = cb_position.SelectedItem.ToString();
-                foreach (var item in dbContext.CatalogGroupManagers)
-                {
-                    if (item.Group == cb_group.SelectedItem.ToString())
-                    {
-                        del_manager.Group = item.Id;
-                    }
-                    
-                }
+                del_manager.Group = cb_group.SelectedItem.ToString();
                 del_manager.Address = tb_address.Text;
                 del_manager.Phone = tb_phone.Text;
                 del_manager.Passport = tb_passport.Text;

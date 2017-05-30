@@ -21,18 +21,11 @@ namespace CRM
     /// </summary>
     public partial class MainWindow : Window
     {
-        /*public static bool TopMostCheck = true;
-        public static void setTop(bool x)
-        {
-            TopMostCheck = false;
-        }*/
         public MainWindow()
         {
-            //Topmost = TopMostCheck;
             InitializeComponent();
-            Calendar M = new Calendar(ref G);
+            Tasks M = new Tasks(ref G);
             G.Children.Add(M);
-            IAm.isAdmin = true;
             
             
 

@@ -23,19 +23,9 @@ namespace CRM.BD
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<CatalogGroupManagers>()
-                .HasMany(e => e.Managers)
-                .WithOptional(e => e.CatalogGroupManagers)
-                .HasForeignKey(e => e.Group);
-
             modelBuilder.Entity<CatalogPositions>()
                 .Property(e => e.Pay)
                 .HasPrecision(19, 4);
-
-            modelBuilder.Entity<CatalogStatus>()
-                .HasMany(e => e.Tasks)
-                .WithOptional(e => e.CatalogStatus)
-                .HasForeignKey(e => e.Status);
 
             modelBuilder.Entity<Clients>()
                 .Property(e => e.Phone)

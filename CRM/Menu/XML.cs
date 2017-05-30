@@ -262,7 +262,7 @@ namespace XMLE
                                 }
                                 else if ("Статус".Equals(k.Name))
                                 {
-                                    task.Status = Convert.ToInt32(k.FirstChild.Value);
+                                    task.Status = k.FirstChild.Value;
                                 }
                             }
                             using (CRMContext dbContext = new CRMContext())
@@ -325,7 +325,7 @@ namespace XMLE
                                 }
                                 else if ("Группа".Equals(k.Name))
                                 {
-                                    manager.Group = Convert.ToInt32(k.FirstChild.Value);
+                                    manager.Group = k.FirstChild.Value;
                                 }
                                 else if ("Адрес".Equals(k.Name))
                                 {

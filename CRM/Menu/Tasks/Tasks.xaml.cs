@@ -69,7 +69,7 @@ namespace CRM
         {
             if (dg_Tasks.SelectedItem != null)
             {
-                if (IAm.isAdmin && IAm.myName != ((BD.Tasks)dg_Tasks.SelectedItem).Manager)
+                if (IAm.isAdmin || IAm.myName == ((BD.Tasks)dg_Tasks.SelectedItem).Manager)
                 {
                     Delete delete_Zad = new Delete((BD.Tasks)dg_Tasks.SelectedItem);
                     delete_Zad.Show();

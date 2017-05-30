@@ -17,7 +17,7 @@ namespace CRM.BD
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
-        [Required]
+        [Key]
         [MaxLength(20, ErrorMessage = "Поле 'Группа' не должно содержать более 20 символов")]
         [MinLength(3, ErrorMessage = "Поле 'Группа' не должно содержать менее 3 символов")]
         [RegularExpression(@"[^0-9!`~:;@$%^*()_=/\?<>,.]{1,20}", ErrorMessage = "Некорректно введена группа")]

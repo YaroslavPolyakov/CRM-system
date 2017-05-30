@@ -17,6 +17,7 @@ namespace CRM.BD
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
+        [Key]
         [Required]
         [StringLength(15)]
         public string Status { get; set; }

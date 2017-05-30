@@ -41,7 +41,8 @@ namespace CRM.BD
         [Column(TypeName = "date")]
         public DateTime? DateComplete { get; set; }
 
-        public int? Status { get; set; }
+        [StringLength(15)]
+        public string Status { get; set; }
 
         public virtual CatalogStatus CatalogStatus { get; set; }
 

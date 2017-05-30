@@ -7,6 +7,7 @@ namespace CRM.BD
     using System.Data.Entity.Spatial;
     using System.Xml.Serialization;
 
+
     public partial class Clients
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

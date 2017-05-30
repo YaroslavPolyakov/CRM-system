@@ -20,7 +20,7 @@
             <Button Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Удалить" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Del"/>
             <Button x:Name="b_o" Background="#FF00A8AC" Foreground="White" FontFamily="Roboto Th" Content="Открыть" Margin="30,15,0,22" Width="145" FontSize="22" Click="Button_Open"/>
          </StackPanel>
-        <DataGrid x:Name="dg_Managers"  SelectedItem="{Binding Selected, Mode=TwoWay}" Margin="14,100,12,10" Grid.Column="1" IsReadOnly="True">
+        <DataGrid x:Name="dg_Managers" ItemsSource="{Binding MyList}"  SelectedItem="{Binding Selected, Mode=TwoWay}" Margin="14,100,12,10" Grid.Column="1" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}" Header="ФИО"/>
                 <DataGridTextColumn x:Name="dgc_login" Binding="{Binding Login}" Header="Логин"/>

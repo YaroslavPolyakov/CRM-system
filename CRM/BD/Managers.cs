@@ -5,7 +5,6 @@ namespace CRM.BD
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-    using System.Xml.Serialization;
 
     public partial class Managers
     {
@@ -35,7 +34,7 @@ namespace CRM.BD
         
         public string Position { get; set; }
         
-        public int? Group { get; set; }
+        public string Group { get; set; }
 
         [Required]
         [MaxLength(30, ErrorMessage = "Поле 'Адрес' не должно содержать более 30 символов")]
