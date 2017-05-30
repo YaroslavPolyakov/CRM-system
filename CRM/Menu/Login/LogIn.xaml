@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CRM"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        Title="CRM" Height="427.676" Width="447.221" Background="#FF1F233E" MinHeight="470" MinWidth="470">
+        Title="CRM" Height="427.676" Width="447.221" Background="#FF1F233E" MinHeight="470" MinWidth="470" WindowState="Maximized">
     <Grid Width="450" Height="450" Background="#FF1F233E">
         <Image HorizontalAlignment="Left" Source="/Resources/logo.png" Height="100" Margin="68,44,0,0" VerticalAlignment="Top" Width="100"/>
         <Label Content="КОМПАНИЯ" HorizontalAlignment="Left" Margin="168,72,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Roboto Th"/>
@@ -13,7 +13,7 @@
         <TextBox x:Name="loginTextBox" HorizontalAlignment="Center" Height="50" Margin="91,180,90,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269" RenderTransformOrigin="0.5,0.5" VerticalContentAlignment="Center" Padding="10,0,0,0" FontSize="16" BorderBrush="{x:Null}" FontFamily="Roboto Th"/>
         <Label Content="Пароль" HorizontalAlignment="Left" Margin="191,233,0,0" VerticalAlignment="Top" FontSize="17" Foreground="#FF1ECCD1" Width="69" RenderTransformOrigin="0.197,0.513" FontFamily="Roboto Th"/>
         <PasswordBox x:Name="passwordPasswordBox" HorizontalAlignment="Center" Margin="91,265,90,0" VerticalAlignment="Top" Width="269" Height="50" Password="" VerticalContentAlignment="Center" Padding="10,0,0,0" FontSize="16" BorderBrush="{x:Null}" FontFamily="Roboto Th"/>
-        
+
         <Button x:Name="Enter" 
                 Content="Вход" 
                 HorizontalAlignment="Center" 
@@ -27,21 +27,25 @@
                 Foreground="White" 
                 BorderBrush="{x:Null}" 
                 Click="Button_Click"/>
-            <Popup x:Name="popup1" 
+        <Popup x:Name="popup1" 
                    StaysOpen="False" 
                    Placement="Relative" 
                    MinHeight="25" 
                    MinWidth="453" 
-                   AllowsTransparency="True" 
+                   AllowsTransparency="True"
+                   
+                   HorizontalAlignment="Center" 
                    PopupAnimation="Slide"
-                   HorizontalOffset="-1">
-                <TextBlock TextAlignment="Center"
+                   VerticalOffset ="320" 
+                   HorizontalOffset="317">
+
+            <TextBlock TextAlignment="Center"
                            FontSize="14"
                            Background="#FF00A8AC" 
-                           Foreground="White">
+                           Foreground="White" Width="186">
                     Неверный логин или пароль
-                </TextBlock>
-            </Popup>
-              
+            </TextBlock>
+        </Popup>
+
     </Grid>
 </Window>

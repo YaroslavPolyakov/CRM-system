@@ -81,7 +81,14 @@ namespace CRM
                 del_manager.Address = tb_address.Text;
                 del_manager.Phone = tb_phone.Text;
                 del_manager.Passport = tb_passport.Text;
-                del_manager.DateOfBirth = d_dateofbirth.SelectedDate;
+                if (del_manager.DateOfBirth >= (DateTime.Today).AddYears(18))
+                {
+                    MessageBox.Show("Некорректный ввод даты рождения");
+                }
+                else
+                {
+                    del_manager.DateOfBirth = d_dateofbirth.SelectedDate;
+                }
                 del_manager.DateRecruitment = d_daterecruitment.SelectedDate;
                 del_manager.Email = tb_email.Text;
                 del_manager.Info = tb_info.Text;

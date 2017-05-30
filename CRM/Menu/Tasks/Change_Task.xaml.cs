@@ -69,7 +69,7 @@ namespace CRM
             {
                 
                 
-                del_task.Id = Convert.ToInt32(l_id.Text);
+
                 del_task.Client = l_client.Text;
                 del_task.Manager = l_manager.Text;
                 del_task.Task = l_task.Text;

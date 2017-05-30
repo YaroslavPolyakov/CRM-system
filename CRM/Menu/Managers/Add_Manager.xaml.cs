@@ -63,7 +63,14 @@ namespace CRM
                 manager.Address = tb_address.Text;
                 manager.Phone = tb_phone.Text;
                 manager.Passport = tb_passport.Text;
-                manager.DateOfBirth = d_dateofbirth.SelectedDate;
+                if (manager.DateOfBirth >= (DateTime.Today).AddYears(18))
+                {
+                    MessageBox.Show("Некорректный ввод даты рождения");
+                }
+                else
+                {
+                    manager.DateOfBirth = d_dateofbirth.SelectedDate;
+                }
                 manager.DateRecruitment = d_daterecruitment.SelectedDate;
                 manager.Email = tb_email.Text;
                 manager.Info = tb_info.Text;

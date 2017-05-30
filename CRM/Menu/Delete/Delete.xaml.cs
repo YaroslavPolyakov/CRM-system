@@ -72,7 +72,7 @@ namespace CRM
                 }
                 this.Close();
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 MessageBox.Show("Ошибка! Сначала удалите задачи c этим менеджером/клиентом!" );
             }

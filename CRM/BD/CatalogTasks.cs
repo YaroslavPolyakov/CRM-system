@@ -15,10 +15,16 @@ namespace CRM.BD
         }
 
         [Key]
-        [StringLength(30)]
+        [Required]
+        [MaxLength(30, ErrorMessage = "Поле 'Задача' не должно содержать более 30 символов")]
+        [MinLength(3, ErrorMessage = "Поле 'Задача' не должно содержать менее 3 символов")]
+        [RegularExpression(@"[^0-9!`~:;@$%^*()_=/\?<>,.]{1,30}", ErrorMessage = "Некорректно введена задача")]
         public string Task { get; set; }
 
-        [StringLength(20)]
+        [Required]
+        [MaxLength(20, ErrorMessage = "Поле 'Группа' не должно содержать более 20 символов")]
+        [MinLength(3, ErrorMessage = "Поле 'Группа' не должно содержать менее 3 символов")]
+        [RegularExpression(@"[^0-9!`~:;@$%^*()_=/\?<>,.]{1,20}", ErrorMessage = "Некорректно введена группа")]
         public string Group { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

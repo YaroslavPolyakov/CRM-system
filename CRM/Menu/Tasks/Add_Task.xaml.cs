@@ -50,7 +50,16 @@ namespace CRM
             using (CRMContext dbContext = new CRMContext())
             {
                 var task = new BD.Tasks();
-                task.Id = Convert.ToInt32(l_id.Text);
+                Random rnd = new Random();
+                try
+                {
+                    int i = 1 + rnd.Next(10000);
+                    task.Id = i;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Повторите попытку");
+                }
                 task.Client = l_client.Text;
                 task.Manager = l_manager.Text;
                 task.Task = l_task.Text;

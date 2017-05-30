@@ -30,7 +30,17 @@ namespace CRM
             using (CRMContext dbContext = new CRMContext())
             {
                 var group = new BD.CatalogGroupManagers();
-                group.Group = l_id.Text;
+                Random rnd = new Random();
+                try
+                {
+                    int i = 1 + rnd.Next(10000);
+                    group.Group = l_id.Text;
+                    group.Id = i;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Повторите попытку");
+                }
                 var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
                 var context = new ValidationContext(group);
                 if (!Validator.TryValidateObject(group, context, results, true))

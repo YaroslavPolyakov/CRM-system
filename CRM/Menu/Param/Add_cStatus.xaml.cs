@@ -30,7 +30,17 @@ namespace CRM
             using (CRMContext dbContext = new CRMContext())
             {
                 var status = new BD.CatalogStatus();
-                status.Status = l_id.Text;
+                Random rnd = new Random();
+                try
+                {
+                    int i = 1 + rnd.Next(10000);
+                    status.Status = l_id.Text;
+                    status.Id = i;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Повторите попытку");
+                }
                 var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
                 var context = new ValidationContext(status);
                 if (!Validator.TryValidateObject(status, context, results, true))
