@@ -44,50 +44,57 @@ namespace CRM
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
-            using (CRMContext dbContext = new CRMContext())
+            try
             {
-                var manager = new BD.Managers();
-                manager.Name = tb_name.Text;
-                manager.Login = tb_login.Text;
-                manager.Password = Hash.EncryptPassword(tb_login.Text, tb_password.Text);
-                manager.Position = cb_position.SelectedItem.ToString();
-                manager.Group = cb_group.SelectedItem.ToString();
-                manager.Address = tb_address.Text;
-                manager.Phone = tb_phone.Text;
-                manager.Passport = tb_passport.Text;
-                if ( d_dateofbirth.SelectedDate >= (DateTime.Today).AddYears(18))
+                using (CRMContext dbContext = new CRMContext())
                 {
-                    MessageBox.Show("Некорректный ввод даты рождения");
-                }
-                else
-                {
-                    manager.DateOfBirth = d_dateofbirth.SelectedDate;
-                }
-                manager.DateRecruitment = d_daterecruitment.SelectedDate;
-                manager.Email = tb_email.Text;
-                manager.Info = tb_info.Text;
-
-                var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
-                var context = new ValidationContext(manager);
-                if (!Validator.TryValidateObject(manager, context, results, true))
-                {
-                    foreach (var error in results)
+                    var manager = new BD.Managers();
+                    manager.Name = tb_name.Text;
+                    manager.Login = tb_login.Text;
+                    manager.Password = Hash.EncryptPassword(tb_login.Text, tb_password.Text);
+                    manager.Position = cb_position.SelectedItem.ToString();
+                    manager.Group = cb_group.SelectedItem.ToString();
+                    manager.Address = tb_address.Text;
+                    manager.Phone = tb_phone.Text;
+                    manager.Passport = tb_passport.Text;
+                    if (d_dateofbirth.SelectedDate >= (DateTime.Today).AddYears(18))
                     {
-                        MessageBox.Show(error.ErrorMessage);
+                        MessageBox.Show("Некорректный ввод даты рождения");
                     }
-                }
-                else
-                {
-                    dbContext.Managers.Add(manager);
-                    dbContext.SaveChanges();
-                }
-                if (Validator.TryValidateObject(manager, context, results, true))
-                {
-                    this.Close();
-                }
+                    else
+                    {
+                        manager.DateOfBirth = d_dateofbirth.SelectedDate;
+                    }
+                    manager.DateRecruitment = d_daterecruitment.SelectedDate;
+                    manager.Email = tb_email.Text;
+                    manager.Info = tb_info.Text;
 
+                    var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+                    var context = new ValidationContext(manager);
+                    if (!Validator.TryValidateObject(manager, context, results, true))
+                    {
+                        foreach (var error in results)
+                        {
+                            MessageBox.Show(error.ErrorMessage);
+                        }
+                    }
+                    else
+                    {
+                        dbContext.Managers.Add(manager);
+                        dbContext.SaveChanges();
+                    }
+                    if (Validator.TryValidateObject(manager, context, results, true))
+                    {
+                        this.Close();
+                    }
+                } }
+            catch
+            {
+                MessageBox.Show("Ошибка! Некорректный ввод данных!");
             }
+           
+
+            
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
