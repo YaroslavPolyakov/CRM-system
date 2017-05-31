@@ -52,8 +52,16 @@ namespace CRM
                 }
                 else
                 {
-                    dbContext.CatalogStatus.Add(status);
-                    dbContext.SaveChanges();
+                    try
+                    {
+                        dbContext.CatalogStatus.Add(status);
+                        dbContext.SaveChanges();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ошибка");
+                    }
+                    
                 }
                 if (Validator.TryValidateObject(status, context, results, true))
                 {

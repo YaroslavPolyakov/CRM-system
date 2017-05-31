@@ -43,8 +43,15 @@ namespace CRM
                 }
                 else
                 {
-                    dbContext.CatalogTasks.Add(task);
-                    dbContext.SaveChanges();
+                    try
+                    {
+                        dbContext.CatalogTasks.Add(task);
+                        dbContext.SaveChanges();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ошибка");
+                    }
                 }
                 if (Validator.TryValidateObject(task, context, results, true))
                 {

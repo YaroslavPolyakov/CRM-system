@@ -52,8 +52,15 @@ namespace CRM
                 }
                 else
                 {
+                    try
+                    {
                     dbContext.CatalogGroupManagers.Add(group);
                     dbContext.SaveChanges();
+                    }
+                    catch 
+                    {
+                        MessageBox.Show("Ошибка");
+                    }
                 }
                 if (Validator.TryValidateObject(group, context, results, true))
                 {
