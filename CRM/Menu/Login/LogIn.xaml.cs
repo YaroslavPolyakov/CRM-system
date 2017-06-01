@@ -26,7 +26,6 @@ namespace CRM
         public LogIn()
         {
             InitializeComponent();
-           
         }
 
 
@@ -52,6 +51,7 @@ namespace CRM
                             MainWindow mainWnd = new MainWindow();
                             mainWnd.Show();
                             this.Close();
+                            EmailSender.SendMail("n.harseko@mail.ru", "w5323871w", item.Email, "Вход", "Вы вошли в систему под логином: " + item.Login);
                         }
                         }
                     else

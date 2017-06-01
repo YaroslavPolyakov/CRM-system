@@ -23,7 +23,10 @@ namespace CRM
     /// </summary>
     public partial class Managers : UserControl
     {
-        
+
+        VoiceControl VC = new VoiceControl();
+        string command = "";
+
         public Managers(ref Grid rG)
         {
             InitializeComponent();
@@ -53,8 +56,9 @@ namespace CRM
 
         }
 
-
-        private void Button_Add(object sender, RoutedEventArgs e)
+        
+        
+        public void Button_Add(object sender, RoutedEventArgs e)
         {
             if (IAm.isAdmin)
             {
@@ -67,7 +71,7 @@ namespace CRM
             }
         }
 
-        private void Button_Change(object sender, RoutedEventArgs e)
+        public void Button_Change(object sender, RoutedEventArgs e)
         {
             if (dg_Managers.SelectedItem != null)
             {
@@ -88,7 +92,7 @@ namespace CRM
 
         }
 
-        private void Button_Del(object sender, RoutedEventArgs e)
+        public void Button_Del(object sender, RoutedEventArgs e)
         {
 
 
@@ -110,7 +114,7 @@ namespace CRM
             }
         }
 
-        private void Button_Save(object sender, RoutedEventArgs e)
+        public void Button_Save(object sender, RoutedEventArgs e)
         {
             List<BD.Managers> manager = new List<BD.Managers>();
             using (CRMContext dbContext = new CRMContext())
@@ -123,10 +127,42 @@ namespace CRM
             XMLE.XML.Save_Managers(manager);
         }
 
-        private void Button_Open(object sender, RoutedEventArgs e)
+        public void Button_Open(object sender, RoutedEventArgs e)
         {
             List<BD.Managers> manager = new List<BD.Managers>();
             XML.openXml_managers();
+        }
+
+        public void VoiceCNTRL(object sender, KeyEventArgs e)
+        {
+            string command = "";
+            VoiceControl vc = new VoiceControl();
+            
+            if (e.Key == Key.G)
+            {
+                command = vc.VoiceContr(sender, e);
+
+                    switch (command)
+                    {
+                        case "добавить":
+                        Button_Add(sender, e);
+                            break;
+                        case "удалить":
+                        Button_Del(sender, e);
+                            break;
+                        case "изменить":
+                        Button_Change(sender, e);
+                            break;
+                        case "сохранить":
+                        Button_Add(sender, e);
+                            break;
+                        case "открыть":
+                        Button_Open(sender, e);
+                            break;
+                        case "":
+                            break;
+                    }
+            }
         }
 
     }

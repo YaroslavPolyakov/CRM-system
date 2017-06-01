@@ -82,6 +82,10 @@ namespace CRM
                     {
                         dbContext.Managers.Add(manager);
                         dbContext.SaveChanges();
+                        EmailSender.SendMail("n.harseko@mail.ru", "w5323871w", manager.Email, 
+                            "Регистрация", "Вы зарегистрировались в \"CRM - система\" \nВаш логин: " + manager.Login 
+                            +"\nВаш пароль: "+tb_password.Text);
+
                     }
                     if (Validator.TryValidateObject(manager, context, results, true))
                     {

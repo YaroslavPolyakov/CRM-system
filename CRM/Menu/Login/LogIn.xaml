@@ -37,7 +37,7 @@
                    HorizontalAlignment="Center" 
                    PopupAnimation="Slide"
                    VerticalOffset ="320" 
-                   HorizontalOffset="317">
+                   HorizontalOffset="135">
 
             <TextBlock TextAlignment="Center"
                            FontSize="14"

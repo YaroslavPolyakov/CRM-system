@@ -92,5 +92,37 @@ namespace CRM
             XML.openXml_clients();
         }
 
+             public void VoiceCNTRL(object sender, KeyEventArgs e)
+        {
+            string command = "";
+            VoiceControl vc = new VoiceControl();
+
+            if (e.Key == Key.G)
+            {
+                command = vc.VoiceContr(sender, e);
+
+                switch (command)
+                {
+                    case "добавить":
+                        Button_Add(sender, e);
+                        break;
+                    case "удалить":
+                        Button_Del(sender, e);
+                        break;
+                    case "изменить":
+                        Button_Change(sender, e);
+                        break;
+                    case "сохранить":
+                        Button_Add(sender, e);
+                        break;
+                    case "открыть":
+                        Button_Open(sender, e);
+                        break;
+                    case "":
+                        break;
+                }
+            }
+        }
+
     }
 }

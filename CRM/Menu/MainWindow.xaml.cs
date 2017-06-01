@@ -26,13 +26,15 @@ namespace CRM
             InitializeComponent();
             Tasks M = new Tasks(ref G);
             G.Children.Add(M);
-            
-            
 
-            
+
+
+
 
         }
 
-       
+        
+
+
     }
 }

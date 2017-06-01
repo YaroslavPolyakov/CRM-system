@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:CRM"
              mc:Ignorable="d" 
              d:DesignHeight="600"
-             x:Name="p_Clients" d:DesignWidth="800" >
+             x:Name="p_Clients" d:DesignWidth="800" KeyDown="VoiceCNTRL">
     <Grid x:Name="G1" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="240"/>
